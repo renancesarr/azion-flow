@@ -12,7 +12,8 @@ export class NodeFileSystemProvider {
         if (entry.isDirectory()) {
           await walk(full);
         } else if (entry.isFile()) {
-          results.push(full.replace(`${baseDir}/`, ""));
+          const relative = full.startsWith(baseDir) ? full.slice(baseDir.length + 1) : full;
+          results.push(relative);
         }
       }
     };

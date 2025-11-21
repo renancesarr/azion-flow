@@ -1,3 +1,3 @@
-import { BaseError } from "../../core/errors/base-error";
+import { BaseError } from "../../../core/errors/base-error";
 
 export class AzionHttpError extends BaseError {}
