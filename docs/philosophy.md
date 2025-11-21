@@ -37,7 +37,7 @@ Para sites simples, o processo é mais complicado do que deveria ser.
 
 ### 2.2 Objetivo Estratégico
 
-Criar uma **CLI modular e confiável** que automatiza o deploy estático na Azion com o mínimo de esforço humano.
+Criar uma **CLI modular e confiável** que automatiza o deploy sites estático na Azion com o mínimo de esforço humano.
 
 Objetivo real:
 
@@ -55,17 +55,14 @@ Mais simples, mais rápido, mais previsível.
 Abaixo, somente dores concretas — nada abstrato.
 
 * Processo de deploy exige muitos passos separados.
-* Criar e configurar bucket é manual.
+* Criar e configurar bucket é manual. Chamando API ou na AZION CLI não exite no dashboard web.
 * Upload/sincronização é manual.
-* Criar application e presets exige repetição.
+* Criar application e presets rules e de cache exige repetição.
 * Configurar domínio demanda vários cliques.
-* A CLI oficial é extensa e pouco amigável.
-* A API é poderosa, mas não intuitiva.
+* A CLI oficial é extensa e pouco amigável. E é bem limitada comparada a API.
 * Falta ferramenta simples para fluxo completo.
 * Falta documentação aplicada ao caso "deploy simples".
-* Alta chance de erro humano por repetição.
-
-Essas são as dores que o projeto resolve. Somente elas.
+* Alta chance de erro humano por repetição
 
 ---
 
@@ -101,7 +98,6 @@ Somente o que pode ser percebido e medido.
 * Processo mais rápido de ponta a ponta (sem estimativas fantasiosas).
 * Projeto documentado de forma modular e utilitária.
 
-Não prometemos velocidade absoluta ou milagre.
 Prometemos **eficiência e simplicidade real**.
 
 ---
