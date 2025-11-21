@@ -54,7 +54,7 @@ Regras mínimas:
 
 ## 📁 FASE 2 — FileSyncService (Domínio de Sincronização)
 
-### - [ ] **TSERVREAL-004 — Implementar listLocalFiles() real**
+### - [x] **TSERVREAL-004 — Implementar listLocalFiles() real**
 
 **Descrição:**
 
@@ -81,7 +81,7 @@ Regras mínimas:
 
 ---
 
-### - [ ] **TSERVREAL-006 — Implementar diff mínimo (opcional nesta fase)**
+### - [x] **TSERVREAL-006 — Implementar diff mínimo (opcional nesta fase)**
 
 **Descrição:**  
 Comparar lista local vs lista remota (se provider permitir).  
