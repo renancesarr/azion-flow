@@ -4,6 +4,7 @@ import { DeployUseCase } from "./deploy.usecase";
 import { AzionStorageProvider } from "../providers/azion/azion.storage";
 import { AzionApplicationProvider } from "../providers/azion/azion.application";
 import { AzionDomainProvider } from "../providers/azion/azion.domain";
+import { AzionHttpClient } from "../providers/azion/http/http-client";
 import { NodeFileSystemProvider } from "../providers/filesystem/nodefs";
 import { FileConfigProvider } from "../providers/config/file-config";
 import { BucketService } from "../domain/bucket/bucket.service";
@@ -13,13 +14,14 @@ import { DomainConfigService } from "../domain/domain-config/domain-config.servi
 import { ConfigStorageService } from "../domain/config-storage/config-storage.service";
 
 export function createDeployUseCase(services: any = {}, providers: any = {}): DeployUseCase {
+  const httpProvider = providers.httpProvider ?? new AzionHttpClient();
   const resolvedProviders = {
     storageProvider: providers.storageProvider ?? new AzionStorageProvider(),
     applicationProvider: providers.applicationProvider ?? new AzionApplicationProvider(),
     domainProvider: providers.domainProvider ?? new AzionDomainProvider(),
     fsProvider: providers.fsProvider ?? new NodeFileSystemProvider(),
     configProvider: providers.configProvider ?? new FileConfigProvider(),
-    httpProvider: providers.httpProvider ?? providers.storageProvider // reuse when available
+    httpProvider
   };
 
   const resolvedServices = {
