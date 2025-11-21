@@ -1,0 +1,111 @@
+---
+# Context Index — Mapeamento estrutural do projeto azion-flow
+# Este arquivo define como IAs e humanos devem navegar o repositório.
+
+version: "1.0.0-mvp1"
+
+project:
+  id: "azion-flow"
+  name: "Azion Flow"
+  description: "CLI modular para deploy de sites estáticos na Azion."
+  mission: >
+    Tornar o deploy de sites estáticos mais simples, rápido e previsível,
+    com arquitetura escalável e documentação viva.
+
+directories:
+  docs: "docs/"
+  tasks: "docs/tasks/"
+  developer: "code-brain/developer/"
+  ai: "docs/ai/"
+  architecture: "docs/architecture/"
+  root: "./"
+
+core_files:
+  project_guide: "docs/project-guide.md"
+  project_manifest: "project.yaml"
+  agents: "AGENTS.md"
+  philosophy: "docs/philosophy.md"
+  user_stories: "docs/user-stories.md"
+  requirements_functional: "docs/requirements-functional.md"
+  requirements_nonfunctional: "docs/requirements-non-functional.md"
+  use_cases: "docs/use-cases.md"
+  traceability: "docs/traceability-matrix.md"
+  architecture: "docs/architecture.md"
+  stack: "docs/stack.md"
+  context_state: "code-brain/context.yaml"
+
+patterns:
+  tasks: "^T[A-Z0-9\\-]+\\.md$"
+  use_cases: "^UC-[0-9]{4}\\.md$"
+  ai_logs: "^[0-9]{10,}-ia-code\\.md$"
+  dev_notes: "^[0-9]{8}-dev-notes\\.md$"
+
+required_structure:
+  directories:
+    - "docs/"
+    - "docs/tasks/"
+    - "docs/architecture/"
+    - "code-brain/"
+    - "code-brain/developer/"
+  files:
+    - "project.yaml"
+    - "docs/project-guide.md"
+    - "AGENTS.md"
+    - "docs/philosophy.md"
+    - "docs/user-stories.md"
+    - "docs/requirements-functional.md"
+    - "docs/requirements-non-functional.md"
+    - "docs/use-cases.md"
+    - "docs/traceability-matrix.md"
+    - "docs/architecture.md"
+    - "docs/stack.md"
+
+governance:
+  file_ownership:
+    user_controlled:
+      - "project.yaml"
+      - "docs/philosophy.md"
+      - "code-brain/context.yaml"
+    ai_controlled:
+      - "code-brain/developer/logs-ai-code/"
+      - "docs/tasks/"
+      - "docs/ai/"
+    shared:
+      - "docs/use-cases.md"
+      - "docs/requirements-functional.md"
+      - "docs/requirements-non-functional.md"
+      - "docs/traceability-matrix.md"
+
+principles:
+  - "Ler antes de agir"
+  - "Respeitar decisões anteriores"
+  - "Manter consistência entre todos os artefatos"
+  - "Gerar apenas mudanças rastreáveis"
+  - "Registrar tudo o que foi feito"
+  - "Criticar a si mesmo ao final de cada ação"
+
+pipeline:
+  stages:
+    - name: "INSIGHT"
+      description: "Observação de problemas, padrões ou melhorias."
+    - name: "USE_CASE"
+      description: "Transformação do insight em narrativa funcional UC-XXXX."
+    - name: "TODO"
+      description: "Geração de tasks atômicas."
+    - name: "IMPLEMENTATION"
+      description: "Código escrito com base nas tasks."
+    - name: "REVIEW"
+      description: "Validação de coerência, rastreabilidade e qualidade."
+    - name: "RELEASE"
+      description: "Integração final no produto."
+
+ai_rules:
+  - "Sempre ler project.yaml antes de agir."
+  - "Sempre consultar traceability antes de propor mudanças."
+  - "Nunca alterar filosofia ou visão sem autorização."
+  - "Sempre referenciar IDs como RF-XXX, RNF-XXX, UC-XXXX, TXXX."
+  - "Sempre evitar modificar artefatos controlados exclusivamente por humanos."
+
+metadata:
+  last_update: null
+  maintained_by: ["NaNer", "Azymuth", "code-brain"]

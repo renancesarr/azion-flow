@@ -1,0 +1,70 @@
+---
+# Estado operacional atual do projeto azion-flow
+# Complementa context-index.yaml
+
+context:
+  last_update: "2025-11-20T04:44:00Z"
+  active_branch: "main"
+  current_phase: "mvp-1"
+
+  active_tasks:
+    current: []
+    pending: []
+    completed: []
+
+  execution_context:
+    reading_order:
+      - "context-index.yaml"
+      - "AGENTS.md"
+      - "project.yaml"
+      - "docs/project-guide.md"
+      - "docs/traceability-matrix.md"
+    ai_processing:
+      token_budget: 8000
+      max_files_per_read: 5
+      read_last_n_logs: 3
+
+  pipeline_stages:
+    - stage: "INSIGHT"
+      required: true
+      description: "Observação de ajustes, ideias e problemas."
+    - stage: "USE_CASE"
+      required: true
+      description: "Transformação de insights em UC-XXXX rastreáveis."
+    - stage: "TODO"
+      required: true
+      description: "Geração de tasks atômicas TXXX."
+    - stage: "IMPLEMENTATION"
+      required: true
+      description: "Aplicação das tasks e escrita de código."
+    - stage: "REVIEW"
+      required: true
+      description: "Validação de arquitetura, rastreabilidade e testes."
+    - stage: "RELEASE"
+      required: true
+      description: "Integração da feature no produto final."
+
+  governance:
+    update_task_status: true
+    create_dev_notes: true
+    validate_changes: true
+    file_ownership:
+      user_controlled:
+        - "context.yaml"
+        - "project.yaml"
+        - "docs/philosophy.md"
+        - "prompt.yaml"
+      ai_controlled:
+        - "code-brain/developer/logs-ai-code/"
+        - "docs/tasks/"
+      shared:
+        - "docs/use-cases.md"
+        - "docs/requirements-functional.md"
+        - "docs/requirements-non-functional.md"
+        - "docs/traceability-matrix.md"
+
+  environment:
+    required_tools:
+      node: ">=22"
+      npm: ">=10"
+      git: "any"
