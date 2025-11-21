@@ -8,7 +8,7 @@ Nenhuma lógica de negócio será implementada aqui — apenas a base estrutural
 
 ## ⚡ FASE: Configuração e EntryPoint da CLI
 
-### - [ ] **TCLI-001 — Criar arquivo `bin/azion-flow`**
+### - [x] **TCLI-001 — Criar arquivo `bin/azion-flow`**
 
 **Descrição:**  
 Criar o arquivo executável principal da CLI no diretório `bin/`.  
@@ -30,7 +30,7 @@ Marcar o arquivo como executável.
 
 ---
 
-### - [ ] **TCLI-002 — Adicionar campo `bin` no `package.json`**
+### - [x] **TCLI-002 — Adicionar campo `bin` no `package.json`**
 
 **Descrição:**  
 Adicionar:
@@ -51,7 +51,7 @@ Permite rodar a CLI globalmente via `npx azion-flow`.
 
 ---
 
-### - [ ] **TCLI-003 — Criar arquivo `src/cli/bootstrap.ts`**
+### - [x] **TCLI-003 — Criar arquivo `src/cli/bootstrap.ts`**
 
 **Descrição:**  
 Criar arquivo responsável por:
@@ -68,7 +68,7 @@ Criar arquivo responsável por:
 
 ---
 
-### - [ ] **TCLI-004 — Ajustar `src/cli/index.ts` para usar bootstrap**
+### - [x] **TCLI-004 — Ajustar `src/cli/index.ts` para usar bootstrap**
 
 **Descrição:**  
 Adicionar conteúdo mínimo:
@@ -94,7 +94,7 @@ main();
 
 ## ⚡ FASE: Sistema de Comandos da CLI
 
-### - [ ] **TCLI-005 — Criar diretório `src/cli/commands/`**
+### - [x] **TCLI-005 — Criar diretório `src/cli/commands/`**
 
 **Descrição:**  
 Criar pasta onde comandos individuais serão armazenados.  
@@ -107,7 +107,7 @@ Criar pasta onde comandos individuais serão armazenados.
 
 ---
 
-### - [ ] **TCLI-006 — Criar `src/cli/commands/help.ts` (comando vazio)**
+### - [x] **TCLI-006 — Criar `src/cli/commands/help.ts` (comando vazio)**
 
 **Descrição:**  
 Criar arquivo com função:
@@ -124,7 +124,7 @@ Sem lógica ainda.
 
 ---
 
-### - [ ] **TCLI-007 — Criar `src/cli/commands/version.ts`**
+### - [x] **TCLI-007 — Criar `src/cli/commands/version.ts`**
 
 **Descrição:**  
 Arquivo com função vazia para exibir versão futuramente.  
@@ -135,7 +135,7 @@ Arquivo com função vazia para exibir versão futuramente.
 
 ---
 
-### - [ ] **TCLI-008 — Criar roteador central `src/cli/router.ts`**
+### - [x] **TCLI-008 — Criar roteador central `src/cli/router.ts`**
 
 **Descrição:**  
 Criar arquivo com função vazia:
@@ -152,7 +152,7 @@ Responsável futuramente por rotear comandos.
 
 ---
 
-### - [ ] **TCLI-009 — Ligar router ao `index.ts`**
+### - [x] **TCLI-009 — Ligar router ao `index.ts`**
 
 **Descrição:**  
 Adicionar em `index.ts`:
@@ -178,7 +178,7 @@ async function main() {
 
 ## ⚡ FASE: Tipos e Interfaces da CLI
 
-### - [ ] **TCLI-010 — Criar `src/cli/types/`**
+### - [x] **TCLI-010 — Criar `src/cli/types/`**
 
 **Descrição:**  
 Criar diretório para tipos específicos da CLI.  
@@ -191,7 +191,7 @@ Criar diretório para tipos específicos da CLI.
 
 ---
 
-### - [ ] **TCLI-011 — Criar `src/cli/types/command.ts`**
+### - [x] **TCLI-011 — Criar `src/cli/types/command.ts`**
 
 **Descrição:**  
 Criar interface inicial:
@@ -212,7 +212,7 @@ export interface CLICommand {
 
 ## ⚡ FASE: Estrutura de Mensagens e Saída
 
-### - [ ] **TCLI-012 — Criar `src/cli/ui/`**
+### - [x] **TCLI-012 — Criar `src/cli/ui/`**
 
 **Descrição:**  
 Criar pasta para output da CLI (print, cores, banners).  
@@ -223,7 +223,7 @@ Criar pasta para output da CLI (print, cores, banners).
 
 ---
 
-### - [ ] **TCLI-013 — Criar arquivo `src/cli/ui/output.ts`**
+### - [x] **TCLI-013 — Criar arquivo `src/cli/ui/output.ts`**
 
 **Descrição:**  
 Criar funções vazias:
@@ -243,7 +243,7 @@ export function printSuccess() {}
 
 ## ⚡ FASE: Testes Iniciais da CLI
 
-### - [ ] **TCLI-014 — Criar teste de smoke para entrypoint**
+### - [x] **TCLI-014 — Criar teste de smoke para entrypoint**
 
 **Descrição:**  
 Criar arquivo `tests/cli/entrypoint.test.ts` com:
@@ -268,7 +268,7 @@ describe("CLI Entrypoint", () => {
 
 ---
 
-### - [ ] **TCLI-015 — Criar teste de smoke do router**
+### - [x] **TCLI-015 — Criar teste de smoke do router**
 
 **Descrição:**  
 Criar arquivo `tests/cli/router.test.ts` com:

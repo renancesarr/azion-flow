@@ -7,7 +7,7 @@ Cada task é atômica, granular e sem implementação de lógica avançada — a
 
 ## 📦 FASE DOMAIN — Bucket
 
-### - [ ] **TDOM-001 — Criar arquivo `src/domain/bucket/bucket.entity.ts`**
+### - [x] **TDOM-001 — Criar arquivo `src/domain/bucket/bucket.entity.ts`**
 
 **Descrição:**  
 Criar entidade Bucket com campos ainda vazios, apenas a estrutura:
@@ -23,7 +23,7 @@ export interface BucketEntity {}
 
 ---
 
-### - [ ] **TDOM-002 — Criar arquivo `src/domain/bucket/bucket.service.ts`**
+### - [x] **TDOM-002 — Criar arquivo `src/domain/bucket/bucket.service.ts`**
 
 **Descrição:**  
 Criar service vazio com classe:
@@ -42,7 +42,7 @@ Sem implementação.
 
 ## 📦 FASE DOMAIN — File Sync
 
-### - [ ] **TDOM-003 — Criar arquivo `src/domain/filesync/file-sync.entity.ts`**
+### - [x] **TDOM-003 — Criar arquivo `src/domain/filesync/file-sync.entity.ts`**
 
 **Descrição:**  
 Criar entidade representando operação de sincronização (vazia por agora).
@@ -58,7 +58,7 @@ export interface FileSyncEntity {}
 
 ---
 
-### - [ ] **TDOM-004 — Criar arquivo `src/domain/filesync/file-sync.service.ts`**
+### - [x] **TDOM-004 — Criar arquivo `src/domain/filesync/file-sync.service.ts`**
 
 **Descrição:**  
 Criar serviço com estrutura básica:
@@ -76,7 +76,7 @@ export class FileSyncService {}
 
 ## 📦 FASE DOMAIN — Application
 
-### - [ ] **TDOM-005 — Criar arquivo `src/domain/application/application.entity.ts`**
+### - [x] **TDOM-005 — Criar arquivo `src/domain/application/application.entity.ts`**
 
 **Descrição:**  
 Criar entidade Application com estrutura inicial vazia:
@@ -92,7 +92,7 @@ export interface ApplicationEntity {}
 
 ---
 
-### - [ ] **TDOM-006 — Criar arquivo `src/domain/application/application.service.ts`**
+### - [x] **TDOM-006 — Criar arquivo `src/domain/application/application.service.ts`**
 
 **Descrição:**  
 Criar classe de service vazia:
@@ -110,7 +110,7 @@ export class ApplicationService {}
 
 ## 📦 FASE DOMAIN — Domain Config
 
-### - [ ] **TDOM-007 — Criar arquivo `src/domain/domain-config/domain-config.entity.ts`**
+### - [x] **TDOM-007 — Criar arquivo `src/domain/domain-config/domain-config.entity.ts`**
 
 **Descrição:**  
 Criar entidade DomainConfig vazia:
@@ -126,7 +126,7 @@ export interface DomainConfigEntity {}
 
 ---
 
-### - [ ] **TDOM-008 — Criar arquivo `src/domain/domain-config/domain-config.service.ts`**
+### - [x] **TDOM-008 — Criar arquivo `src/domain/domain-config/domain-config.service.ts`**
 
 **Descrição:**  
 Criar service base:
@@ -144,7 +144,7 @@ export class DomainConfigService {}
 
 ## 📦 FASE DOMAIN — Config Storage
 
-### - [ ] **TDOM-009 — Criar arquivo `src/domain/config-storage/config-storage.entity.ts`**
+### - [x] **TDOM-009 — Criar arquivo `src/domain/config-storage/config-storage.entity.ts`**
 
 **Descrição:**  
 Criar entidade ConfigStorage vazia:
@@ -160,7 +160,7 @@ export interface ConfigStorageEntity {}
 
 ---
 
-### - [ ] **TDOM-010 — Criar arquivo `src/domain/config-storage/config-storage.service.ts`**
+### - [x] **TDOM-010 — Criar arquivo `src/domain/config-storage/config-storage.service.ts`**
 
 **Descrição:**  
 Criar classe de service vazia:
@@ -178,7 +178,7 @@ export class ConfigStorageService {}
 
 ## 📚 FASE DOMAIN — Indexação e Tipos Compartilhados
 
-### - [ ] **TDOM-011 — Criar `src/domain/index.ts`**
+### - [x] **TDOM-011 — Criar `src/domain/index.ts`**
 
 **Descrição:**  
 Arquivo exportador central para todos os subdomínios.  
@@ -189,7 +189,7 @@ Arquivo exportador central para todos os subdomínios.
 
 ---
 
-### - [ ] **TDOM-012 — Criar `tests/domain/smoke.test.ts`**
+### - [x] **TDOM-012 — Criar `tests/domain/smoke.test.ts`**
 
 **Descrição:**  
 Smoke test global do domínio:

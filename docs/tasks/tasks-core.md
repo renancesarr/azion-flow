@@ -8,7 +8,7 @@ Nenhuma task implementa lógica de negócio — apenas a estrutura e placeholder
 
 ## ⚡ FASE CORE — Contexto
 
-### - [ ] **TCORE-001 — Criar arquivo `src/core/context/index.ts`**
+### - [x] **TCORE-001 — Criar arquivo `src/core/context/index.ts`**
 
 **Descrição:**  
 Criar arquivo que exportará o contexto padrão do sistema. Começa vazio.  
@@ -19,7 +19,7 @@ Criar arquivo que exportará o contexto padrão do sistema. Começa vazio.
 
 ---
 
-### - [ ] **TCORE-002 — Criar `src/core/context/types.ts`**
+### - [x] **TCORE-002 — Criar `src/core/context/types.ts`**
 
 **Descrição:**  
 Adicionar interfaces mínimas do contexto (ainda vazias).  
@@ -30,7 +30,7 @@ Adicionar interfaces mínimas do contexto (ainda vazias).
 
 ---
 
-### - [ ] **TCORE-003 — Criar `src/core/context/createContext.ts`**
+### - [x] **TCORE-003 — Criar `src/core/context/createContext.ts`**
 
 **Descrição:**  
 Criar função vazia `createContext()` que retornará contexto futuro.  
@@ -43,7 +43,7 @@ Criar função vazia `createContext()` que retornará contexto futuro.
 
 ## ⚡ FASE CORE — Errors
 
-### - [ ] **TCORE-004 — Criar diretório `src/core/errors/types/`**
+### - [x] **TCORE-004 — Criar diretório `src/core/errors/types/`**
 
 **Descrição:** Criar pasta para tipagens de erros.  
 **RFs:** null  
@@ -53,7 +53,7 @@ Criar função vazia `createContext()` que retornará contexto futuro.
 
 ---
 
-### - [ ] **TCORE-005 — Criar arquivo `src/core/errors/base-error.ts`**
+### - [x] **TCORE-005 — Criar arquivo `src/core/errors/base-error.ts`**
 
 **Descrição:**  
 Criar classe mínima:
@@ -69,7 +69,7 @@ export class BaseError extends Error {}
 
 ---
 
-### - [ ] **TCORE-006 — Criar `src/core/errors/error-codes.ts`**
+### - [x] **TCORE-006 — Criar `src/core/errors/error-codes.ts`**
 
 **Descrição:**  
 Arquivo contendo enum vazio para códigos de erro.  
@@ -80,7 +80,7 @@ Arquivo contendo enum vazio para códigos de erro.
 
 ---
 
-### - [ ] **TCORE-007 — Criar `src/core/errors/index.ts`**
+### - [x] **TCORE-007 — Criar `src/core/errors/index.ts`**
 
 **Descrição:**  
 Arquivo para exportar módulos de erro.  
@@ -93,7 +93,7 @@ Arquivo para exportar módulos de erro.
 
 ## ⚡ FASE CORE — Logger
 
-### - [ ] **TCORE-008 — Criar `src/core/logger/logger.ts`**
+### - [x] **TCORE-008 — Criar `src/core/logger/logger.ts`**
 
 **Descrição:**  
 Criar funções vazias:
@@ -111,7 +111,7 @@ export function logDebug() {}
 
 ---
 
-### - [ ] **TCORE-009 — Criar `src/core/logger/types.ts`**
+### - [x] **TCORE-009 — Criar `src/core/logger/types.ts`**
 
 **Descrição:**  
 Criar interfaces base para loggers.  
@@ -122,7 +122,7 @@ Criar interfaces base para loggers.
 
 ---
 
-### - [ ] **TCORE-010 — Criar `src/core/logger/adapters/`**
+### - [x] **TCORE-010 — Criar `src/core/logger/adapters/`**
 
 **Descrição:**  
 Criar diretório onde ficarão implementações (console, file, future providers).  
@@ -133,7 +133,7 @@ Criar diretório onde ficarão implementações (console, file, future providers
 
 ---
 
-### - [ ] **TCORE-011 — Criar `src/core/logger/adapters/console-logger.ts`**
+### - [x] **TCORE-011 — Criar `src/core/logger/adapters/console-logger.ts`**
 
 **Descrição:**  
 Criar arquivo com funções vazias para log via console.  
@@ -146,7 +146,7 @@ Criar arquivo com funções vazias para log via console.
 
 ## ⚡ FASE CORE — Utils
 
-### - [ ] **TCORE-012 — Criar diretório `src/core/utils/fs/`**
+### - [x] **TCORE-012 — Criar diretório `src/core/utils/fs/`**
 
 **Descrição:** Pasta para utilitários de filesystem.  
 **RFs:** null  
@@ -156,7 +156,7 @@ Criar arquivo com funções vazias para log via console.
 
 ---
 
-### - [ ] **TCORE-013 — Criar `src/core/utils/fs/path.ts`**
+### - [x] **TCORE-013 — Criar `src/core/utils/fs/path.ts`**
 
 **Descrição:** Funções utilitárias vazias (ex.: join, resolve wrappers).  
 **RFs:** null  
@@ -166,7 +166,7 @@ Criar arquivo com funções vazias para log via console.
 
 ---
 
-### - [ ] **TCORE-014 — Criar diretório `src/core/utils/text/`**
+### - [x] **TCORE-014 — Criar diretório `src/core/utils/text/`**
 
 **Descrição:** Pasta para utilidades de string e formatação.  
 **RFs:** null  
@@ -176,7 +176,7 @@ Criar arquivo com funções vazias para log via console.
 
 ---
 
-### - [ ] **TCORE-015 — Criar `src/core/utils/text/format.ts`**
+### - [x] **TCORE-015 — Criar `src/core/utils/text/format.ts`**
 
 **Descrição:** Criar funções vazias:
 
@@ -192,7 +192,7 @@ export function normalizeText() {}
 
 ---
 
-### - [ ] **TCORE-016 — Criar arquivo `src/core/utils/index.ts`**
+### - [x] **TCORE-016 — Criar arquivo `src/core/utils/index.ts`**
 
 **Descrição:**  
 Arquivo para exportar todos os utilitários centralizados.  
@@ -205,7 +205,7 @@ Arquivo para exportar todos os utilitários centralizados.
 
 ## ⚡ FASE CORE — Testes
 
-### - [ ] **TCORE-017 — Criar `tests/core/context.test.ts`**
+### - [x] **TCORE-017 — Criar `tests/core/context.test.ts`**
 
 **Descrição:**  
 Smoke test:
@@ -228,7 +228,7 @@ describe("Core Context", () => {
 
 ---
 
-### - [ ] **TCORE-018 — Criar `tests/core/errors.test.ts`**
+### - [x] **TCORE-018 — Criar `tests/core/errors.test.ts`**
 
 **Descrição:**  
 Testar imports básicos dos erros.  
@@ -239,7 +239,7 @@ Testar imports básicos dos erros.
 
 ---
 
-### - [ ] **TCORE-019 — Criar `tests/core/logger.test.ts`**
+### - [x] **TCORE-019 — Criar `tests/core/logger.test.ts`**
 
 **Descrição:**  
 Validar importação do logger sem crash.  
@@ -250,7 +250,7 @@ Validar importação do logger sem crash.
 
 ---
 
-### - [ ] **TCORE-020 — Criar `tests/core/utils.test.ts`**
+### - [x] **TCORE-020 — Criar `tests/core/utils.test.ts`**
 
 **Descrição:**  
 Smoke test dos utilitários.  

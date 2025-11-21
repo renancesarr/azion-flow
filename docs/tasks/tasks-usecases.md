@@ -17,7 +17,7 @@ Sem lógica real ainda.
 
 ## Diretório base
 
-### - [ ] **TUC-001 — Criar arquivo `src/usecases/deploy/deploy.usecase.ts`**
+### - [x] **TUC-001 — Criar arquivo `src/usecases/deploy/deploy.usecase.ts`**
 
 **Descrição:**  
 Criar classe vazia representando o caso de uso de deploy:
@@ -37,7 +37,7 @@ export class DeployUseCase {
 
 ## Steps do Deploy (somente referências)
 
-### - [ ] **TUC-002 — Criar diretório `src/usecases/deploy/steps/`**
+### - [x] **TUC-002 — Criar diretório `src/usecases/deploy/steps/`**
 
 **Descrição:**  
 Pasta já deveria existir; caso não, criar.  
@@ -48,7 +48,7 @@ Pasta já deveria existir; caso não, criar.
 
 ---
 
-### - [ ] **TUC-003 — Criar arquivo `src/usecases/deploy/steps/step.types.ts`**
+### - [x] **TUC-003 — Criar arquivo `src/usecases/deploy/steps/step.types.ts`**
 
 **Descrição:**  
 Definir interface base de step:
@@ -66,7 +66,7 @@ export interface DeployStep {
 
 ---
 
-### - [ ] **TUC-004 — Criar arquivo `src/usecases/deploy/steps/index.ts`**
+### - [x] **TUC-004 — Criar arquivo `src/usecases/deploy/steps/index.ts`**
 
 **Descrição:**  
 Exportar steps (ainda vazios).  
@@ -79,7 +79,7 @@ Exportar steps (ainda vazios).
 
 ## Tipos e Contexto do Deploy
 
-### - [ ] **TUC-005 — Criar arquivo `src/usecases/deploy/types.ts`**
+### - [x] **TUC-005 — Criar arquivo `src/usecases/deploy/types.ts`**
 
 **Descrição:**  
 Definir interfaces básicas de contexto do deploy:
@@ -96,7 +96,7 @@ export interface DeployResult {}
 
 ---
 
-### - [ ] **TUC-006 — Criar arquivo `src/usecases/deploy/deploy.factory.ts`**
+### - [x] **TUC-006 — Criar arquivo `src/usecases/deploy/deploy.factory.ts`**
 
 **Descrição:**  
 Criar função vazia para montar a cadeia de steps.
@@ -116,7 +116,7 @@ export function createDeployUseCase() {}
 
 ## Base
 
-### - [ ] **TUC-007 — Criar arquivo `src/usecases/config/config.usecase.ts`**
+### - [x] **TUC-007 — Criar arquivo `src/usecases/config/config.usecase.ts`**
 
 **Descrição:**  
 Classe base para gerenciar config local (token, defaults).
@@ -134,7 +134,7 @@ export class ConfigUseCase {
 
 ---
 
-### - [ ] **TUC-008 — Criar arquivo `src/usecases/config/types.ts`**
+### - [x] **TUC-008 — Criar arquivo `src/usecases/config/types.ts`**
 
 **Descrição:**  
 Interfaces mínimas.
@@ -153,7 +153,7 @@ export interface ConfigResult {}
 
 ## 📁 FASE USE CASES — Shared
 
-### - [ ] **TUC-009 — Criar diretório `src/usecases/shared/validators/`**
+### - [x] **TUC-009 — Criar diretório `src/usecases/shared/validators/`**
 
 **Descrição:**  
 Criar pasta para validadores usados em múltiplos usecases.  
@@ -164,7 +164,7 @@ Criar pasta para validadores usados em múltiplos usecases.
 
 ---
 
-### - [ ] **TUC-010 — Criar arquivo `src/usecases/shared/validators/basic.ts`**
+### - [x] **TUC-010 — Criar arquivo `src/usecases/shared/validators/basic.ts`**
 
 **Descrição:**  
 Arquivo contendo funções de validação vazias:
@@ -180,7 +180,7 @@ export function validate() {}
 
 ---
 
-### - [ ] **TUC-011 — Criar arquivo `src/usecases/shared/types.ts`**
+### - [x] **TUC-011 — Criar arquivo `src/usecases/shared/types.ts`**
 
 **Descrição:**  
 Interfaces compartilhadas básicas.
@@ -199,7 +199,7 @@ export interface UseCaseResult {}
 
 ## 📦 FASE USE CASES — Indexação
 
-### - [ ] **TUC-012 — Criar arquivo `src/usecases/index.ts`**
+### - [x] **TUC-012 — Criar arquivo `src/usecases/index.ts`**
 
 **Descrição:**  
 Exportar todos os usecases.  
@@ -212,7 +212,7 @@ Exportar todos os usecases.
 
 ## 🧪 FASE USE CASES — Testes
 
-### - [ ] **TUC-013 — Criar `tests/usecases/deploy.test.ts`**
+### - [x] **TUC-013 — Criar `tests/usecases/deploy.test.ts`**
 
 **Descrição:**  
 Smoke test:
@@ -236,7 +236,7 @@ describe("Deploy Use Case", () => {
 
 ---
 
-### - [ ] **TUC-014 — Criar `tests/usecases/config.test.ts`**
+### - [x] **TUC-014 — Criar `tests/usecases/config.test.ts`**
 
 **Descrição:**  
 Smoke test para ConfigUseCase.  
@@ -247,7 +247,7 @@ Smoke test para ConfigUseCase.
 
 ---
 
-### - [ ] **TUC-015 — Criar `tests/usecases/shared.test.ts`**
+### - [x] **TUC-015 — Criar `tests/usecases/shared.test.ts`**
 
 **Descrição:**  
 Smoke test global:
