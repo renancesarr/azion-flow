@@ -90,7 +90,7 @@ Sem animação, apenas estados estáticos.
 
 ---
 
-### - [ ] **TUX-007 — Integrar loading com orchestrator**
+### - [x] **TUX-007 — Integrar loading com orchestrator**
 
 **Arquivo:** `deploy.orchestrator.ts`  
 **Descrição:**
