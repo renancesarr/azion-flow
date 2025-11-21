@@ -17,7 +17,7 @@ As tasks abaixo são extremamente atômicas.
 
 ## ⚡ FASE 1 — Definir Pipeline Oficial do Deploy
 
-### - [ ] **TDEP-001 — Criar arquivo `src/usecases/deploy/pipeline.ts`**
+### - [x] **TDEP-001 — Criar arquivo `src/usecases/deploy/pipeline.ts`**
 
 **Descrição:**  
 Criar arquivo que exporta a SEQUÊNCIA oficial dos steps, exemplo vazio:
@@ -34,7 +34,7 @@ export const DEPLOY_PIPELINE: (new () => DeployStepBase)[] = [];
 
 ---
 
-### - [ ] **TDEP-002 — Preencher pipeline com steps (sem lógica interna)**
+### - [x] **TDEP-002 — Preencher pipeline com steps (sem lógica interna)**
 
 **Descrição:**  
 Adicionar no array a lista dos steps na ordem correta.  
@@ -45,7 +45,7 @@ Ainda sem parâmetros e sem lógica de execução.
 
 ## ⚡ FASE 2 — Orquestrador do Deploy
 
-### - [ ] **TDEP-003 — Criar arquivo `src/usecases/deploy/deploy.orchestrator.ts`**
+### - [x] **TDEP-003 — Criar arquivo `src/usecases/deploy/deploy.orchestrator.ts`**
 
 **Descrição:**  
 Criar classe vazia responsável por:
@@ -68,7 +68,7 @@ export class DeployOrchestrator {
 
 ---
 
-### - [ ] **TDEP-004 — Conectar factory → orchestrator**
+### - [x] **TDEP-004 — Conectar factory → orchestrator**
 
 **Arquivo:** `deploy.factory.ts`  
 **Descrição:**  
@@ -81,7 +81,7 @@ Adicionar instância do orchestrator (ainda sem lógica).
 
 > Aqui finalmente damos vida ao fluxo do deploy, mas ainda sem lógica específica por step.
 
-### - [ ] **TDEP-005 — Implementar esqueleto de execução no orchestrator**
+### - [x] **TDEP-005 — Implementar esqueleto de execução no orchestrator**
 
 **Descrição:**  
 Adicionar o loop de steps (vazio):
@@ -100,7 +100,7 @@ Sem erros, sem logs, sem lógica interna.
 
 ---
 
-### - [ ] **TDEP-006 — Criar estrutura inicial do `context` de deploy**
+### - [x] **TDEP-006 — Criar estrutura inicial do `context` de deploy**
 
 **Arquivo:** `src/usecases/deploy/context.ts`  
 **Descrição:**  

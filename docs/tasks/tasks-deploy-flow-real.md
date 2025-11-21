@@ -12,7 +12,7 @@ As tasks abaixo são **cirúrgicas e altamente atômicas**.
 
 ## 🔥 FASE 1 — Orchestrator REAL
 
-### - [ ] **TDEP-REAL-001 — Implementar criação REAL do DeployOrchestrator**
+### - [x] **TDEP-REAL-001 — Implementar criação REAL do DeployOrchestrator**
 
 **Arquivo:** `src/usecases/deploy/deploy.orchestrator.ts`  
 **Descrição:**  
@@ -30,7 +30,7 @@ Implementar construtor real:
 
 ---
 
-### - [ ] **TDEP-REAL-002 — Implementar método run() REAL (loop sequencial)**
+### - [x] **TDEP-REAL-002 — Implementar método run() REAL (loop sequencial)**
 
 **Descrição:**  
 Implementação REAL do loop:
@@ -49,7 +49,7 @@ for (const Step of this.steps) {
 
 ---
 
-### - [ ] **TDEP-REAL-003 — Implementar captura de erros (error boundary por step)**
+### - [x] **TDEP-REAL-003 — Implementar captura de erros (error boundary por step)**
 
 **Descrição:**  
 Adicionar:
@@ -67,7 +67,7 @@ Adicionar:
 
 ## 🧩 FASE 2 — Pipeline REAL
 
-### - [ ] **TDEP-REAL-004 — Atualizar DEPLOY_PIPELINE com steps reais**
+### - [x] **TDEP-REAL-004 — Atualizar DEPLOY_PIPELINE com steps reais**
 
 **Arquivo:** `src/usecases/deploy/pipeline.ts`  
 **Descrição:**  
@@ -91,7 +91,7 @@ Adicionar steps reais na ordem precisa:
 
 ---
 
-### - [ ] **TDEP-REAL-005 — Validar ordem do pipeline (teste dedicado)**
+### - [x] **TDEP-REAL-005 — Validar ordem do pipeline (teste dedicado)**
 
 **Arquivo:** `tests/usecases/pipeline-order.test.ts`  
 **Descrição:**  
@@ -102,7 +102,7 @@ Evita bugs de regressão.
 
 ## 🧠 FASE 3 — Contexto REAL
 
-### - [ ] **TDEP-REAL-006 — Implementar merge de contexto entre steps**
+### - [x] **TDEP-REAL-006 — Implementar merge de contexto entre steps**
 
 **Arquivo:** `deploy.orchestrator.ts`  
 **Descrição:**  
@@ -121,7 +121,7 @@ private mergeContext(partial) {
 
 ---
 
-### - [ ] **TDEP-REAL-007 — Exportar resultado final do deploy**
+### - [x] **TDEP-REAL-007 — Exportar resultado final do deploy**
 
 **Arquivo:** `deploy.usecase.ts`  
 **Descrição:**  
@@ -143,7 +143,7 @@ return {
 
 ## 📝 FASE 4 — Logs e Observabilidade (mínimo necessário)
 
-### - [ ] **TDEP-REAL-008 — Implementar log por step (prefixado)**
+### - [x] **TDEP-REAL-008 — Implementar log por step (prefixado)**
 
 **Arquivo:** `deploy.orchestrator.ts`  
 **Descrição:**  
@@ -162,7 +162,7 @@ private log(msg: string) {
 
 ---
 
-### - [ ] **TDEP-REAL-009 — Registrar tempo de execução por step**
+### - [x] **TDEP-REAL-009 — Registrar tempo de execução por step**
 
 **Descrição:**
 
@@ -177,7 +177,7 @@ private log(msg: string) {
 
 ## 📦 FASE 5 — Integração REAL com a CLI
 
-### - [ ] **TDEP-REAL-010 — Implementar comando CLI “deploy” REAL**
+### - [x] **TDEP-REAL-010 — Implementar comando CLI “deploy” REAL**
 
 **Arquivo:** `src/cli/commands/deploy.ts`  
 **Descrição:**
@@ -194,7 +194,7 @@ private log(msg: string) {
 
 ---
 
-### - [ ] **TDEP-REAL-011 — Implementar flags da CLI**
+### - [x] **TDEP-REAL-011 — Implementar flags da CLI**
 
 **Arquivo:** `deploy.ts`  
 **Descrição:**  
