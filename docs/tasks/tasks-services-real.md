@@ -8,7 +8,7 @@ Cada task é **cirúrgica**, **granular** e foca em completar o comportamento ce
 
 ## 📦 FASE 1 — BucketService (Domínio de Storage)
 
-### - [ ] **TSERVREAL-001 — Implementar validação de nome de bucket**
+### - [x] **TSERVREAL-001 — Implementar validação de nome de bucket**
 
 **Arquivo:** `domain/bucket/bucket.service.ts`  
 Regras mínimas:
@@ -24,7 +24,7 @@ Regras mínimas:
 
 ---
 
-### - [ ] **TSERVREAL-002 — Implementar método real listBuckets()**
+### - [x] **TSERVREAL-002 — Implementar método real listBuckets()**
 
 **Descrição:**
 
@@ -37,7 +37,7 @@ Regras mínimas:
 
 ---
 
-### - [ ] **TSERVREAL-003 — Implementar ensureBucket() real**
+### - [x] **TSERVREAL-003 — Implementar ensureBucket() real**
 
 **Descrição:**
 
@@ -67,7 +67,7 @@ Regras mínimas:
 
 ---
 
-### - [ ] **TSERVREAL-005 — Implementar algoritmo simples de upload**
+### - [x] **TSERVREAL-005 — Implementar algoritmo simples de upload**
 
 **Descrição:**
 
@@ -94,7 +94,7 @@ Testes:
 
 ## ⚙️ FASE 3 — ApplicationService
 
-### - [ ] **TSERVREAL-007 — Implementar listApplications() real**
+### - [x] **TSERVREAL-007 — Implementar listApplications() real**
 
 **Descrição:**
 
@@ -107,7 +107,7 @@ Testes:
 
 ---
 
-### - [ ] **TSERVREAL-008 — Implementar selectApplication(criteria)**
+### - [x] **TSERVREAL-008 — Implementar selectApplication(criteria)**
 
 **Descrição:**  
 Critérios:
@@ -123,7 +123,7 @@ Critérios:
 
 ## 🌍 FASE 4 — DomainConfigService
 
-### - [ ] **TSERVREAL-009 — Implementar getConfig(domainId) real**
+### - [x] **TSERVREAL-009 — Implementar getConfig(domainId) real**
 
 **Descrição:**
 
@@ -135,7 +135,7 @@ Critérios:
 
 ---
 
-### - [ ] **TSERVREAL-010 — Implementar ensureDomain(domainName) real**
+### - [x] **TSERVREAL-010 — Implementar ensureDomain(domainName) real**
 
 **Descrição:**
 
@@ -151,7 +151,7 @@ Critérios:
 
 ## 💾 FASE 5 — ConfigStorageService
 
-### - [ ] **TSERVREAL-011 — Implementar loadConfig() com validações**
+### - [x] **TSERVREAL-011 — Implementar loadConfig() com validações**
 
 **Descrição:**
 
@@ -165,7 +165,7 @@ Critérios:
 
 ---
 
-### - [ ] **TSERVREAL-012 — Implementar saveConfig() real**
+### - [x] **TSERVREAL-012 — Implementar saveConfig() real**
 
 **Descrição:**
 

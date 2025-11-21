@@ -16,7 +16,7 @@ Cada task é **atômica**, **cirúrgica** e segue a arquitetura definida.
 
 ## 🏁 FASE 1 — Preparação do Contexto
 
-### - [ ] **TSTEPREAL-001 — Implementar normalização do contexto inicial**
+### - [x] **TSTEPREAL-001 — Implementar normalização do contexto inicial**
 
 **Arquivo:** `src/usecases/deploy/context.ts`  
 **Descrição:**
@@ -32,7 +32,7 @@ Cada task é **atômica**, **cirúrgica** e segue a arquitetura definida.
 
 ## 🏠 FASE 2 — Steps de Ambiente Local
 
-### - [ ] **TSTEPREAL-002 — Implementar ValidateLocalEnvStep REAL**
+### - [x] **TSTEPREAL-002 — Implementar ValidateLocalEnvStep REAL**
 
 **Arquivo:** `validate-local-env.step.ts`  
 **Descrição REAL:**
@@ -48,7 +48,7 @@ Cada task é **atômica**, **cirúrgica** e segue a arquitetura definida.
 
 ---
 
-### - [ ] **TSTEPREAL-003 — Implementar ReadConfigStep REAL**
+### - [x] **TSTEPREAL-003 — Implementar ReadConfigStep REAL**
 
 **Arquivo:** `read-config.step.ts`  
 **Descrição REAL:**
@@ -63,7 +63,7 @@ Cada task é **atômica**, **cirúrgica** e segue a arquitetura definida.
 
 ---
 
-### - [ ] **TSTEPREAL-004 — Implementar ResolvePathsStep REAL**
+### - [x] **TSTEPREAL-004 — Implementar ResolvePathsStep REAL**
 
 **Arquivo:** `resolve-paths.step.ts`  
 **Descrição REAL:**
@@ -80,7 +80,7 @@ Cada task é **atômica**, **cirúrgica** e segue a arquitetura definida.
 
 ## ☁️ FASE 3 — Steps de Bucket / Storage
 
-### - [ ] **TSTEPREAL-005 — Implementar ListBucketsStep REAL**
+### - [x] **TSTEPREAL-005 — Implementar ListBucketsStep REAL**
 
 **Arquivo:** `list-buckets.step.ts`  
 **Descrição REAL:**
@@ -93,7 +93,7 @@ Cada task é **atômica**, **cirúrgica** e segue a arquitetura definida.
 
 ---
 
-### - [ ] **TSTEPREAL-006 — Implementar EnsureBucketStep REAL**
+### - [x] **TSTEPREAL-006 — Implementar EnsureBucketStep REAL**
 
 **Arquivo:** `ensure-bucket.step.ts`  
 **Descrição REAL:**
@@ -109,7 +109,7 @@ Cada task é **atômica**, **cirúrgica** e segue a arquitetura definida.
 
 ---
 
-### - [ ] **TSTEPREAL-007 — Implementar SyncFilesStep REAL**
+### - [x] **TSTEPREAL-007 — Implementar SyncFilesStep REAL**
 
 **Arquivo:** `sync-files.step.ts`  
 **Descrição REAL:**
@@ -125,7 +125,7 @@ Cada task é **atômica**, **cirúrgica** e segue a arquitetura definida.
 
 ## ⚙️ FASE 4 — Steps de Application
 
-### - [ ] **TSTEPREAL-008 — Implementar ListApplicationsStep REAL**
+### - [x] **TSTEPREAL-008 — Implementar ListApplicationsStep REAL**
 
 **Arquivo:** `list-applications.step.ts`  
 **Descrição REAL:**
@@ -138,7 +138,7 @@ Cada task é **atômica**, **cirúrgica** e segue a arquitetura definida.
 
 ---
 
-### - [ ] **TSTEPREAL-009 — Implementar SelectApplicationStep REAL**
+### - [x] **TSTEPREAL-009 — Implementar SelectApplicationStep REAL**
 
 **Arquivo:** `select-application.step.ts`  
 **Descrição REAL:**
@@ -156,7 +156,7 @@ Cada task é **atômica**, **cirúrgica** e segue a arquitetura definida.
 
 ## 🌍 FASE 5 — Steps de Domain Config
 
-### - [ ] **TSTEPREAL-010 — Implementar GetDomainConfigStep REAL**
+### - [x] **TSTEPREAL-010 — Implementar GetDomainConfigStep REAL**
 
 **Arquivo:** `get-domain-config.step.ts`  
 **Descrição REAL:**
@@ -171,7 +171,7 @@ Cada task é **atômica**, **cirúrgica** e segue a arquitetura definida.
 
 ---
 
-### - [ ] **TSTEPREAL-011 — Implementar EnsureDomainStep REAL**
+### - [x] **TSTEPREAL-011 — Implementar EnsureDomainStep REAL**
 
 **Arquivo:** `ensure-domain.step.ts`  
 **Descrição REAL:**
@@ -188,7 +188,7 @@ Cada task é **atômica**, **cirúrgica** e segue a arquitetura definida.
 
 ## 📊 FASE 6 — Step de Relatório Final
 
-### - [ ] **TSTEPREAL-012 — Implementar GenerateReportStep REAL**
+### - [x] **TSTEPREAL-012 — Implementar GenerateReportStep REAL**
 
 **Arquivo:** `generate-report.step.ts`  
 **Descrição REAL:**
@@ -206,7 +206,7 @@ Cada task é **atômica**, **cirúrgica** e segue a arquitetura definida.
 
 ## 🔄 FASE 7 — Testes Integrados dos Steps Reais
 
-### - [ ] **TSTEPREAL-013 — Teste integrado buckets**
+### - [x] **TSTEPREAL-013 — Teste integrado buckets**
 
 Arquivo: `tests/steps/bucket-flow.real.test.ts`  
 Fluxo:
@@ -217,19 +217,19 @@ Fluxo:
 
 ---
 
-### - [ ] **TSTEPREAL-014 — Teste integrado applications**
+### - [x] **TSTEPREAL-014 — Teste integrado applications**
 
 Arquivo: `tests/steps/application-flow.real.test.ts`
 
 ---
 
-### - [ ] **TSTEPREAL-015 — Teste integrado domain**
+### - [x] **TSTEPREAL-015 — Teste integrado domain**
 
 Arquivo: `tests/steps/domain-flow.real.test.ts`
 
 ---
 
-### - [ ] **TSTEPREAL-016 — Teste integrado relatório**
+### - [x] **TSTEPREAL-016 — Teste integrado relatório**
 
 Arquivo: `tests/steps/report-flow.real.test.ts`
 

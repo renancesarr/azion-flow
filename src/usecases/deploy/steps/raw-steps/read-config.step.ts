@@ -1,7 +1,18 @@
 import { DeployStepBase } from "../step.base";
 
 export class ReadConfigStep extends DeployStepBase {
+  constructor(private readonly services: any = {}, private readonly providers: any = {}) {
+    super();
+    void providers;
+  }
+
   async execute(context: any): Promise<void> {
-    void context;
+    const storage = this.services?.configStorageService;
+    const config = storage?.loadConfig ? await storage.loadConfig() : null;
+    if (config && typeof config === "object") {
+      Object.assign(context, config);
+      context.report = context.report ?? {};
+      context.report.config = config;
+    }
   }
 }
