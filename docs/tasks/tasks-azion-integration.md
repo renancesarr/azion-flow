@@ -7,7 +7,7 @@ As tasks são **atômicas**, **granulares** e seguem a ordem real de desenvolvim
 
 ## 🌐 FASE 1 — Infraestrutura de HTTP e Autenticação
 
-### - [ ] **TAZ-001 — Criar constantes de endpoints da API**
+### - [x] **TAZ-001 — Criar constantes de endpoints da API**
 
 **Arquivo:** `src/providers/azion/http/endpoints.ts`  
 **Descrição:** Criar arquivo para armazenar endpoints base (sem paths ainda).  
@@ -17,7 +17,7 @@ As tasks são **atômicas**, **granulares** e seguem a ordem real de desenvolvim
 
 ---
 
-### - [ ] **TAZ-002 — Criar classe de error HTTP da Azion**
+### - [x] **TAZ-002 — Criar classe de error HTTP da Azion**
 
 **Arquivo:** `src/providers/azion/http/http-error.ts`  
 **Descrição:**  
@@ -28,7 +28,7 @@ Classe vazia extendendo BaseError.
 
 ---
 
-### - [ ] **TAZ-003 — Adicionar método `request()` na classe `AzionHttpClient`**
+### - [x] **TAZ-003 — Adicionar método `request()` na classe `AzionHttpClient`**
 
 **Arquivo:** `src/providers/azion/http/http-client.ts`  
 **Descrição:**  
@@ -44,7 +44,7 @@ async request(req: HttpRequest): Promise<HttpResponse> {}
 
 ---
 
-### - [ ] **TAZ-004 — Adicionar suporte a token no cliente HTTP**
+### - [x] **TAZ-004 — Adicionar suporte a token no cliente HTTP**
 
 **Descrição:**  
 Adicionar campo `token?: string` (somente atributo, sem lógica).  
@@ -58,7 +58,7 @@ Adicionar campo `token?: string` (somente atributo, sem lógica).
 
 ## ☁️ FASE 2 — Integração com Edge Storage (Buckets)
 
-### - [ ] **TAZ-005 — Criar arquivo de mapeamento de bucket (DTO)**
+### - [x] **TAZ-005 — Criar arquivo de mapeamento de bucket (DTO)**
 
 **Arquivo:** `src/providers/azion/storage/bucket.dto.ts`  
 **Descrição:**  
@@ -69,7 +69,7 @@ Criar interface vazia para mapear response da Azion.
 
 ---
 
-### - [ ] **TAZ-006 — Implementar método `listBuckets()` no StorageProvider (assinatura vazia)**
+### - [x] **TAZ-006 — Implementar método `listBuckets()` no StorageProvider (assinatura vazia)**
 
 **Arquivo:** `src/providers/azion/azion.storage.ts`  
 **Descrição:**  
@@ -85,7 +85,7 @@ async listBuckets(): Promise<any> {}
 
 ---
 
-### - [ ] **TAZ-007 — Implementar método `ensureBucket()` (assinatura vazia)**
+### - [x] **TAZ-007 — Implementar método `ensureBucket()` (assinatura vazia)**
 
 **Descrição:**  
 Adicionar:
@@ -100,7 +100,7 @@ async ensureBucket(name: string): Promise<any> {}
 
 ---
 
-### - [ ] **TAZ-008 — Integrar provider de Bucket ao domínio**
+### - [x] **TAZ-008 — Integrar provider de Bucket ao domínio**
 
 **Arquivo:** `src/domain/bucket/bucket.service.ts`  
 **Descrição:**  
@@ -113,7 +113,7 @@ Adicionar construtor vazio que recebe provider.
 
 ## ⚙️ FASE 3 — Integração com Applications
 
-### - [ ] **TAZ-009 — Criar DTO para Application**
+### - [x] **TAZ-009 — Criar DTO para Application**
 
 **Arquivo:** `src/providers/azion/application/application.dto.ts`  
 **Descrição:**  
@@ -124,7 +124,7 @@ Criar interface vazia.
 
 ---
 
-### - [ ] **TAZ-010 — Criar método `listApplications()` (assinatura vazia)**
+### - [x] **TAZ-010 — Criar método `listApplications()` (assinatura vazia)**
 
 **Arquivo:** `src/providers/azion/azion.application.ts`  
 **Descrição:**  
@@ -138,7 +138,7 @@ async listApplications(): Promise<any> {}
 
 ---
 
-### - [ ] **TAZ-011 — Integrar provider Application ao domínio**
+### - [x] **TAZ-011 — Integrar provider Application ao domínio**
 
 **Arquivo:** `src/domain/application/application.service.ts`  
 **Descrição:**  
@@ -151,7 +151,7 @@ Adicionar construtor vazio com provider.
 
 ## 🌍 FASE 4 — Integração com Domain Config
 
-### - [ ] **TAZ-012 — Criar DTO para Domain Config**
+### - [x] **TAZ-012 — Criar DTO para Domain Config**
 
 **Arquivo:** `src/providers/azion/domain/domain.dto.ts`  
 **Descrição:** Interface vazia.  
@@ -159,7 +159,7 @@ Adicionar construtor vazio com provider.
 
 ---
 
-### - [ ] **TAZ-013 — Criar método `getDomainConfig()` (assinatura vazia)**
+### - [x] **TAZ-013 — Criar método `getDomainConfig()` (assinatura vazia)**
 
 **Arquivo:** `src/providers/azion/azion.domain.ts`  
 **Descrição:**  
@@ -173,7 +173,7 @@ async getDomainConfig(domainId: string): Promise<any> {}
 
 ---
 
-### - [ ] **TAZ-014 — Integrar DomainConfigProvider ao domínio**
+### - [x] **TAZ-014 — Integrar DomainConfigProvider ao domínio**
 
 **Arquivo:** `src/domain/domain-config/domain-config.service.ts`  
 **Descrição:**  
@@ -186,21 +186,21 @@ Adicionar construtor com provider.
 
 ## 💾 FASE 5 — Integração com File Sync (Local vs Azion)
 
-### - [ ] **TAZ-015 — Criar DTO para FileSync**
+### - [x] **TAZ-015 — Criar DTO para FileSync**
 
 **Arquivo:** `src/providers/filesystem/filesync.dto.ts`  
 **Dependência:** TPROV-008
 
 ---
 
-### - [ ] **TAZ-016 — Criar método `listLocalFiles()`/`readFile()` (assinaturas vazias)**
+### - [x] **TAZ-016 — Criar método `listLocalFiles()`/`readFile()` (assinaturas vazias)**
 
 **Arquivo:** `src/providers/filesystem/nodefs.ts`  
 **Dependência:** TPROV-008
 
 ---
 
-### - [ ] **TAZ-017 — Integrar FileSyncProvider ao domínio**
+### - [x] **TAZ-017 — Integrar FileSyncProvider ao domínio**
 
 **Arquivo:** `src/domain/filesync/file-sync.service.ts`  
 **Dependência:** TDOM-004, TAZ-016
@@ -211,7 +211,7 @@ Adicionar construtor com provider.
 
 ## 🔗 FASE 6 — Conectar Providers → UseCase Deploy
 
-### - [ ] **TAZ-018 — Atualizar `createDeployUseCase()`**
+### - [x] **TAZ-018 — Atualizar `createDeployUseCase()`**
 
 **Arquivo:** `src/usecases/deploy/deploy.factory.ts`  
 **Descrição:**  
@@ -221,7 +221,7 @@ Sem lógica de flow.
 
 ---
 
-### - [ ] **TAZ-019 — Atualizar `DeployUseCase.execute()`**
+### - [x] **TAZ-019 — Atualizar `DeployUseCase.execute()`**
 
 **Descrição:**  
 Aceitar steps, services e providers via construtor (sem lógica).  
@@ -233,7 +233,7 @@ Aceitar steps, services e providers via construtor (sem lógica).
 
 ## 🧪 FASE 7 — Testes de Integração Inicial (sem API real)
 
-### - [ ] **TAZ-020 — Criar `tests/integration/azion-client.test.ts`**
+### - [x] **TAZ-020 — Criar `tests/integration/azion-client.test.ts`**
 
 **Descrição:**  
 Smoke test para garantir que instância do cliente HTTP carrega.  
@@ -241,7 +241,7 @@ Smoke test para garantir que instância do cliente HTTP carrega.
 
 ---
 
-### - [ ] **TAZ-021 — Criar `tests/integration/deploy-factory.test.ts`**
+### - [x] **TAZ-021 — Criar `tests/integration/deploy-factory.test.ts`**
 
 **Descrição:**  
 Testar se a factory monta corretamente as dependências.  
