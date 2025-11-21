@@ -9,7 +9,7 @@ Cada task é **atômica**, **precisa** e focada em criar uma CLI agradável para
 
 ## 🎨 FASE 1 — Base de Estilo e Utilidades de Output
 
-### - [ ] **TUX-001 — Criar utilitário de cores**
+### - [x] **TUX-001 — Criar utilitário de cores**
 
 **Arquivo:** `src/cli/utils/colors.ts`  
 **Descrição:**  
@@ -24,7 +24,7 @@ Criar helpers simples usando ANSI escapes, sem dependências externas:
 
 ---
 
-### - [ ] **TUX-002 — Criar renderer básico de seções**
+### - [x] **TUX-002 — Criar renderer básico de seções**
 
 **Arquivo:** `src/cli/utils/section.ts`  
 **Descrição:**  
@@ -37,7 +37,7 @@ Criar helpers:
 
 ---
 
-### - [ ] **TUX-003 — Criar função de render de tabelas simples**
+### - [x] **TUX-003 — Criar função de render de tabelas simples**
 
 **Arquivo:** `src/cli/utils/table.ts`  
 **Descrição:**  
@@ -48,7 +48,7 @@ Tabela sem libs externas, alinhamento básico.
 
 ## 🚀 FASE 2 — Banner e Identidade
 
-### - [ ] **TUX-004 — Criar banner do azion-flow**
+### - [x] **TUX-004 — Criar banner do azion-flow**
 
 **Arquivo:** `src/cli/banner.ts`  
 **Descrição:**  
@@ -63,7 +63,7 @@ azion-flow • static deploy on edge, simplified
 
 ---
 
-### - [ ] **TUX-005 — Mostrar banner em todos os comandos**
+### - [x] **TUX-005 — Mostrar banner em todos os comandos**
 
 **Arquivo:** `src/cli/commands/*.ts`  
 **Descrição:**  
@@ -74,7 +74,7 @@ Adicionar banner antes de qualquer execução.
 
 ## 📦 FASE 3 — UX do Comando “deploy”
 
-### - [ ] **TUX-006 — Criar loading minimalista para cada step**
+### - [x] **TUX-006 — Criar loading minimalista para cada step**
 
 **Arquivo:** `src/cli/utils/loading.ts`  
 **Descrição:**  
@@ -102,7 +102,7 @@ Sem animação, apenas estados estáticos.
 
 ---
 
-### - [ ] **TUX-008 — Criar mapeamento step → nome amigável**
+### - [x] **TUX-008 — Criar mapeamento step → nome amigável**
 
 **Arquivo:** `src/cli/utils/step-labels.ts`  
 **Descrição:**  
