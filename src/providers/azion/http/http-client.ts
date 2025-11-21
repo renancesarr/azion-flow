@@ -13,7 +13,7 @@ export class AzionHttpClient {
       ...(this.token ? { Authorization: `Token ${this.token}` } : {})
     };
 
-    const response = await fetch(url, {
+    const response: any = await (globalThis as any).fetch(url, {
       method: req.method ?? "GET",
       headers,
       body: req.body ? JSON.stringify(req.body) : undefined
@@ -32,11 +32,14 @@ export class AzionHttpClient {
     };
   }
 
-  private async parseBody(res: Response): Promise<unknown> {
-    const contentType = res.headers.get("content-type") ?? "";
-    if (contentType.includes("application/json")) {
+  private async parseBody(res: any): Promise<unknown> {
+    const contentType = res.headers?.get?.("content-type") ?? "";
+    if (contentType.includes("application/json") && typeof res.json === "function") {
       return res.json();
     }
-    return res.text();
+    if (typeof res.text === "function") {
+      return res.text();
+    }
+    return null;
   }
 }
