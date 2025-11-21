@@ -114,7 +114,7 @@ Exemplo:
 
 ---
 
-### - [ ] **TUX-009 — Criar “deploy summary” final**
+### - [x] **TUX-009 — Criar “deploy summary” final**
 
 **Arquivo:** `src/cli/commands/deploy.ts`  
 **Descrição:**  
@@ -131,7 +131,7 @@ Tabela contendo:
 
 ## 🔧 FASE 4 — Flags, Output e Formatos Avançados
 
-### - [ ] **TUX-010 — Implementar flag `--json`**
+### - [x] **TUX-010 — Implementar flag `--json`**
 
 **Descrição:**  
 Retorna JSON puro sem estilização.  
@@ -139,7 +139,7 @@ Retorna JSON puro sem estilização.
 
 ---
 
-### - [ ] **TUX-011 — Implementar flag `--silent`**
+### - [x] **TUX-011 — Implementar flag `--silent`**
 
 **Descrição:**  
 Não imprime steps, somente resultado final.  
@@ -155,7 +155,7 @@ Mostra logs internos do orchestrator.
 
 ---
 
-### - [ ] **TUX-013 — Implementar flag `--no-color`**
+### - [x] **TUX-013 — Implementar flag `--no-color`**
 
 **Descrição:**  
 Desativa cores.  

@@ -7,13 +7,15 @@ interface DeployFlags {
   json: boolean;
   debug: boolean;
   noColor: boolean;
+  silent: boolean;
 }
 
 function parseFlags(args: string[]): DeployFlags {
   return {
     json: args.includes("--json"),
     debug: args.includes("--debug"),
-    noColor: args.includes("--no-color")
+    noColor: args.includes("--no-color"),
+    silent: args.includes("--silent")
   };
 }
 
@@ -25,12 +27,18 @@ export async function deployCommand(args: string[]): Promise<void> {
   if (flags.noColor) {
     process.env.NO_COLOR = "1";
   }
+  if (flags.noColor) {
+    process.env.NO_COLOR = "1";
+  }
 
-  const stepLogger = {
-    onStart: (step: string) => console.log(renderLoadingStart(labelForStep(step))),
-    onSuccess: (step: string) => console.log(renderLoadingSuccess(labelForStep(step))),
-    onError: (step: string, err: unknown) => console.log(renderLoadingError(`${labelForStep(step)} (${(err as any)?.message ?? err})`))
-  };
+  const stepLogger = flags.silent
+    ? undefined
+    : {
+        onStart: (step: string) => console.log(renderLoadingStart(labelForStep(step))),
+        onSuccess: (step: string) => console.log(renderLoadingSuccess(labelForStep(step))),
+        onError: (step: string, err: unknown) =>
+          console.log(renderLoadingError(`${labelForStep(step)} (${(err as any)?.message ?? err})`))
+      };
 
   const usecase = createDeployUseCase({}, {}, stepLogger);
   const result = await usecase.execute({});
