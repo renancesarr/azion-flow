@@ -213,7 +213,7 @@ Adicionar suporte:
 
 ## 🌎 FASE 6 — Testes Integrados REAIS (padrão ouro)
 
-### - [ ] **TDEP-REAL-012 — Teste integrado REAl com mocks dos providers**
+### - [x] **TDEP-REAL-012 — Teste integrado REAl com mocks dos providers**
 
 Arquivo: `tests/integration/deploy.real.test.ts`  
 Fluxo completo:
@@ -228,13 +228,13 @@ Fluxo completo:
 
 ---
 
-### - [ ] **TDEP-REAL-013 — Teste de fallback (quando faltam config, paths ou bucket)**
+### - [x] **TDEP-REAL-013 — Teste de fallback (quando faltam config, paths ou bucket)**
 
 Arquivo: `tests/integration/deploy.fallback.test.ts`
 
 ---
 
-### - [ ] **TDEP-REAL-014 — Teste de erro (simular provider quebrado)**
+### - [x] **TDEP-REAL-014 — Teste de erro (simular provider quebrado)**
 
 Arquivo: `tests/integration/deploy.error.test.ts`
 
