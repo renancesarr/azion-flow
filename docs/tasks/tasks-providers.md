@@ -9,7 +9,7 @@ As tasks abaixo seguem atomicidade máxima.
 
 ## 🌐 FASE PROVIDERS — HTTP Base (Azion HTTP Client)
 
-### - [ ] **TPROV-001 — Criar diretório `src/providers/azion/http/`**
+### - [x] **TPROV-001 — Criar diretório `src/providers/azion/http/`**
 
 **Descrição:**  
 Criar pasta exclusiva para o cliente HTTP da Azion.  
@@ -20,7 +20,7 @@ Criar pasta exclusiva para o cliente HTTP da Azion.
 
 ---
 
-### - [ ] **TPROV-002 — Criar arquivo `src/providers/azion/http/http-client.ts`**
+### - [x] **TPROV-002 — Criar arquivo `src/providers/azion/http/http-client.ts`**
 
 **Descrição:**  
 Criar classe vazia:
@@ -37,7 +37,7 @@ Será o cliente HTTP básico da Azion.
 
 ---
 
-### - [ ] **TPROV-003 — Criar arquivo `src/providers/azion/http/types.ts`**
+### - [x] **TPROV-003 — Criar arquivo `src/providers/azion/http/types.ts`**
 
 **Descrição:**  
 Adicionar interfaces vazias para request/response.
@@ -54,7 +54,7 @@ export interface HttpResponse {}
 
 ---
 
-### - [ ] **TPROV-004 — Criar `src/providers/azion/http/index.ts`**
+### - [x] **TPROV-004 — Criar `src/providers/azion/http/index.ts`**
 
 **Descrição:**  
 Exportar componentes HTTP do provider.  
@@ -69,7 +69,7 @@ Exportar componentes HTTP do provider.
 
 ## 📦 FASE PROVIDERS — Azion Storage
 
-### - [ ] **TPROV-005 — Criar arquivo `src/providers/azion/azion.storage.ts`**
+### - [x] **TPROV-005 — Criar arquivo `src/providers/azion/azion.storage.ts`**
 
 **Descrição:**  
 Criar classe vazia que futuramente enviará operações de Bucket.
@@ -87,7 +87,7 @@ export class AzionStorageProvider {}
 
 ## 📦 FASE PROVIDERS — Azion Application
 
-### - [ ] **TPROV-006 — Criar arquivo `src/providers/azion/azion.application.ts`**
+### - [x] **TPROV-006 — Criar arquivo `src/providers/azion/azion.application.ts`**
 
 **Descrição:**  
 Classe vazia representando provedor de aplicações.
@@ -105,7 +105,7 @@ export class AzionApplicationProvider {}
 
 ## 🌐 FASE PROVIDERS — Azion Domain
 
-### - [ ] **TPROV-007 — Criar arquivo `src/providers/azion/azion.domain.ts`**
+### - [x] **TPROV-007 — Criar arquivo `src/providers/azion/azion.domain.ts`**
 
 **Descrição:**  
 Classe vazia representando provedor de configurações de domínio.
@@ -123,7 +123,7 @@ export class AzionDomainProvider {}
 
 ## 📁 FASE PROVIDERS — Filesystem (FS)
 
-### - [ ] **TPROV-008 — Criar arquivo `src/providers/filesystem/nodefs.ts`**
+### - [x] **TPROV-008 — Criar arquivo `src/providers/filesystem/nodefs.ts`**
 
 **Descrição:**  
 Criar provider básico de FS com estrutura vazia.
@@ -143,7 +143,7 @@ export class NodeFileSystemProvider {}
 
 ## ⚙️ FASE PROVIDERS — Config (Persistência de Config Local)
 
-### - [ ] **TPROV-009 — Criar arquivo `src/providers/config/file-config.ts`**
+### - [x] **TPROV-009 — Criar arquivo `src/providers/config/file-config.ts`**
 
 **Descrição:**  
 Criar provider de configuração baseado em arquivo local.
@@ -161,7 +161,7 @@ export class FileConfigProvider {}
 
 ## 🧱 FASE PROVIDERS — Tipos Globais de Providers
 
-### - [ ] **TPROV-010 — Criar arquivo `src/providers/types.ts`**
+### - [x] **TPROV-010 — Criar arquivo `src/providers/types.ts`**
 
 **Descrição:**  
 Criar interfaces mínimas para padronizar providers.
@@ -177,7 +177,7 @@ export interface Provider {}
 
 ---
 
-### - [ ] **TPROV-011 — Criar `src/providers/index.ts`**
+### - [x] **TPROV-011 — Criar `src/providers/index.ts`**
 
 **Descrição:**  
 Arquivo exportador central.  
@@ -190,7 +190,7 @@ Arquivo exportador central.
 
 ## 🧪 FASE PROVIDERS — Testes
 
-### - [ ] **TPROV-012 — Criar `tests/providers/http.test.ts`**
+### - [x] **TPROV-012 — Criar `tests/providers/http.test.ts`**
 
 **Descrição:**  
 Smoke test básico:
@@ -213,7 +213,7 @@ describe("Azion HTTP Provider", () => {
 
 ---
 
-### - [ ] **TPROV-013 — Criar `tests/providers/storage.test.ts`**
+### - [x] **TPROV-013 — Criar `tests/providers/storage.test.ts`**
 
 **Descrição:**  
 Smoke test para storage provider.  
@@ -224,7 +224,7 @@ Smoke test para storage provider.
 
 ---
 
-### - [ ] **TPROV-014 — Criar `tests/providers/application.test.ts`**
+### - [x] **TPROV-014 — Criar `tests/providers/application.test.ts`**
 
 **Descrição:**  
 Smoke test para application provider.  
@@ -235,7 +235,7 @@ Smoke test para application provider.
 
 ---
 
-### - [ ] **TPROV-015 — Criar `tests/providers/domain.test.ts`**
+### - [x] **TPROV-015 — Criar `tests/providers/domain.test.ts`**
 
 **Descrição:**  
 Smoke test para domain provider.  
@@ -246,7 +246,7 @@ Smoke test para domain provider.
 
 ---
 
-### - [ ] **TPROV-016 — Criar `tests/providers/filesystem.test.ts`**
+### - [x] **TPROV-016 — Criar `tests/providers/filesystem.test.ts`**
 
 **Descrição:**  
 Smoke test para FS provider.  
@@ -257,7 +257,7 @@ Smoke test para FS provider.
 
 ---
 
-### - [ ] **TPROV-017 — Criar `tests/providers/config.test.ts`**
+### - [x] **TPROV-017 — Criar `tests/providers/config.test.ts`**
 
 **Descrição:**  
 Smoke test para config provider.  
