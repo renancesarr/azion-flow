@@ -8,7 +8,7 @@ Aqui criamos APENAS a estrutura, classes vazias, contratos e testes de fumaça.
 
 ## ⚡ FASE STEPS — Estrutura Base
 
-### - [ ] **TSTEP-001 — Criar diretório `src/usecases/deploy/steps/raw-steps/`**
+### - [x] **TSTEP-001 — Criar diretório `src/usecases/deploy/steps/raw-steps/`**
 
 **Descrição:**  
 Diretório onde ficarão steps unitários, cada um responsável por uma ação única.  
@@ -19,7 +19,7 @@ Diretório onde ficarão steps unitários, cada um responsável por uma ação �
 
 ---
 
-### - [ ] **TSTEP-002 — Criar arquivo `src/usecases/deploy/steps/step.base.ts`**
+### - [x] **TSTEP-002 — Criar arquivo `src/usecases/deploy/steps/step.base.ts`**
 
 **Descrição:**  
 Criar classe abstrata base para steps:
@@ -43,7 +43,7 @@ Cada step abaixo é **somente um arquivo vazio**, com classe preparada para impl
 
 ## 🎯 Grupo 1 — Preparação Local
 
-### - [ ] **TSTEP-003 — Step: Validar ambiente local**
+### - [x] **TSTEP-003 — Step: Validar ambiente local**
 
 **Arquivo:** `validate-local-env.step.ts`  
 **Descrição:**  
@@ -59,14 +59,14 @@ export class ValidateLocalEnvStep extends DeployStepBase {
 
 ---
 
-### - [ ] **TSTEP-004 — Step: Ler config local**
+### - [x] **TSTEP-004 — Step: Ler config local**
 
 **Arquivo:** `read-config.step.ts`  
 **Dependência:** TSTEP-002
 
 ---
 
-### - [ ] **TSTEP-005 — Step: Resolver paths locais**
+### - [x] **TSTEP-005 — Step: Resolver paths locais**
 
 **Arquivo:** `resolve-paths.step.ts`  
 **Dependência:** TSTEP-002
@@ -75,21 +75,21 @@ export class ValidateLocalEnvStep extends DeployStepBase {
 
 ## 🎯 Grupo 2 — Integração com Azion: Storage
 
-### - [ ] **TSTEP-006 — Step: Obter lista de buckets**
+### - [x] **TSTEP-006 — Step: Obter lista de buckets**
 
 **Arquivo:** `list-buckets.step.ts`  
 **Dependência:** TSTEP-002
 
 ---
 
-### - [ ] **TSTEP-007 — Step: Garantir bucket alvo**
+### - [x] **TSTEP-007 — Step: Garantir bucket alvo**
 
 **Arquivo:** `ensure-bucket.step.ts`  
 **Dependência:** TSTEP-006
 
 ---
 
-### - [ ] **TSTEP-008 — Step: Sincronizar arquivos**
+### - [x] **TSTEP-008 — Step: Sincronizar arquivos**
 
 **Arquivo:** `sync-files.step.ts`  
 **Dependência:** TSTEP-007
@@ -98,14 +98,14 @@ export class ValidateLocalEnvStep extends DeployStepBase {
 
 ## 🎯 Grupo 3 — Integração com Azion: Application
 
-### - [ ] **TSTEP-009 — Step: Listar aplicações**
+### - [x] **TSTEP-009 — Step: Listar aplicações**
 
 **Arquivo:** `list-applications.step.ts`  
 **Dependência:** TSTEP-002
 
 ---
 
-### - [ ] **TSTEP-010 — Step: Selecionar aplicação alvo**
+### - [x] **TSTEP-010 — Step: Selecionar aplicação alvo**
 
 **Arquivo:** `select-application.step.ts`  
 **Dependência:** TSTEP-009
@@ -114,14 +114,14 @@ export class ValidateLocalEnvStep extends DeployStepBase {
 
 ## 🎯 Grupo 4 — Integração com Azion: Domain Config
 
-### - [ ] **TSTEP-011 — Step: Obter configurações de domínio**
+### - [x] **TSTEP-011 — Step: Obter configurações de domínio**
 
 **Arquivo:** `get-domain-config.step.ts`  
 **Dependência:** TSTEP-002
 
 ---
 
-### - [ ] **TSTEP-012 — Step: Garantir domínio configurado**
+### - [x] **TSTEP-012 — Step: Garantir domínio configurado**
 
 **Arquivo:** `ensure-domain.step.ts`  
 **Dependência:** TSTEP-011
@@ -130,7 +130,7 @@ export class ValidateLocalEnvStep extends DeployStepBase {
 
 ## 🎯 Grupo 5 — Finalização
 
-### - [ ] **TSTEP-013 — Step: Gerar relatório final de deploy**
+### - [x] **TSTEP-013 — Step: Gerar relatório final de deploy**
 
 **Arquivo:** `generate-report.step.ts`  
 **Dependência:** Todos anteriores
@@ -139,7 +139,7 @@ export class ValidateLocalEnvStep extends DeployStepBase {
 
 ## ⚡ FASE STEPS — Registro e Exportação
 
-### - [ ] **TSTEP-014 — Criar arquivo `src/usecases/deploy/steps/register.ts`**
+### - [x] **TSTEP-014 — Criar arquivo `src/usecases/deploy/steps/register.ts`**
 
 **Descrição:**  
 Arquivo onde steps serão futuramente registrados em ordem.  
@@ -150,7 +150,7 @@ Arquivo onde steps serão futuramente registrados em ordem.
 
 ---
 
-### - [ ] **TSTEP-015 — Atualizar `src/usecases/deploy/steps/index.ts`**
+### - [x] **TSTEP-015 — Atualizar `src/usecases/deploy/steps/index.ts`**
 
 **Descrição:**  
 Exportar todos steps criados.  
@@ -163,7 +163,7 @@ Exportar todos steps criados.
 
 ## 🧪 FASE STEPS — Testes
 
-### - [ ] **TSTEP-016 — Criar `tests/usecases/steps/smoke.test.ts`**
+### - [x] **TSTEP-016 — Criar `tests/usecases/steps/smoke.test.ts`**
 
 **Descrição:**  
 Smoke global:
