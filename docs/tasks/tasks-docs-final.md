@@ -9,7 +9,7 @@ Cada task é atômica, direta e associada ao fluxo real do produto.
 
 ## 📘 FASE 1 — README Principal (Produto)
 
-### - [ ] **TDOC-001 — Criar README.md definitivo**
+### - [x] **TDOC-001 — Criar README.md definitivo**
 
 **Descrição:**  
 O README principal deve conter:
@@ -32,7 +32,7 @@ O README principal deve conter:
 
 ## 📚 FASE 2 — Guia do Usuário (User Guide)
 
-### - [ ] **TDOC-002 — Criar guia de instalação**
+### - [x] **TDOC-002 — Criar guia de instalação**
 
 Arquivo: `docs/user/install.md`  
 Conteúdo:
@@ -44,7 +44,7 @@ Conteúdo:
 
 ---
 
-### - [ ] **TDOC-003 — Criar guia de primeiros passos**
+### - [x] **TDOC-003 — Criar guia de primeiros passos**
 
 Arquivo: `docs/user/getting-started.md`  
 Conteúdo:
@@ -56,7 +56,7 @@ Conteúdo:
 
 ---
 
-### - [ ] **TDOC-004 — Criar guia de commands**
+### - [x] **TDOC-004 — Criar guia de commands**
 
 Arquivo: `docs/user/commands.md`  
 Conteúdo:
@@ -69,7 +69,7 @@ Conteúdo:
 
 ## 🧠 FASE 3 — Guia de Arquitetura (para Devs)
 
-### - [ ] **TDOC-005 — Criar docs/architecture/overview.md**
+### - [x] **TDOC-005 — Criar docs/architecture/overview.md**
 
 Conteúdo:
 
@@ -79,7 +79,7 @@ Conteúdo:
 
 ---
 
-### - [ ] **TDOC-006 — Criar docs/architecture/execution-flow.md**
+### - [x] **TDOC-006 — Criar docs/architecture/execution-flow.md**
 
 Conteúdo:
 
@@ -90,7 +90,7 @@ Conteúdo:
 
 ---
 
-### - [ ] **TDOC-007 — Criar docs/architecture/providers.md**
+### - [x] **TDOC-007 — Criar docs/architecture/providers.md**
 
 Conteúdo:
 
@@ -101,7 +101,7 @@ Conteúdo:
 
 ---
 
-### - [ ] **TDOC-008 — Criar docs/architecture/services.md**
+### - [x] **TDOC-008 — Criar docs/architecture/services.md**
 
 Conteúdo:
 
@@ -112,7 +112,7 @@ Conteúdo:
 
 ---
 
-### - [ ] **TDOC-009 — Criar docs/architecture/cli.md**
+### - [x] **TDOC-009 — Criar docs/architecture/cli.md**
 
 Conteúdo:
 
@@ -126,7 +126,7 @@ Conteúdo:
 
 ## 🛠️ FASE 4 — Guia de Contribuição
 
-### - [ ] **TDOC-010 — Criar CONTRIBUTING.md**
+### - [x] **TDOC-010 — Criar CONTRIBUTING.md**
 
 Conteúdo:
 
@@ -139,7 +139,7 @@ Conteúdo:
 
 ---
 
-### - [ ] **TDOC-011 — Criar CODE_OF_CONDUCT.md**
+### - [x] **TDOC-011 — Criar CODE_OF_CONDUCT.md**
 
 Modelo: Contributor Covenant
 
@@ -147,7 +147,7 @@ Modelo: Contributor Covenant
 
 ## 🧪 FASE 5 — Referência Técnica (Tech Reference)
 
-### - [ ] **TDOC-012 — Criar docs/reference/api.md**
+### - [x] **TDOC-012 — Criar docs/reference/api.md**
 
 Conteúdo:
 
@@ -157,7 +157,7 @@ Conteúdo:
 
 ---
 
-### - [ ] **TDOC-013 — Criar docs/reference/config.md**
+### - [x] **TDOC-013 — Criar docs/reference/config.md**
 
 Conteúdo:
 
@@ -167,7 +167,7 @@ Conteúdo:
 
 ---
 
-### - [ ] **TDOC-014 — Criar docs/reference/errors.md**
+### - [x] **TDOC-014 — Criar docs/reference/errors.md**
 
 Conteúdo:
 
@@ -179,7 +179,7 @@ Conteúdo:
 
 ## 📦 FASE 6 — Exemplos
 
-### - [ ] **TDOC-015 — Criar pasta examples/basic-deploy/**
+### - [x] **TDOC-015 — Criar pasta examples/basic-deploy/**
 
 **Descrição:**  
 Exemplo mínimo com:
@@ -190,14 +190,14 @@ Exemplo mínimo com:
 
 ---
 
-### - [ ] **TDOC-016 — Criar examples/multi-folder/**
+### - [x] **TDOC-016 — Criar examples/multi-folder/**
 
 **Descrição:**  
 Deploy com múltiplas pastas / rotas
 
 ---
 
-### - [ ] **TDOC-017 — Criar examples/custom-domain/**
+### - [x] **TDOC-017 — Criar examples/custom-domain/**
 
 **Descrição:**  
 Exemplo de domínio customizado
@@ -206,7 +206,7 @@ Exemplo de domínio customizado
 
 ## 🧩 FASE 7 — Documentação para IAs (DX Automática)
 
-### - [ ] **TDOC-018 — Criar docs/ai/overview.md**
+### - [x] **TDOC-018 — Criar docs/ai/overview.md**
 
 Conteúdo:
 
@@ -216,7 +216,7 @@ Conteúdo:
 
 ---
 
-### - [ ] **TDOC-019 — Criar docs/ai/prompts.md**
+### - [x] **TDOC-019 — Criar docs/ai/prompts.md**
 
 Conteúdo:
 
@@ -228,11 +228,11 @@ Conteúdo:
 
 ## 🛡️ FASE 8 — Verificações e Qualidade
 
-### - [ ] **TDOC-020 — Rodar markdownlint e ajustar tudo**
+### - [x] **TDOC-020 — Rodar markdownlint e ajustar tudo**
 
 ---
 
-### - [ ] **TDOC-021 — Criar script validate-docs**
+### - [x] **TDOC-021 — Criar script validate-docs**
 
 **Descrição:**  
 Valida:

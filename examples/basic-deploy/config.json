@@ -1,0 +1,6 @@
+{
+  "projectRoot": ".",
+  "buildDir": ".",
+  "bucketName": "basic-bucket",
+  "domain": "example.com"
+}

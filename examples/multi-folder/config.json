@@ -1,0 +1,6 @@
+{
+  "projectRoot": ".",
+  "buildDir": "dist",
+  "bucketName": "multi-folder-demo",
+  "domain": "multi.example.com"
+}

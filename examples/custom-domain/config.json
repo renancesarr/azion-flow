@@ -1,0 +1,7 @@
+{
+  "projectRoot": ".",
+  "buildDir": "dist",
+  "bucketName": "custom-domain-demo",
+  "domain": "www.seu-dominio.com",
+  "applicationId": "app-xyz"
+}
