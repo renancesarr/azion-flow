@@ -10,12 +10,15 @@ export class AzionHttpClient {
   private readonly fetchImpl: FetchImpl;
 
   constructor(options: { token?: string; baseUrl?: string; fetchImpl?: FetchImpl } = {}) {
-    this.token = options.token ?? process.env.AZION_TOKEN;
+    this.token = options.token; // token deve ser fornecido pela CLI/config, não por env implícita
     this.baseUrl = options.baseUrl ?? AZION_API_BASE;
     this.fetchImpl = options.fetchImpl ?? (globalThis.fetch as FetchImpl);
   }
 
   async request(req: HttpRequest): Promise<HttpResponse> {
+    if (!this.token && !(req.headers && req.headers.Authorization)) {
+      throw new AzionHttpError("AZION_TOKEN não definido: forneça token via CLI/config");
+    }
     const url = new URL(req.path ?? "/", req.baseUrl ?? this.baseUrl).toString();
     const headers = {
       "content-type": "application/json",
