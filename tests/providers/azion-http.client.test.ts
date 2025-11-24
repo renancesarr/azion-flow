@@ -6,7 +6,8 @@ const mockResponse = (status: number, data: any, headers: Record<string, string>
   statusText: status === 200 ? "OK" : "ERR",
   ok: status >= 200 && status < 300,
   headers: {
-    get: (key: string) => headers[key.toLowerCase()] ?? headers[key]
+    get: (key: string) => headers[key.toLowerCase()] ?? headers[key],
+    entries: () => Object.entries(headers)
   },
   json: vi.fn(async () => data),
   text: vi.fn(async () => JSON.stringify(data))
@@ -44,5 +45,28 @@ describe("AzionHttpClient", () => {
 
     const client = new AzionHttpClient({ token: "abc" });
     await expect(client.request({ path: "/fail" })).rejects.toThrow("500");
+  });
+
+  it("should include token and return rate limit headers", async () => {
+    const response = mockResponse(
+      200,
+      { results: [] },
+      {
+        "content-type": "application/json",
+        "x-ratelimit-limit": "200",
+        "x-ratelimit-remaining": "199",
+        "x-ratelimit-reset": "2025-08-20T12:07:46.418804"
+      }
+    );
+    const fetchMock = vi.fn(async () => response as any);
+    // @ts-ignore
+    globalThis.fetch = fetchMock;
+
+    const client = new AzionHttpClient({ token: "token-value" });
+    const res = await client.request({ path: "/workspace/applications" });
+    const headers = fetchMock.mock.calls[0][1]?.headers;
+    expect(headers.Authorization).toBe("Token token-value");
+    expect(res.headers["x-ratelimit-limit"]).toBe("200");
+    expect(res.headers["x-ratelimit-remaining"]).toBe("199");
   });
 });
