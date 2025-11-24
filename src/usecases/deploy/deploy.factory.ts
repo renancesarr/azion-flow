@@ -13,7 +13,7 @@ import { ApplicationService } from "../domain/application/application.service";
 import { DomainConfigService } from "../domain/domain-config/domain-config.service";
 import { ConfigStorageService } from "../domain/config-storage/config-storage.service";
 
-export function createDeployUseCase(services: any = {}, providers: any = {}): DeployUseCase {
+export function createDeployUseCase(services: any = {}, providers: any = {}, stepLogger?: any): DeployUseCase {
   const httpProvider = providers.httpProvider ?? new AzionHttpClient();
   const resolvedProviders = {
     storageProvider: providers.storageProvider ?? new AzionStorageProvider(),
@@ -33,6 +33,6 @@ export function createDeployUseCase(services: any = {}, providers: any = {}): De
     configStorageService: services.configStorageService ?? new ConfigStorageService(resolvedProviders.configProvider)
   };
 
-  const orchestrator = new DeployOrchestrator(DEPLOY_PIPELINE, resolvedServices, resolvedProviders, {});
+  const orchestrator = new DeployOrchestrator(DEPLOY_PIPELINE, resolvedServices, resolvedProviders, {}, stepLogger);
   return new DeployUseCase(orchestrator);
 }

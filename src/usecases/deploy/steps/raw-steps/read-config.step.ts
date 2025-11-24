@@ -13,6 +13,14 @@ export class ReadConfigStep extends DeployStepBase {
       Object.assign(context, config);
       context.report = context.report ?? {};
       context.report.config = config;
+
+      // Propaga token para o HTTP client, se existir
+      if (config.token && this.providers?.httpProvider) {
+        this.providers.httpProvider.token = config.token;
+      }
+      if (config.token) {
+        context.token = config.token;
+      }
     }
   }
 }
