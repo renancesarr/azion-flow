@@ -1,7 +1,7 @@
 import { createDeployUseCase } from "../../usecases/deploy/deploy.factory";
-import { labelForStep } from "../utils/step-labels";
-import { renderLoadingError, renderLoadingStart, renderLoadingSuccess } from "../utils/loading";
 import { renderTable } from "../utils/table";
+import { createCliStepLogger } from "../utils/step-logger";
+import { promptTokenIfNeeded } from "../utils/token-prompt";
 
 interface DeployFlags {
   json: boolean;
@@ -31,14 +31,8 @@ export async function deployCommand(args: string[]): Promise<void> {
     process.env.NO_COLOR = "1";
   }
 
-  const stepLogger = flags.silent
-    ? undefined
-    : {
-        onStart: (step: string) => console.log(renderLoadingStart(labelForStep(step))),
-        onSuccess: (step: string) => console.log(renderLoadingSuccess(labelForStep(step))),
-        onError: (step: string, err: unknown) =>
-          console.log(renderLoadingError(`${labelForStep(step)} (${(err as any)?.message ?? err})`))
-      };
+  await promptTokenIfNeeded();
+  const stepLogger = createCliStepLogger(flags.silent);
 
   const usecase = createDeployUseCase({}, {}, stepLogger);
   const result = await usecase.execute({});
