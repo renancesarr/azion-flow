@@ -1,5 +1,6 @@
 import { describe, it, expect, vi, afterEach } from "vitest";
 import { AzionStorageProvider } from "../../src/providers/azion/azion.storage";
+import { AzionHttpClient } from "../../src/providers/azion/http/http-client";
 
 describe("AzionStorageProvider", () => {
   const originalFetch = globalThis.fetch;
@@ -20,7 +21,7 @@ describe("AzionStorageProvider", () => {
     // @ts-ignore
     globalThis.fetch = fetchMock;
 
-    const provider = new AzionStorageProvider();
+    const provider = new AzionStorageProvider(new AzionHttpClient({ token: "test-token", fetchImpl: fetchMock as any }));
     const buckets = await provider.listBuckets();
     expect(fetchMock).toHaveBeenCalled();
     expect(buckets[0].name).toBe("bucket");
@@ -37,7 +38,7 @@ describe("AzionStorageProvider", () => {
     // @ts-ignore
     globalThis.fetch = fetchMock;
 
-    const provider = new AzionStorageProvider();
+    const provider = new AzionStorageProvider(new AzionHttpClient({ token: "test-token", fetchImpl: fetchMock as any }));
     const bucket = await provider.ensureBucket("new");
     expect(bucket.name).toBe("new");
     expect(bucket.id).toBe("2");

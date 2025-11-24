@@ -1,5 +1,6 @@
 import { describe, it, expect, vi, afterEach } from "vitest";
 import { AzionApplicationProvider } from "../../src/providers/azion/azion.application";
+import { AzionHttpClient } from "../../src/providers/azion/http/http-client";
 
 describe("AzionApplicationProvider", () => {
   const originalFetch = globalThis.fetch;
@@ -20,7 +21,7 @@ describe("AzionApplicationProvider", () => {
     // @ts-ignore
     globalThis.fetch = fetchMock;
 
-    const provider = new AzionApplicationProvider();
+    const provider = new AzionApplicationProvider(new AzionHttpClient({ token: "test-token", fetchImpl: fetchMock as any }));
     const apps = await provider.listApplications();
     expect(apps[0].name).toBe("demo");
   });

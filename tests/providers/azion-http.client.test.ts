@@ -26,8 +26,7 @@ describe("AzionHttpClient", () => {
     // @ts-ignore
     globalThis.fetch = fetchMock;
 
-    const client = new AzionHttpClient();
-    client.token = "abc";
+    const client = new AzionHttpClient({ token: "abc" });
     const res = await client.request({ path: "/test" });
 
     expect(fetchMock).toHaveBeenCalled();
@@ -43,7 +42,7 @@ describe("AzionHttpClient", () => {
     // @ts-ignore
     globalThis.fetch = fetchMock;
 
-    const client = new AzionHttpClient();
+    const client = new AzionHttpClient({ token: "abc" });
     await expect(client.request({ path: "/fail" })).rejects.toThrow("500");
   });
 });
