@@ -3,6 +3,7 @@ import { renderTable } from "../utils/table";
 import { createCliStepLogger } from "../utils/step-logger";
 import { promptTokenIfNeeded } from "../utils/token-prompt";
 import { getToken } from "../../providers/azion/http/token-store";
+import { formatError } from "../utils/errors";
 
 interface DeployFlags {
   json: boolean;
@@ -32,25 +33,41 @@ export async function deployCommand(args: string[]): Promise<void> {
     process.env.NO_COLOR = "1";
   }
 
-  await promptTokenIfNeeded();
-  const token = getToken();
-  if (!token) {
-    throw new Error("AZION_TOKEN ausente após o prompt; não é possível prosseguir com o deploy.");
-  }
-  const stepLogger = createCliStepLogger(flags.silent);
+  try {
+    await promptTokenIfNeeded();
+    const token = getToken();
+    if (!token) {
+      throw new Error("AZION_TOKEN ausente após o prompt; não é possível prosseguir com o deploy.");
+    }
+    const stepLogger = createCliStepLogger(flags.silent);
 
-  const usecase = createDeployUseCase({ services: {}, providers: {}, stepLogger, token });
-  const result = await usecase.execute({});
+    const usecase = createDeployUseCase({ services: {}, providers: {}, stepLogger, token });
+    const result = await usecase.execute({});
 
-  if (flags.json) {
+    if (flags.json) {
+      // eslint-disable-next-line no-console
+      console.log(JSON.stringify(result, null, 2));
+      return;
+    }
+
     // eslint-disable-next-line no-console
-    console.log(JSON.stringify(result, null, 2));
-    return;
+    console.log(`Deploy success: ${result.success}`);
+    printReportSummary(result.report);
+  } catch (err) {
+    const friendly = formatError(err);
+    if (flags.json) {
+      // eslint-disable-next-line no-console
+      console.log(JSON.stringify({ success: false, error: friendly }, null, 2));
+    } else if (!flags.silent) {
+      // eslint-disable-next-line no-console
+      console.error(`Erro: ${friendly.message}`);
+      if (friendly.hints?.length) {
+        // eslint-disable-next-line no-console
+        console.error(`Dicas:\n- ${friendly.hints.join("\n- ")}`);
+      }
+    }
+    process.exitCode = 1;
   }
-
-  // eslint-disable-next-line no-console
-  console.log(`Deploy success: ${result.success}`);
-  printReportSummary(result.report);
 }
 
 function printReportSummary(report: any): void {
