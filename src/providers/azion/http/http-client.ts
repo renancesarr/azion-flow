@@ -2,18 +2,28 @@ import { AZION_API_BASE } from "./endpoints";
 import { AzionHttpError } from "./http-error";
 import type { HttpRequest, HttpResponse } from "./types";
 
+type FetchImpl = (input: RequestInfo | URL, init?: RequestInit) => Promise<Response>;
+
 export class AzionHttpClient {
   token?: string;
   baseUrl: string = AZION_API_BASE;
+  private readonly fetchImpl: FetchImpl;
+
+  constructor(options: { token?: string; baseUrl?: string; fetchImpl?: FetchImpl } = {}) {
+    this.token = options.token ?? process.env.AZION_TOKEN;
+    this.baseUrl = options.baseUrl ?? AZION_API_BASE;
+    this.fetchImpl = options.fetchImpl ?? (globalThis.fetch as FetchImpl);
+  }
 
   async request(req: HttpRequest): Promise<HttpResponse> {
     const url = new URL(req.path ?? "/", req.baseUrl ?? this.baseUrl).toString();
     const headers = {
+      "content-type": "application/json",
       ...(req.headers ?? {}),
       ...(this.token ? { Authorization: `Token ${this.token}` } : {})
     };
 
-    const response: any = await (globalThis as any).fetch(url, {
+    const response: any = await this.fetchImpl(url, {
       method: req.method ?? "GET",
       headers,
       body: req.body ? JSON.stringify(req.body) : undefined

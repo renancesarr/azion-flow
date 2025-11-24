@@ -7,16 +7,6 @@ const raw = readFileSync(file, "utf-8");
 const doc = YAML.parse(raw);
 const paths = doc.paths || {};
 
-const groups = new Map();
-
-for (const [path, value] of Object.entries(paths)) {
-  const segments = path.split("/").filter(Boolean);
-  if (!segments.length) continue;
-  const group = segments.slice(0, 2).join("-");
-  if (!groups.has(group)) groups.set(group, {});
-  groups.get(group)[path] = value;
-}
-
 const outDir = "docs/integration-api/azion-v4/split";
 rmSync(outDir, { recursive: true, force: true });
 mkdirSync(outDir, { recursive: true });
@@ -33,7 +23,10 @@ function writeSpec(name, filteredPaths) {
   writeFileSync(join(outDir, name), YAML.stringify(spec));
 }
 
-for (const [group, filteredPaths] of groups.entries()) {
-  const safeName = group.replace(/[^a-zA-Z0-9_-]/g, "_");
-  writeSpec(`${safeName}.yaml`, filteredPaths);
+for (const [path, value] of Object.entries(paths)) {
+  const safeName = path
+    .replace(/^\//, "")
+    .replace(/\//g, "_")
+    .replace(/[^a-zA-Z0-9_-]/g, "_");
+  writeSpec(`${safeName}.yaml`, { [path]: value });
 }
