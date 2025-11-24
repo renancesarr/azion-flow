@@ -3,7 +3,7 @@ import { AzionApplicationProvider } from "../../src/providers/azion/azion.applic
 
 describe("Azion Application Provider", () => {
   it("loads without crashing", () => {
-    const provider = new AzionApplicationProvider();
+    const provider = new AzionApplicationProvider({ token: "test-token" });
     expect(provider).toBeDefined();
   });
 });

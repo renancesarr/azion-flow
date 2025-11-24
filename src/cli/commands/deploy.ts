@@ -2,6 +2,7 @@ import { createDeployUseCase } from "../../usecases/deploy/deploy.factory";
 import { renderTable } from "../utils/table";
 import { createCliStepLogger } from "../utils/step-logger";
 import { promptTokenIfNeeded } from "../utils/token-prompt";
+import { getToken } from "../../providers/azion/http/token-store";
 
 interface DeployFlags {
   json: boolean;
@@ -32,9 +33,13 @@ export async function deployCommand(args: string[]): Promise<void> {
   }
 
   await promptTokenIfNeeded();
+  const token = getToken();
+  if (!token) {
+    throw new Error("AZION_TOKEN ausente após o prompt; não é possível prosseguir com o deploy.");
+  }
   const stepLogger = createCliStepLogger(flags.silent);
 
-  const usecase = createDeployUseCase({}, {}, stepLogger);
+  const usecase = createDeployUseCase({ services: {}, providers: {}, stepLogger, token });
   const result = await usecase.execute({});
 
   if (flags.json) {

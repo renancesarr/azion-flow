@@ -4,7 +4,11 @@ import { AzionHttpClient } from "./http/http-client";
 const PATH_APPLICATIONS = "/workspace/applications";
 
 export class AzionApplicationProvider {
-  constructor(private readonly http = new AzionHttpClient()) {}
+  private readonly http: AzionHttpClient;
+
+  constructor(options: { token: string; http?: AzionHttpClient }) {
+    this.http = options.http ?? new AzionHttpClient({ token: options.token });
+  }
 
   async listApplications(): Promise<AzionApplicationDto[]> {
     const res = await this.http.request({ path: PATH_APPLICATIONS });

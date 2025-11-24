@@ -21,7 +21,8 @@ describe("AzionApplicationProvider", () => {
     // @ts-ignore
     globalThis.fetch = fetchMock;
 
-    const provider = new AzionApplicationProvider(new AzionHttpClient({ token: "test-token", fetchImpl: fetchMock as any }));
+    const http = new AzionHttpClient({ token: "test-token", fetchImpl: fetchMock as any });
+    const provider = new AzionApplicationProvider({ token: "test-token", http });
     const apps = await provider.listApplications();
     expect(apps[0].name).toBe("demo");
   });

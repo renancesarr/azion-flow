@@ -3,7 +3,7 @@ import { AzionStorageProvider } from "../../src/providers/azion/azion.storage";
 
 describe("Azion Storage Provider", () => {
   it("loads without crashing", () => {
-    const provider = new AzionStorageProvider();
+    const provider = new AzionStorageProvider({ token: "test-token" });
     expect(provider).toBeDefined();
   });
 });

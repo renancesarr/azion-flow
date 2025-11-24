@@ -21,7 +21,8 @@ describe("AzionDomainProvider", () => {
     // @ts-ignore
     globalThis.fetch = fetchMock;
 
-    const provider = new AzionDomainProvider(new AzionHttpClient({ token: "test-token", fetchImpl: fetchMock as any }));
+    const http = new AzionHttpClient({ token: "test-token", fetchImpl: fetchMock as any });
+    const provider = new AzionDomainProvider({ token: "test-token", http });
     const config = await provider.getDomainConfig("dom-1");
     expect(config?.domain).toBe("example.com");
   });
@@ -37,7 +38,8 @@ describe("AzionDomainProvider", () => {
     // @ts-ignore
     globalThis.fetch = fetchMock;
 
-    const provider = new AzionDomainProvider(new AzionHttpClient({ token: "test-token", fetchImpl: fetchMock as any }));
+    const http = new AzionHttpClient({ token: "test-token", fetchImpl: fetchMock as any });
+    const provider = new AzionDomainProvider({ token: "test-token", http });
     const ensured = await provider.ensureDomain("new.com");
     expect(ensured?.domain).toBe("new.com");
     expect(ensured?.id).toBe("dom-2");

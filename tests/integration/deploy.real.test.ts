@@ -13,7 +13,7 @@ describe("Deploy flow real (base pipeline)", () => {
       domainConfigService: { getConfig: async () => null, ensureDomain: async () => null },
       configStorageService: { loadConfig: async () => ({}) }
     };
-    const usecase = createDeployUseCase(services);
+    const usecase = createDeployUseCase({ services, token: "test-token" });
     const cwd = process.cwd();
     const result = await usecase.execute({ projectRoot: cwd, buildDir: cwd });
     expect(result.success).toBe(true);

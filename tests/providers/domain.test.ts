@@ -3,7 +3,7 @@ import { AzionDomainProvider } from "../../src/providers/azion/azion.domain";
 
 describe("Azion Domain Provider", () => {
   it("loads without crashing", () => {
-    const provider = new AzionDomainProvider();
+    const provider = new AzionDomainProvider({ token: "test-token" });
     expect(provider).toBeDefined();
   });
 });

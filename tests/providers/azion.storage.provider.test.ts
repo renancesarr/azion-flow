@@ -21,7 +21,8 @@ describe("AzionStorageProvider", () => {
     // @ts-ignore
     globalThis.fetch = fetchMock;
 
-    const provider = new AzionStorageProvider(new AzionHttpClient({ token: "test-token", fetchImpl: fetchMock as any }));
+    const http = new AzionHttpClient({ token: "test-token", fetchImpl: fetchMock as any });
+    const provider = new AzionStorageProvider({ token: "test-token", http });
     const buckets = await provider.listBuckets();
     expect(fetchMock).toHaveBeenCalled();
     expect(buckets[0].name).toBe("bucket");
@@ -38,7 +39,8 @@ describe("AzionStorageProvider", () => {
     // @ts-ignore
     globalThis.fetch = fetchMock;
 
-    const provider = new AzionStorageProvider(new AzionHttpClient({ token: "test-token", fetchImpl: fetchMock as any }));
+    const http = new AzionHttpClient({ token: "test-token", fetchImpl: fetchMock as any });
+    const provider = new AzionStorageProvider({ token: "test-token", http });
     const bucket = await provider.ensureBucket("new");
     expect(bucket.name).toBe("new");
     expect(bucket.id).toBe("2");

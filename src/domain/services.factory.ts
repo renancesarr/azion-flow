@@ -3,6 +3,7 @@ import { AzionDomainProvider } from "../providers/azion/azion.domain";
 import { AzionStorageProvider } from "../providers/azion/azion.storage";
 import { FileConfigProvider } from "../providers/config/file-config";
 import { NodeFileSystemProvider } from "../providers/filesystem/nodefs";
+import { AzionHttpClient } from "../providers/azion/http/http-client";
 import { ApplicationService } from "./application/application.service";
 import { BucketService } from "./bucket/bucket.service";
 import { ConfigStorageService } from "./config-storage/config-storage.service";
@@ -19,14 +20,22 @@ type Providers = {
   httpProvider?: any;
 };
 
-export function createDomainServices(providers: Providers = {}): DomainServices {
+type DomainServiceFactoryOptions = { providers?: Providers; token: string };
+
+export function createDomainServices({ providers = {}, token }: DomainServiceFactoryOptions): DomainServices {
+  const resolvedToken = token?.trim();
+  if (!resolvedToken) {
+    throw new Error("AZION_TOKEN ausente: forneça um token ao criar os domain services.");
+  }
+
+  const httpProvider = providers.httpProvider ?? new AzionHttpClient({ token: resolvedToken });
   const resolvedProviders = {
-    storageProvider: providers.storageProvider ?? new AzionStorageProvider(),
-    applicationProvider: providers.applicationProvider ?? new AzionApplicationProvider(),
-    domainProvider: providers.domainProvider ?? new AzionDomainProvider(),
+    storageProvider: providers.storageProvider ?? new AzionStorageProvider({ token: resolvedToken, http: httpProvider }),
+    applicationProvider: providers.applicationProvider ?? new AzionApplicationProvider({ token: resolvedToken, http: httpProvider }),
+    domainProvider: providers.domainProvider ?? new AzionDomainProvider({ token: resolvedToken, http: httpProvider }),
     fsProvider: providers.fsProvider ?? new NodeFileSystemProvider(),
     configProvider: providers.configProvider ?? new FileConfigProvider(),
-    httpProvider: providers.httpProvider ?? providers.storageProvider
+    httpProvider
   };
 
   return {

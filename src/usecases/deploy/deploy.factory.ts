@@ -13,12 +13,24 @@ import { ApplicationService } from "../../domain/application/application.service
 import { DomainConfigService } from "../../domain/domain-config/domain-config.service";
 import { ConfigStorageService } from "../../domain/config-storage/config-storage.service";
 
-export function createDeployUseCase(services: any = {}, providers: any = {}, stepLogger?: any): DeployUseCase {
-  const httpProvider = providers.httpProvider ?? new AzionHttpClient();
+type DeployFactoryOptions = {
+  services?: any;
+  providers?: any;
+  stepLogger?: any;
+  token: string;
+};
+
+export function createDeployUseCase({ services = {}, providers = {}, stepLogger, token }: DeployFactoryOptions): DeployUseCase {
+  const resolvedToken = token?.trim();
+  if (!resolvedToken) {
+    throw new Error("AZION_TOKEN ausente: forneça um token ao criar o DeployUseCase.");
+  }
+
+  const httpProvider = providers.httpProvider ?? new AzionHttpClient({ token: resolvedToken });
   const resolvedProviders = {
-    storageProvider: providers.storageProvider ?? new AzionStorageProvider(),
-    applicationProvider: providers.applicationProvider ?? new AzionApplicationProvider(),
-    domainProvider: providers.domainProvider ?? new AzionDomainProvider(),
+    storageProvider: providers.storageProvider ?? new AzionStorageProvider({ token: resolvedToken, http: httpProvider }),
+    applicationProvider: providers.applicationProvider ?? new AzionApplicationProvider({ token: resolvedToken, http: httpProvider }),
+    domainProvider: providers.domainProvider ?? new AzionDomainProvider({ token: resolvedToken, http: httpProvider }),
     fsProvider: providers.fsProvider ?? new NodeFileSystemProvider(),
     configProvider: providers.configProvider ?? new FileConfigProvider(),
     httpProvider

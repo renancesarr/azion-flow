@@ -4,7 +4,11 @@ import { AzionHttpClient } from "./http/http-client";
 const PATH_DOMAINS = "/domains";
 
 export class AzionDomainProvider {
-  constructor(private readonly http = new AzionHttpClient()) {}
+  private readonly http: AzionHttpClient;
+
+  constructor(options: { token: string; http?: AzionHttpClient }) {
+    this.http = options.http ?? new AzionHttpClient({ token: options.token });
+  }
 
   async getDomainConfig(domainId: string): Promise<AzionDomainDto | null> {
     if (!domainId) return null;

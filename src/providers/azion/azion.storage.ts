@@ -4,7 +4,11 @@ import { AzionHttpClient } from "./http/http-client";
 const PATH_BUCKETS = "/workspace/storage/buckets";
 
 export class AzionStorageProvider {
-  constructor(private readonly http = new AzionHttpClient()) {}
+  private readonly http: AzionHttpClient;
+
+  constructor(options: { token: string; http?: AzionHttpClient }) {
+    this.http = options.http ?? new AzionHttpClient({ token: options.token });
+  }
 
   async listBuckets(): Promise<AzionBucketDto[]> {
     const res = await this.http.request({ path: PATH_BUCKETS });
