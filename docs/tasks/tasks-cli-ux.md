@@ -147,7 +147,7 @@ Não imprime steps, somente resultado final.
 
 ---
 
-### - [ ] **TUX-012 — Implementar flag `--debug`**
+### - [x] **TUX-012 — Implementar flag `--debug`**
 
 **Descrição:**  
 Mostra logs internos do orchestrator.  
@@ -165,7 +165,7 @@ Desativa cores.
 
 ## 🧭 FASE 5 — Qualidade de Vida (QoL)
 
-### - [ ] **TUX-014 — Criar mensagem de erro universal amigável**
+### - [x] **TUX-014 — Criar mensagem de erro universal amigável**
 
 **Arquivo:** `src/cli/utils/errors.ts`  
 **Descrição:**  
@@ -174,7 +174,7 @@ Transformar erros técnicos em mensagens curtas e claras.
 
 ---
 
-### - [ ] **TUX-015 — Criar seção “como resolver” para erros comuns**
+### - [x] **TUX-015 — Criar seção “como resolver” para erros comuns**
 
 **Descrição:**  
 Se erro for de bucket → sugerir verificar token, permissões, nome  
@@ -184,7 +184,7 @@ Etc.
 
 ---
 
-### - [ ] **TUX-016 — Criar ajuda CLI (`--help`)**
+### - [x] **TUX-016 — Criar ajuda CLI (`--help`)**
 
 **Arquivo:** `src/cli/help.ts`  
 **Descrição:**  
