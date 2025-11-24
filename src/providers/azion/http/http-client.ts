@@ -20,21 +20,34 @@ type MinimalResponse = {
 type MinimalRequestInit = {
   method?: string;
   headers?: Record<string, string>;
-  body?: string;
+  body?: string | undefined;
 };
 
 type FetchImpl = (input: string | URL, init?: MinimalRequestInit) => Promise<MinimalResponse>;
 type FetchResponse = MinimalResponse;
 
 export class AzionHttpClient {
-  token?: string;
-  baseUrl: string = AZION_API_BASE;
+  private token: string;
+  private baseUrl: string = AZION_API_BASE;
   private readonly fetchImpl: FetchImpl;
 
-  constructor(options: { token?: string; baseUrl?: string; fetchImpl?: FetchImpl } = {}) {
-    this.token = options.token; // token deve ser fornecido explicitamente (CLI/config)
+  constructor(options: { token: string; baseUrl?: string; fetchImpl?: FetchImpl }) {
+    const token = options.token?.trim();
+    if (!token) {
+      throw new Error("AZION_TOKEN ausente: forneça um token ao criar o AzionHttpClient.");
+    }
+
+    this.token = token; // token deve ser fornecido explicitamente (CLI/config)
     this.baseUrl = options.baseUrl ?? AZION_API_BASE;
     this.fetchImpl = options.fetchImpl ?? (globalThis.fetch as FetchImpl);
+  }
+
+  setToken(token: string) {
+    const nextToken = token?.trim();
+    if (!nextToken) {
+      throw new Error("AZION_TOKEN ausente: informe um token válido.");
+    }
+    this.token = nextToken;
   }
 
   async request(req: HttpRequest): Promise<HttpResponse> {
@@ -44,11 +57,7 @@ export class AzionHttpClient {
     }
 
     const url = new URL(req.path ?? "/", req.baseUrl ?? this.baseUrl).toString();
-    const headers = {
-      "content-type": "application/json",
-      ...(req.headers ?? {}),
-      ...(this.token ? { Authorization: `Token ${this.token}` } : {})
-    };
+    const headers = this.buildHeaders(req.headers, this.token);
 
     const response: FetchResponse = await this.fetchImpl(url, {
       method: req.method ?? "GET",
@@ -62,13 +71,24 @@ export class AzionHttpClient {
       throw new AzionHttpError(`${response.status}: ${response.statusText}`);
     }
 
-    const headerEntries = response.headers?.entries ? Object.fromEntries(response.headers.entries()) : {};
-
     return {
       status: response.status,
       data,
-      headers: headerEntries
+      headers: this.toRecord(response.headers)
     };
+  }
+
+  private buildHeaders(extra: Record<string, string> | undefined, token?: string): Record<string, string> {
+    return {
+      "content-type": "application/json",
+      ...(extra ?? {}),
+      ...(token ? { Authorization: `Token ${token}` } : {})
+    };
+  }
+
+  private toRecord(headers: MinimalHeaders): Record<string, string> {
+    if (headers.entries) return Object.fromEntries(headers.entries());
+    return {};
   }
 
   private async parseBody(res: FetchResponse): Promise<unknown> {
