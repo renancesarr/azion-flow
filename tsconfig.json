@@ -8,7 +8,6 @@
     "moduleResolution": "bundler",
     "outDir": "dist",
     "rootDir": ".",
-    "allowImportingTsExtensions": true,
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
     "skipLibCheck": true
