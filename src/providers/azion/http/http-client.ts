@@ -35,10 +35,12 @@ export class AzionHttpClient {
       throw new AzionHttpError(`${response.status}: ${response.statusText}`);
     }
 
+    const headerEntries = response.headers?.entries ? Object.fromEntries(response.headers.entries()) : {};
+
     return {
       status: response.status,
       data,
-      headers: Object.fromEntries(response.headers.entries())
+      headers: headerEntries
     };
   }
 
