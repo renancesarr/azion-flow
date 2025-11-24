@@ -3,6 +3,7 @@ import { AzionHttpError } from "./http-error";
 import type { HttpRequest, HttpResponse } from "./types";
 
 type FetchImpl = (input: RequestInfo | URL, init?: RequestInit) => Promise<Response>;
+type FetchResponse = Pick<Response, "ok" | "status" | "statusText" | "headers" | "json" | "text">;
 
 export class AzionHttpClient {
   token?: string;
@@ -26,7 +27,7 @@ export class AzionHttpClient {
       ...(this.token ? { Authorization: `Token ${this.token}` } : {})
     };
 
-    const response: any = await this.fetchImpl(url, {
+    const response: FetchResponse = await this.fetchImpl(url, {
       method: req.method ?? "GET",
       headers,
       body: req.body ? JSON.stringify(req.body) : undefined
@@ -47,7 +48,7 @@ export class AzionHttpClient {
     };
   }
 
-  private async parseBody(res: any): Promise<unknown> {
+  private async parseBody(res: FetchResponse): Promise<unknown> {
     const contentType = res.headers?.get?.("content-type") ?? "";
     if (contentType.includes("application/json") && typeof res.json === "function") {
       return res.json();
