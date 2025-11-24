@@ -2,8 +2,29 @@ import { AZION_API_BASE } from "./endpoints";
 import { AzionHttpError } from "./http-error";
 import type { HttpRequest, HttpResponse } from "./types";
 
-type FetchImpl = (input: RequestInfo | URL, init?: RequestInit) => Promise<Response>;
-type FetchResponse = Pick<Response, "ok" | "status" | "statusText" | "headers" | "json" | "text">;
+// Tipagens mínimas para evitar dependência dos tipos DOM em Node
+type MinimalHeaders = {
+  get: (key: string) => string | null | undefined;
+  entries?: () => Iterable<[string, string]>;
+};
+
+type MinimalResponse = {
+  ok: boolean;
+  status: number;
+  statusText: string;
+  headers: MinimalHeaders;
+  json: () => Promise<any>;
+  text: () => Promise<string>;
+};
+
+type MinimalRequestInit = {
+  method?: string;
+  headers?: Record<string, string>;
+  body?: string;
+};
+
+type FetchImpl = (input: string | URL, init?: MinimalRequestInit) => Promise<MinimalResponse>;
+type FetchResponse = MinimalResponse;
 
 export class AzionHttpClient {
   token?: string;
