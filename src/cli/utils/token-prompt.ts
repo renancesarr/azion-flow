@@ -26,3 +26,9 @@ export async function promptTokenIfNeeded(): Promise<void> {
   }
   setToken(token);
 }
+
+export function setTokenDirect(token?: string) {
+  if (token) {
+    setToken(token.trim());
+  }
+}

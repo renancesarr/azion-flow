@@ -4,6 +4,8 @@ export const AZION_API_BASE = "https://api.azion.com/v4";
 export const getBucketsUrl = () => "/edge_storage/buckets";
 export const createBucketUrl = () => "/edge_storage/buckets";
 export const uploadFileUrl = (bucket: string, path: string) => `/edge_storage/buckets/${bucket}/files/${path}`;
+export const listCredentialsUrl = () => "/edge_storage/credentials";
+export const createCredentialUrl = () => "/edge_storage/credentials";
 
 // applications
 export const listApplicationsUrl = () => "/applications";
