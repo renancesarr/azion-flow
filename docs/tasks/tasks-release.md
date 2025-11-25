@@ -9,7 +9,7 @@ Tudo é **cirúrgico, granular e seguro** — sem passos escondidos.
 
 ## 🧭 FASE 1 — Versionamento e Preparação
 
-### - [ ] **TREL-001 — Criar CHANGELOG.md inicial**
+### - [x] **TREL-001 — Criar CHANGELOG.md inicial**
 
 **Descrição:**
 
@@ -19,7 +19,7 @@ Tudo é **cirúrgico, granular e seguro** — sem passos escondidos.
 
 ---
 
-### - [ ] **TREL-002 — Criar VERSION file**
+### - [x] **TREL-002 — Criar VERSION file**
 
 **Descrição:**  
 Arquivo simples contendo versão semântica atual (`0.1.0`).  
@@ -27,7 +27,7 @@ Arquivo simples contendo versão semântica atual (`0.1.0`).
 
 ---
 
-### - [ ] **TREL-003 — Implementar script automático update-version**
+### - [x] **TREL-003 — Implementar script automático update-version**
 
 **Arquivo:** `scripts/update-version.ts`  
 **Descrição:**
@@ -45,7 +45,7 @@ Arquivo simples contendo versão semântica atual (`0.1.0`).
 
 ## 📦 FASE 2 — Empacotamento NPM
 
-### - [ ] **TREL-004 — Criar script de build de release (`build:release`)**
+### - [x] **TREL-004 — Criar script de build de release (`build:release`)**
 
 **Descrição:**
 
@@ -55,7 +55,7 @@ Arquivo simples contendo versão semântica atual (`0.1.0`).
 
 ---
 
-### - [ ] **TREL-005 — Criar .npmignore**
+### - [x] **TREL-005 — Criar .npmignore**
 
 Conteúdo mínimo:
 
@@ -70,7 +70,7 @@ scripts/
 
 ---
 
-### - [ ] **TREL-006 — Adicionar campo “bin” no package.json**
+### - [x] **TREL-006 — Adicionar campo “bin” no package.json**
 
 Exemplo:
 
@@ -82,7 +82,7 @@ Exemplo:
 
 ---
 
-### - [ ] **TREL-007 — Implementar validação pós-build**
+### - [x] **TREL-007 — Implementar validação pós-build**
 
 Criar script: `scripts/validate-release.ts`  
 Valida:
@@ -95,7 +95,7 @@ Valida:
 
 ## 🚀 FASE 3 — Publicação no NPM
 
-### - [ ] **TREL-008 — Criar script `npm:publish`**
+### - [x] **TREL-008 — Criar script `npm:publish`**
 
 - roda build
 - roda validate
@@ -103,7 +103,7 @@ Valida:
 
 ---
 
-### - [ ] **TREL-009 — Criar dry-run de publish**
+### - [x] **TREL-009 — Criar dry-run de publish**
 
 `npm publish --dry-run`  
 Integrado no pipeline do GitHub.
@@ -112,7 +112,7 @@ Integrado no pipeline do GitHub.
 
 ## 🔄 FASE 4 — GitHub Release Automático
 
-### - [ ] **TREL-010 — Criar GitHub Workflow: release.yml**
+### - [x] **TREL-010 — Criar GitHub Workflow: release.yml**
 
 Triggers:
 
@@ -128,7 +128,7 @@ Stages:
 
 ---
 
-### - [ ] **TREL-011 — Criar GitHub Workflow: test.yml**
+### - [x] **TREL-011 — Criar GitHub Workflow: test.yml**
 
 Executa em:
 
@@ -144,7 +144,7 @@ Steps:
 
 ---
 
-### - [ ] **TREL-012 — Criar GitHub Workflow: lint.yml**
+### - [x] **TREL-012 — Criar GitHub Workflow: lint.yml**
 
 Executa lint + markdownlint + commitlint.
 
@@ -152,7 +152,7 @@ Executa lint + markdownlint + commitlint.
 
 ## 📚 FASE 5 — Documentação final para Release
 
-### - [ ] **TREL-013 — Criar README de produto**
+### - [x] **TREL-013 — Criar README de produto**
 
 Inclui:
 
@@ -165,7 +165,7 @@ Inclui:
 
 ---
 
-### - [ ] **TREL-014 — Criar pasta examples/**
+### - [x] **TREL-014 — Criar pasta examples/**
 
 Com exemplos reais de:
 
@@ -176,7 +176,7 @@ Com exemplos reais de:
 
 ---
 
-### - [ ] **TREL-015 — Criar guia “Como contribuir”**
+### - [x] **TREL-015 — Criar guia “Como contribuir”**
 
 Arquivo: `CONTRIBUTING.md`  
 Inclui:
@@ -195,13 +195,13 @@ Inclui:
 
 ---
 
-### - [ ] **TREL-017 — Adicionar dependabot.yml**
+### - [x] **TREL-017 — Adicionar dependabot.yml**
 
 Atualizações automáticas de deps.
 
 ---
 
-### - [ ] **TREL-018 — Adicionar licença final (MIT)**
+### - [x] **TREL-018 — Adicionar licença final (MIT)**
 
 Garantir permissões claras.
 

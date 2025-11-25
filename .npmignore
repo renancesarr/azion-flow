@@ -1,0 +1,9 @@
+src/
+tests/
+docs/
+scripts/
+*.md
+!README.md
+node_modules/
+.vscode/
+.git/

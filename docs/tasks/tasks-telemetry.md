@@ -9,7 +9,7 @@ As tasks abaixo seguem granularidade máxima.
 
 ## 🔐 FASE 1 — Opt‑in / Opt‑out (Privacidade Primeiro)
 
-### - [ ] **TTEL-001 — Criar verificação de opt‑in**
+### - [x] **TTEL-001 — Criar verificação de opt‑in**
 
 **Arquivo:** `src/telemetry/telemetry.optin.ts`  
 **Descrição:**
@@ -22,7 +22,7 @@ As tasks abaixo seguem granularidade máxima.
 
 ---
 
-### - [ ] **TTEL-002 — Criar comando CLI “telemetry enable/disable”**
+### - [x] **TTEL-002 — Criar comando CLI “telemetry enable/disable”**
 
 **Arquivo:** `src/cli/commands/telemetry.ts`  
 **Descrição:**  
@@ -35,7 +35,7 @@ Comandos:
 
 ---
 
-### - [ ] **TTEL-003 — Criar aviso inicial opcional (uma única vez)**
+### - [x] **TTEL-003 — Criar aviso inicial opcional (uma única vez)**
 
 **Arquivo:** `startup.ts`  
 **Descrição:**
@@ -49,7 +49,7 @@ Comandos:
 
 ## 📦 FASE 2 — Coleta Local (sem envio)
 
-### - [ ] **TTEL-004 — Criar estrutura de evento**
+### - [x] **TTEL-004 — Criar estrutura de evento**
 
 **Arquivo:** `src/telemetry/event.ts`  
 **Descrição:**  
@@ -70,7 +70,7 @@ type TelemetryEvent = {
 
 ---
 
-### - [ ] **TTEL-005 — Criar função `createEvent(event, payload)`**
+### - [x] **TTEL-005 — Criar função `createEvent(event, payload)`**
 
 **Arquivo:** `src/telemetry/create-event.ts`  
 **Descrição:**
@@ -81,7 +81,7 @@ type TelemetryEvent = {
 
 ---
 
-### - [ ] **TTEL-006 — Criar buffer de eventos em arquivo local**
+### - [x] **TTEL-006 — Criar buffer de eventos em arquivo local**
 
 **Arquivo:** `src/telemetry/buffer.ts`  
 **Descrição:**
@@ -94,7 +94,7 @@ type TelemetryEvent = {
 
 ## 🚀 FASE 3 — Envio Opcional
 
-### - [ ] **TTEL-007 — Criar função `sendEvents()`**
+### - [x] **TTEL-007 — Criar função `sendEvents()`**
 
 **Arquivo:** `src/telemetry/send.ts`  
 **Descrição:**
@@ -106,7 +106,7 @@ type TelemetryEvent = {
 
 ---
 
-### - [ ] **TTEL-008 — Integrar envio nos comandos**
+### - [x] **TTEL-008 — Integrar envio nos comandos**
 
 **Arquivo:** `deploy.usecase.ts`  
 **Descrição:**
@@ -119,7 +119,7 @@ type TelemetryEvent = {
 
 ## 🧭 FASE 4 — Tipos de Eventos
 
-### - [ ] **TTEL-009 — Criar lista inicial de eventos**
+### - [x] **TTEL-009 — Criar lista inicial de eventos**
 
 **Arquivo:** `src/telemetry/events.ts`  
 Eventos:
@@ -134,7 +134,7 @@ Eventos:
 
 ---
 
-### - [ ] **TTEL-010 — Criar wrappers específicos**
+### - [x] **TTEL-010 — Criar wrappers específicos**
 
 **Arquivo:** `src/telemetry/events/*.ts`  
 Exemplo:  
@@ -146,25 +146,25 @@ Exemplo:
 
 ## 🧪 FASE 5 — Testes
 
-### - [ ] **TTEL-011 — Testar opt‑in/opt‑out**
+### - [x] **TTEL-011 — Testar opt‑in/opt‑out**
 
 Arquivo: `tests/telemetry/optin.test.ts`
 
 ---
 
-### - [ ] **TTEL-012 — Testar criação de eventos**
+### - [x] **TTEL-012 — Testar criação de eventos**
 
 Arquivo: `tests/telemetry/create-event.test.ts`
 
 ---
 
-### - [ ] **TTEL-013 — Testar buffer local**
+### - [x] **TTEL-013 — Testar buffer local**
 
 Arquivo: `tests/telemetry/buffer.test.ts`
 
 ---
 
-### - [ ] **TTEL-014 — Testar envio**
+### - [x] **TTEL-014 — Testar envio**
 
 Mock de endpoint remoto.  
 Arquivo: `tests/telemetry/send.test.ts`

@@ -5,7 +5,12 @@ const YELLOW = "\u001b[33m";
 const RED = "\u001b[31m";
 const MAGENTA = "\u001b[35m";
 
+function isNoColor(): boolean {
+  return process.env.NO_COLOR === "1" || process.env.NO_COLOR === "true";
+}
+
 function wrap(code: string, text: string): string {
+  if (isNoColor()) return text;
   return `${code}${text}${RESET}`;
 }
 

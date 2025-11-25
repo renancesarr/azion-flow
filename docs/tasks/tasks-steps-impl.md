@@ -14,7 +14,7 @@ Agora vamos implementar a lógica real, de forma incremental.
 
 ## 🔧 FASE 1 — Contexto e Tipagem dos Steps
 
-### - [ ] **TSTEP-101 — Definir tipo forte de contexto de deploy**
+### - [x] **TSTEP-101 — Definir tipo forte de contexto de deploy**
 
 **Arquivo:** `src/usecases/deploy/types.ts`  
 **Descrição:**  
@@ -34,7 +34,7 @@ Substituir `DeployContext` e `DeployResult` vazios por interfaces mínimas conte
 
 ---
 
-### - [ ] **TSTEP-102 — Atualizar `DeployStepBase` para usar `DeployContext` tipado**
+### - [x] **TSTEP-102 — Atualizar `DeployStepBase` para usar `DeployContext` tipado**
 
 **Arquivo:** `src/usecases/deploy/steps/step.base.ts`  
 **Descrição:**  
@@ -60,7 +60,7 @@ export abstract class DeployStepBase {
 
 ## 🏠 FASE 2 — Steps de Preparação Local
 
-### - [ ] **TSTEP-103 — Implementar `ValidateLocalEnvStep` (checagem de diretório de build)**
+### - [x] **TSTEP-103 — Implementar `ValidateLocalEnvStep` (checagem de diretório de build)**
 
 **Arquivo:** `validate-local-env.step.ts`  
 **Descrição:**  
@@ -78,7 +78,7 @@ Implementar lógica mínima para:
 
 ---
 
-### - [ ] **TSTEP-104 — Implementar `ReadConfigStep`**
+### - [x] **TSTEP-104 — Implementar `ReadConfigStep`**
 
 **Arquivo:** `read-config.step.ts`  
 **Descrição:**  
@@ -96,7 +96,7 @@ Implementar step que:
 
 ---
 
-### - [ ] **TSTEP-105 — Implementar `ResolvePathsStep`**
+### - [x] **TSTEP-105 — Implementar `ResolvePathsStep`**
 
 **Arquivo:** `resolve-paths.step.ts`  
 **Descrição:**  
@@ -116,7 +116,7 @@ Implementar step que:
 
 ## ☁️ FASE 3 — Steps de Buckets (Azion Edge Storage)
 
-### - [ ] **TSTEP-106 — Implementar `ListBucketsStep`**
+### - [x] **TSTEP-106 — Implementar `ListBucketsStep`**
 
 **Arquivo:** `list-buckets.step.ts`  
 **Descrição:**  
@@ -132,7 +132,7 @@ Implementar step que:
 
 ---
 
-### - [ ] **TSTEP-107 — Implementar `EnsureBucketStep`**
+### - [x] **TSTEP-107 — Implementar `EnsureBucketStep`**
 
 **Arquivo:** `ensure-bucket.step.ts`  
 **Descrição:**  
@@ -151,7 +151,7 @@ Implementar step que:
 
 ---
 
-### - [ ] **TSTEP-108 — Implementar `SyncFilesStep`**
+### - [x] **TSTEP-108 — Implementar `SyncFilesStep`**
 
 **Arquivo:** `sync-files.step.ts`  
 **Descrição:**  
@@ -170,7 +170,7 @@ Implementar step que:
 
 ## ⚙️ FASE 4 — Steps de Application (Azion Applications)
 
-### - [ ] **TSTEP-109 — Implementar `ListApplicationsStep`**
+### - [x] **TSTEP-109 — Implementar `ListApplicationsStep`**
 
 **Arquivo:** `list-applications.step.ts`  
 **Descrição:**  
@@ -186,7 +186,7 @@ Implementar step que:
 
 ---
 
-### - [ ] **TSTEP-110 — Implementar `SelectApplicationStep`**
+### - [x] **TSTEP-110 — Implementar `SelectApplicationStep`**
 
 **Arquivo:** `select-application.step.ts`  
 **Descrição:**  
@@ -207,7 +207,7 @@ Implementar step que:
 
 ## 🌍 FASE 5 — Steps de Domain Config
 
-### - [ ] **TSTEP-111 — Implementar `GetDomainConfigStep`**
+### - [x] **TSTEP-111 — Implementar `GetDomainConfigStep`**
 
 **Arquivo:** `get-domain-config.step.ts`  
 **Descrição:**  
@@ -225,7 +225,7 @@ Implementar step que:
 
 ---
 
-### - [ ] **TSTEP-112 — Implementar `EnsureDomainStep`**
+### - [x] **TSTEP-112 — Implementar `EnsureDomainStep`**
 
 **Arquivo:** `ensure-domain.step.ts`  
 **Descrição:**  
@@ -246,7 +246,7 @@ Implementar step que:
 
 ## 📊 FASE 6 — Step Final de Relatório
 
-### - [ ] **TSTEP-113 — Implementar `GenerateReportStep`**
+### - [x] **TSTEP-113 — Implementar `GenerateReportStep`**
 
 **Arquivo:** `generate-report.step.ts`  
 **Descrição:**  
@@ -267,7 +267,7 @@ Implementar step que:
 
 ## 🧪 FASE 7 — Testes de Integração Parcial dos Steps
 
-### - [ ] **TSTEP-114 — Criar teste `tests/usecases/steps/bucket-flow.test.ts`**
+### - [x] **TSTEP-114 — Criar teste `tests/usecases/steps/bucket-flow.test.ts`**
 
 **Descrição:**  
 Teste de integração entre: `ListBucketsStep` + `EnsureBucketStep` + `SyncFilesStep` com mocks simples dos serviços.  
@@ -280,7 +280,7 @@ Teste de integração entre: `ListBucketsStep` + `EnsureBucketStep` + `SyncFiles
 
 ---
 
-### - [ ] **TSTEP-115 — Criar teste `tests/usecases/steps/application-flow.test.ts`**
+### - [x] **TSTEP-115 — Criar teste `tests/usecases/steps/application-flow.test.ts`**
 
 **Descrição:**  
 Integração entre `ListApplicationsStep` e `SelectApplicationStep`.  
@@ -288,7 +288,7 @@ Integração entre `ListApplicationsStep` e `SelectApplicationStep`.
 
 ---
 
-### - [ ] **TSTEP-116 — Criar teste `tests/usecases/steps/domain-flow.test.ts`**
+### - [x] **TSTEP-116 — Criar teste `tests/usecases/steps/domain-flow.test.ts`**
 
 **Descrição:**  
 Integração entre `GetDomainConfigStep` e `EnsureDomainStep`.  

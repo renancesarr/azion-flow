@@ -25,6 +25,7 @@ describe("AzionDomainProvider", () => {
     const provider = new AzionDomainProvider({ token: "test-token", http });
     const config = await provider.getDomainConfig("dom-1");
     expect(config?.domain).toBe("example.com");
+    expect(fetchMock).toHaveBeenCalledWith(expect.stringContaining("/domains/dom-1/config"), expect.anything());
   });
 
   it("should ensure domain via POST", async () => {
@@ -43,5 +44,8 @@ describe("AzionDomainProvider", () => {
     const ensured = await provider.ensureDomain("new.com");
     expect(ensured?.domain).toBe("new.com");
     expect(ensured?.id).toBe("dom-2");
+    const init = fetchMock.mock.calls[0][1];
+    expect(fetchMock.mock.calls[0][0]).toContain("/domains/new.com/config");
+    expect(init?.method).toBe("PATCH");
   });
 });

@@ -1,7 +1,10 @@
 import type { AzionBucketDto } from "./storage/bucket.dto";
+import {
+  createBucketUrl,
+  getBucketsUrl,
+  uploadFileUrl
+} from "./http/endpoints";
 import { AzionHttpClient } from "./http/http-client";
-
-const PATH_BUCKETS = "/workspace/storage/buckets";
 
 export class AzionStorageProvider {
   private readonly http: AzionHttpClient;
@@ -11,14 +14,26 @@ export class AzionStorageProvider {
   }
 
   async listBuckets(): Promise<AzionBucketDto[]> {
-    const res = await this.http.request({ path: PATH_BUCKETS });
+    const res = await this.http.get(getBucketsUrl());
     const results = (res.data as any)?.results ?? res.data ?? [];
-    return Array.isArray(results) ? results : [];
+    if (!Array.isArray(results)) return [];
+    return results.map((bucket: any) => ({ id: bucket.id, name: bucket.name }));
   }
 
   async ensureBucket(name: string): Promise<AzionBucketDto> {
-    const res = await this.http.request({ path: PATH_BUCKETS, method: "POST", body: { name } });
+    const existing = await this.listBuckets();
+    const found = existing.find((b) => b.name === name);
+    if (found) return found;
+
+    const res = await this.http.post(createBucketUrl(), { name });
     const data = (res.data as any)?.result ?? res.data ?? {};
     return { id: data.id, name: data.name ?? name };
+  }
+
+  async upload(bucket: string, path: string, content: Buffer | string | Uint8Array) {
+    const res = await this.http.post(uploadFileUrl(bucket, path), content, {
+      "Content-Type": "application/octet-stream"
+    });
+    return res.status >= 200 && res.status < 300;
   }
 }

@@ -1,7 +1,8 @@
 import os from "node:os";
+import process from "node:process";
 import { TelemetryEvent } from "./event";
 
-export function createEvent(event: string, payload: Record<string, any> = {}): TelemetryEvent {
+export function createEvent(event: string, payload?: Record<string, any>): TelemetryEvent {
   return {
     event,
     timestamp: new Date().toISOString(),

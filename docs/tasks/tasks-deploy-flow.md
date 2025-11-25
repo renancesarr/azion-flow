@@ -118,7 +118,7 @@ export function createDeployContext(): any {
 
 ---
 
-### - [ ] **TDEP-007 — Ligar contexto ao orchestrator**
+### - [x] **TDEP-007 — Ligar contexto ao orchestrator**
 
 **Descrição:**  
 Adaptar orchestrator para receber `createDeployContext()`.  
@@ -128,7 +128,7 @@ Adaptar orchestrator para receber `createDeployContext()`.
 
 ## ⚡ FASE 4 — Validação e Encapsulamento de Dependências
 
-### - [ ] **TDEP-008 — Injetar Providers diretamente no DeployUseCase**
+### - [x] **TDEP-008 — Injetar Providers diretamente no DeployUseCase**
 
 **Arquivo:** `deploy.usecase.ts`  
 **Descrição:**  
@@ -143,7 +143,7 @@ Adicionar construtor com:
 
 ---
 
-### - [ ] **TDEP-009 — Validar instância do pipeline**
+### - [x] **TDEP-009 — Validar instância do pipeline**
 
 **Arquivo:** `deploy.factory.ts`  
 **Descrição:**  
@@ -154,7 +154,7 @@ Adicionar apenas verificação simples: array existe.
 
 ## ⚡ FASE 5 — Conectar CLI → Deploy
 
-### - [ ] **TDEP-010 — Criar comando CLI `deploy` (vazio)**
+### - [x] **TDEP-010 — Criar comando CLI `deploy` (vazio)**
 
 **Arquivo:** `src/cli/commands/deploy.ts`  
 **Descrição:**  
@@ -170,7 +170,7 @@ export async function deployCommand() {}
 
 ---
 
-### - [ ] **TDEP-011 — Atualizar router da CLI para incluir comando deploy**
+### - [x] **TDEP-011 — Atualizar router da CLI para incluir comando deploy**
 
 **Arquivo:** `src/cli/router.ts`  
 **Descrição:**  
@@ -186,7 +186,7 @@ if (args[0] === "deploy") return deployCommand();
 
 ## ⚡ FASE 6 — Testes de Integração (Flow → Steps)
 
-### - [ ] **TDEP-012 — Criar teste `tests/integration/deploy-flow.test.ts`**
+### - [x] **TDEP-012 — Criar teste `tests/integration/deploy-flow.test.ts`**
 
 **Descrição:**  
 Teste de esqueleto:
@@ -209,7 +209,7 @@ describe("Deploy Flow", () => {
 
 ---
 
-### - [ ] **TDEP-013 — Criar teste `tests/integration/deploy-orchestrator.test.ts`**
+### - [x] **TDEP-013 — Criar teste `tests/integration/deploy-orchestrator.test.ts`**
 
 **Descrição:**  
 Validar que o orchestrator consegue rodar sem steps quebrarem:
@@ -225,7 +225,7 @@ await orchestrator.run();
 
 ## ⚡ FASE 7 — Finalização do Fluxo
 
-### - [ ] **TDEP-014 — Criar arquivo `src/usecases/deploy/result.ts`**
+### - [x] **TDEP-014 — Criar arquivo `src/usecases/deploy/result.ts`**
 
 **Descrição:**  
 Criar interface vazia de resultado:
@@ -238,7 +238,7 @@ export interface DeployFinalResult {}
 
 ---
 
-### - [ ] **TDEP-015 — Retornar resultado vazio no DeployUseCase**
+### - [x] **TDEP-015 — Retornar resultado vazio no DeployUseCase**
 
 **Descrição:**  
 Adicionar return `{}` no método execute().  

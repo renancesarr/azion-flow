@@ -25,5 +25,6 @@ describe("AzionApplicationProvider", () => {
     const provider = new AzionApplicationProvider({ token: "test-token", http });
     const apps = await provider.listApplications();
     expect(apps[0].name).toBe("demo");
+    expect(fetchMock).toHaveBeenCalledWith(expect.stringContaining("/applications"), expect.anything());
   });
 });

@@ -9,7 +9,7 @@ As tasks abaixo seguem atomicidade total.
 
 ## 🌐 FASE 1 — AzionHttpClient (core de tudo)
 
-### - [ ] **TPROVREAL-001 — Implementar classe de configuração do cliente HTTP**
+### - [x] **TPROVREAL-001 — Implementar classe de configuração do cliente HTTP**
 
 **Arquivo:** `src/providers/azion/http/http-config.ts`  
 **Descrição:**  
@@ -27,7 +27,7 @@ export interface HttpClientConfig {
 
 ---
 
-### - [ ] **TPROVREAL-002 — Implementar headers padrão**
+### - [x] **TPROVREAL-002 — Implementar headers padrão**
 
 **Arquivo:** `http-client.ts`  
 **Descrição:**  
@@ -48,7 +48,7 @@ Headers:
 
 ---
 
-### - [ ] **TPROVREAL-003 — Implementar método GET real**
+### - [x] **TPROVREAL-003 — Implementar método GET real**
 
 **Descrição:**  
 Implementar `get(url: string)` chamando fetch com headers, timeout e parse JSON.  
@@ -61,7 +61,7 @@ Implementar `get(url: string)` chamando fetch com headers, timeout e parse JSON.
 
 ---
 
-### - [ ] **TPROVREAL-004 — Implementar método POST real**
+### - [x] **TPROVREAL-004 — Implementar método POST real**
 
 **Descrição:**  
 Implementar `post(url, body)`.  
@@ -70,7 +70,7 @@ Implementar `post(url, body)`.
 
 ---
 
-### - [ ] **TPROVREAL-005 — Implementar método PATCH real**
+### - [x] **TPROVREAL-005 — Implementar método PATCH real**
 
 **Descrição:**  
 Implementar `patch(url, body)`.  
@@ -78,7 +78,7 @@ Implementar `patch(url, body)`.
 
 ---
 
-### - [ ] **TPROVREAL-006 — Implementar método DELETE real**
+### - [x] **TPROVREAL-006 — Implementar método DELETE real**
 
 **Descrição:**  
 Implementar `delete(url)`.  
@@ -86,7 +86,7 @@ Implementar `delete(url)`.
 
 ---
 
-### - [ ] **TPROVREAL-007 — Implementar tratamento de erros HTTP**
+### - [x] **TPROVREAL-007 — Implementar tratamento de erros HTTP**
 
 **Descrição:**  
 Criar função interna:
@@ -104,7 +104,7 @@ Regras:
 
 ---
 
-### - [ ] **TPROVREAL-008 — Implementar lógica de timeout**
+### - [x] **TPROVREAL-008 — Implementar lógica de timeout**
 
 **Descrição:**  
 Usar AbortController para abortar requests.  
@@ -112,7 +112,7 @@ Usar AbortController para abortar requests.
 
 ---
 
-### - [ ] **TPROVREAL-009 — Implementar logging opcional**
+### - [x] **TPROVREAL-009 — Implementar logging opcional**
 
 **Arquivo:** `http-client.ts`  
 **Descrição:**  
@@ -123,7 +123,7 @@ Se `process.env.AZION_FLOW_DEBUG=1`, logar requests/responses.
 
 ## 🪣 FASE 2 — StorageProvider (Buckets e Upload)
 
-### - [ ] **TPROVREAL-010 — Criar URL builder para buckets**
+### - [x] **TPROVREAL-010 — Criar URL builder para buckets**
 
 **Arquivo:** `endpoints.ts`  
 **Descrição:**  
@@ -140,7 +140,7 @@ export const uploadFileUrl = (bucket, path) =>
 
 ---
 
-### - [ ] **TPROVREAL-011 — Implementar listBuckets() real**
+### - [x] **TPROVREAL-011 — Implementar listBuckets() real**
 
 **Arquivo:** `azion.storage.ts`  
 **Descrição:**  
@@ -160,7 +160,7 @@ Parsear estrutura real da Azion:
 
 ---
 
-### - [ ] **TPROVREAL-012 — Implementar ensureBucket() real**
+### - [x] **TPROVREAL-012 — Implementar ensureBucket() real**
 
 **Descrição:**
 
@@ -174,7 +174,7 @@ Parsear estrutura real da Azion:
 
 ---
 
-### - [ ] **TPROVREAL-013 — Implementar upload de arquivos**
+### - [x] **TPROVREAL-013 — Implementar upload de arquivos**
 
 **Descrição:**  
 Usar fetch com body raw ou multipart:
@@ -192,7 +192,7 @@ await this.http.put(uploadFileUrl(bucket, filename), fileBuffer);
 
 ## 🧩 FASE 3 — ApplicationProvider
 
-### - [ ] **TPROVREAL-014 — Criar URL builder para aplicações**
+### - [x] **TPROVREAL-014 — Criar URL builder para aplicações**
 
 **Arquivo:** `endpoints.ts`
 
@@ -204,7 +204,7 @@ export const listApplicationsUrl = () => `/applications`;
 
 ---
 
-### - [ ] **TPROVREAL-015 — Implementar listApplications() real**
+### - [x] **TPROVREAL-015 — Implementar listApplications() real**
 
 **Arquivo:** `azion.application.ts`  
 **Descrição:**
@@ -220,7 +220,7 @@ export const listApplicationsUrl = () => `/applications`;
 
 ## 🌍 FASE 4 — DomainConfigProvider
 
-### - [ ] **TPROVREAL-016 — Criar URL builder para domain config**
+### - [x] **TPROVREAL-016 — Criar URL builder para domain config**
 
 **Arquivo:** `endpoints.ts`
 
@@ -232,7 +232,7 @@ export const getDomainConfigUrl = (domainId) => `/domains/${domainId}/config`;
 
 ---
 
-### - [ ] **TPROVREAL-017 — Implementar getDomainConfig() real**
+### - [x] **TPROVREAL-017 — Implementar getDomainConfig() real**
 
 **Arquivo:** `azion.domain.ts`  
 **Descrição:**
@@ -246,7 +246,7 @@ export const getDomainConfigUrl = (domainId) => `/domains/${domainId}/config`;
 
 ---
 
-### - [ ] **TPROVREAL-018 — Implementar ensureDomain() real**
+### - [x] **TPROVREAL-018 — Implementar ensureDomain() real**
 
 **Descrição:**
 
@@ -259,7 +259,7 @@ export const getDomainConfigUrl = (domainId) => `/domains/${domainId}/config`;
 
 ## 🧪 FASE 5 — Testes Reais dos Providers (com mocks de fetch)
 
-### - [ ] **TPROVREAL-019 — Criar `tests/providers/http-client.test.ts`**
+### - [x] **TPROVREAL-019 — Criar `tests/providers/http-client.test.ts`**
 
 Testar:
 
@@ -270,7 +270,7 @@ Testar:
 
 ---
 
-### - [ ] **TPROVREAL-020 — Criar `tests/providers/storage-provider.test.ts`**
+### - [x] **TPROVREAL-020 — Criar `tests/providers/storage-provider.test.ts`**
 
 Testar:
 
@@ -280,8 +280,8 @@ Testar:
 
 ---
 
-### - [ ] **TPROVREAL-021 — Criar `tests/providers/application-provider.test.ts`**
+### - [x] **TPROVREAL-021 — Criar `tests/providers/application-provider.test.ts`**
 
 ---
 
-### - [ ] **TPROVREAL-022 — Criar `tests/providers/domain-provider.test.ts`**
+### - [x] **TPROVREAL-022 — Criar `tests/providers/domain-provider.test.ts`**

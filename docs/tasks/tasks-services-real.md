@@ -180,7 +180,7 @@ Critérios:
 
 ## 🪢 FASE 6 — Integração entre Services (Domínio Completo)
 
-### - [ ] **TSERVREAL-013 — Criar objeto agregador DomainServices**
+### - [x] **TSERVREAL-013 — Criar objeto agregador DomainServices**
 
 **Arquivo:** `domain/domain-services.ts`  
 Descrição:  
@@ -196,7 +196,7 @@ Exportar todos services construídos:
 
 ---
 
-### - [ ] **TSERVREAL-014 — Criar factory `createDomainServices()`**
+### - [x] **TSERVREAL-014 — Criar factory `createDomainServices()`**
 
 **Arquivo:** `domain/services.factory.ts`  
 Descrição:  
@@ -207,7 +207,7 @@ Dependência: TSERVREAL-013
 
 ## 🧪 FASE 7 — Testes de Integração do Domínio
 
-### - [ ] **TSERVREAL-015 — Criar teste `tests/domain/integration/bucket.test.ts`**
+### - [x] **TSERVREAL-015 — Criar teste `tests/domain/integration/bucket.test.ts`**
 
 Testar fluxo real:
 
@@ -217,19 +217,19 @@ Testar fluxo real:
 
 ---
 
-### - [ ] **TSERVREAL-016 — Criar teste `tests/domain/integration/filesync.test.ts`**
+### - [x] **TSERVREAL-016 — Criar teste `tests/domain/integration/filesync.test.ts`**
 
 Dependência: TSERVREAL-005
 
 ---
 
-### - [ ] **TSERVREAL-017 — Criar teste `tests/domain/integration/applications.test.ts`**
+### - [x] **TSERVREAL-017 — Criar teste `tests/domain/integration/applications.test.ts`**
 
 Dependência: TSERVREAL-008
 
 ---
 
-### - [ ] **TSERVREAL-018 — Criar teste `tests/domain/integration/domainconfig.test.ts`**
+### - [x] **TSERVREAL-018 — Criar teste `tests/domain/integration/domainconfig.test.ts`**
 
 Dependência: TSERVREAL-010
 

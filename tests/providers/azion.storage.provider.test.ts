@@ -29,13 +29,20 @@ describe("AzionStorageProvider", () => {
   });
 
   it("should ensure bucket via POST", async () => {
-    const response = {
+    const listResponse = {
+      status: 200,
+      ok: true,
+      headers: { get: () => "application/json" },
+      json: vi.fn(async () => ({ results: [] }))
+    } as any;
+    const createResponse = {
       status: 200,
       ok: true,
       headers: { get: () => "application/json" },
       json: vi.fn(async () => ({ result: { id: "2", name: "new" } }))
     } as any;
-    const fetchMock = vi.fn(async () => response);
+    const fetchMock = vi.fn();
+    fetchMock.mockResolvedValueOnce(listResponse as any).mockResolvedValueOnce(createResponse as any);
     // @ts-ignore
     globalThis.fetch = fetchMock;
 
@@ -44,5 +51,25 @@ describe("AzionStorageProvider", () => {
     const bucket = await provider.ensureBucket("new");
     expect(bucket.name).toBe("new");
     expect(bucket.id).toBe("2");
+  });
+
+  it("should upload file with octet-stream header", async () => {
+    const uploadResponse = {
+      status: 201,
+      ok: true,
+      headers: { get: () => "application/json" },
+      json: vi.fn(async () => ({}))
+    } as any;
+    const fetchMock = vi.fn().mockResolvedValue(uploadResponse as any);
+    // @ts-ignore
+    globalThis.fetch = fetchMock;
+
+    const http = new AzionHttpClient({ token: "test-token", fetchImpl: fetchMock as any });
+    const provider = new AzionStorageProvider({ token: "test-token", http });
+    const ok = await provider.upload("bucket", "file.txt", Buffer.from("hi"));
+
+    expect(ok).toBe(true);
+    const init = fetchMock.mock.calls[0][1];
+    expect(init?.headers?.["Content-Type"]).toBe("application/octet-stream");
   });
 });

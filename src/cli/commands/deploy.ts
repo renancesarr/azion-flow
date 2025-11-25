@@ -4,6 +4,7 @@ import { createCliStepLogger } from "../utils/step-logger";
 import { promptTokenIfNeeded } from "../utils/token-prompt";
 import { getToken } from "../../providers/azion/http/token-store";
 import { formatError } from "../utils/errors";
+import { labelForStep } from "../utils/step-labels";
 
 interface DeployFlags {
   json: boolean;

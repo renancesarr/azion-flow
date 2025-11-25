@@ -1,28 +1,17 @@
-# Exemplo de domínio customizado — azion-flow
+# Example — Custom Domain
 
-## O que é
+Assumindo que você já possui um domínio configurado na Azion.
 
-Fluxo para publicar e apontar para um domínio customizado existente.
+```bash
+azion-flow deploy --build-dir dist --bucket my-bucket --domain example.com
+```
 
-## Passos
+Se desejar armazenar na config local, crie `.azionflow/config.json`:
 
-1. Entre na pasta:
-
-   ```bash
-   cd examples/custom-domain
-   ```
-
-2. Edite `config.json`:
-   - `bucketName`: bucket alvo.
-   - `domain`: domínio completo (ex.: `www.seu-dominio.com`).
-   - `applicationId`: ID da aplicação já criada (se tiver).
-3. Rode:
-
-   ```bash
-   azion-flow deploy --build-dir dist --domain www.seu-dominio.com
-   ```
-
-## Estrutura
-
-- `dist/index.html`: página a ser publicada.
-- `config.json`: parâmetros do deploy com domínio customizado.
+```json
+{
+  "bucket": "my-bucket",
+  "domain": "example.com",
+  "buildDir": "dist"
+}
+```

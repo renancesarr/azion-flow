@@ -195,7 +195,7 @@ Listar comandos, flags, e exemplos reais.
 
 ## 🧪 FASE 6 — Testes de UX
 
-### - [ ] **TUX-017 — Testar CLI com mock do orchestrator**
+### - [x] **TUX-017 — Testar CLI com mock do orchestrator**
 
 **Arquivo:** `tests/cli/ux/basic.test.ts`  
 Testar:
@@ -206,25 +206,25 @@ Testar:
 
 ---
 
-### - [ ] **TUX-018 — Testar JSON mode**
+### - [x] **TUX-018 — Testar JSON mode**
 
 Arquivo: `tests/cli/ux/json.test.ts`
 
 ---
 
-### - [ ] **TUX-019 — Testar silent mode**
+### - [x] **TUX-019 — Testar silent mode**
 
 Arquivo: `tests/cli/ux/silent.test.ts`
 
 ---
 
-### - [ ] **TUX-020 — Testar no-color mode**
+### - [x] **TUX-020 — Testar no-color mode**
 
 Arquivo: `tests/cli/ux/nocolor.test.ts`
 
 ---
 
-### - [ ] **TUX-021 — Testar help**
+### - [x] **TUX-021 — Testar help**
 
 Arquivo: `tests/cli/ux/help.test.ts`
 

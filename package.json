@@ -5,10 +5,15 @@
   "description": "CLI modular para deploy de sites estáticos na Azion.",
   "license": "MIT",
   "bin": {
-    "azion-flow": "./bin/azion-flow"
+    "azion-flow": "./dist/index.js"
   },
   "scripts": {
     "build": "tsup src/cli/index.ts --format esm --dts --minify --no-splitting --clean",
+    "build:release": "npm run build",
+    "update:version": "node scripts/update-version.ts",
+    "validate:release": "node scripts/validate-release.ts",
+    "npm:publish": "npm run build:release && npm run validate:release && npm publish --access public",
+    "npm:publish:dry": "npm run build:release && npm pack --dry-run",
     "test": "vitest",
     "lint:md": "markdownlint \"**/*.md\" --ignore node_modules --ignore dist --ignore docs/developer --ignore batch-executor.md",
     "validate-docs": "node scripts/validate-docs.js"
@@ -18,6 +23,10 @@
     "tsup": "^8.0.0",
     "typescript": "^5.3.3",
     "vitest": "^1.6.1"
+  },
+  "overrides": {
+    "esbuild": "^0.24.4",
+    "glob": "^10.4.6"
   },
   "dependencies": {
     "yaml": "^2.8.1"

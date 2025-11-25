@@ -9,7 +9,7 @@ Atomicidade total. Nada de steps aqui — apenas domínio.
 
 ## 📦 FASE 1 — BucketService
 
-### - [ ] **TSERV-001 — Definir contrato de BucketService**
+### - [x] **TSERV-001 — Definir contrato de BucketService**
 
 **Arquivo:** `src/domain/bucket/bucket.service.ts`  
 **Descrição:**  
@@ -29,7 +29,7 @@ Sem lógica ainda.
 
 ---
 
-### - [ ] **TSERV-002 — Implementar listBuckets()**
+### - [x] **TSERV-002 — Implementar listBuckets()**
 
 **Descrição:**  
 Implementar lógica real:
@@ -44,7 +44,7 @@ Implementar lógica real:
 
 ---
 
-### - [ ] **TSERV-003 — Implementar ensureBucket()**
+### - [x] **TSERV-003 — Implementar ensureBucket()**
 
 **Descrição:**  
 Implementar lógica real:
@@ -65,7 +65,7 @@ Implementar lógica real:
 
 ## 📁 FASE 2 — FileSyncService
 
-### - [ ] **TSERV-004 — Definir contrato de FileSyncService**
+### - [x] **TSERV-004 — Definir contrato de FileSyncService**
 
 **Arquivo:** `file-sync.service.ts`  
 **Descrição:**  
@@ -84,7 +84,7 @@ async sync(buildDir: string, bucketName: string): Promise<{ uploaded: number }> 
 
 ---
 
-### - [ ] **TSERV-005 — Implementar listLocalFiles()**
+### - [x] **TSERV-005 — Implementar listLocalFiles()**
 
 **Descrição:**
 
@@ -98,7 +98,7 @@ async sync(buildDir: string, bucketName: string): Promise<{ uploaded: number }> 
 
 ---
 
-### - [ ] **TSERV-006 — Implementar sync()**
+### - [x] **TSERV-006 — Implementar sync()**
 
 **Descrição:**
 
@@ -118,7 +118,7 @@ async sync(buildDir: string, bucketName: string): Promise<{ uploaded: number }> 
 
 ## ⚙️ FASE 3 — ApplicationService
 
-### - [ ] **TSERV-007 — Definir contrato de ApplicationService**
+### - [x] **TSERV-007 — Definir contrato de ApplicationService**
 
 **Arquivo:** `application.service.ts`  
 **Descrição:**  
@@ -134,7 +134,7 @@ async listApplications(): Promise<any[]> {}
 
 ---
 
-### - [ ] **TSERV-008 — Implementar listApplications()**
+### - [x] **TSERV-008 — Implementar listApplications()**
 
 **Descrição:**
 
@@ -152,7 +152,7 @@ async listApplications(): Promise<any[]> {}
 
 ## 🌍 FASE 4 — DomainConfigService
 
-### - [ ] **TSERV-009 — Definir contrato**
+### - [x] **TSERV-009 — Definir contrato**
 
 **Arquivo:** `domain-config.service.ts`  
 **Descrição:**  
@@ -169,7 +169,7 @@ async ensureDomain(domain: string): Promise<any> {}
 
 ---
 
-### - [ ] **TSERV-010 — Implementar getConfig()**
+### - [x] **TSERV-010 — Implementar getConfig()**
 
 **Descrição:**
 
@@ -182,7 +182,7 @@ async ensureDomain(domain: string): Promise<any> {}
 
 ---
 
-### - [ ] **TSERV-011 — Implementar ensureDomain()**
+### - [x] **TSERV-011 — Implementar ensureDomain()**
 
 **Descrição:**  
 Implementação simples:
@@ -200,7 +200,7 @@ Implementação simples:
 
 ## 💾 FASE 5 — ConfigStorageService
 
-### - [ ] **TSERV-012 — Definir contrato**
+### - [x] **TSERV-012 — Definir contrato**
 
 **Arquivo:** `config-storage.service.ts`  
 **Descrição:**  
@@ -217,7 +217,7 @@ async saveConfig(data: any): Promise<void> {}
 
 ---
 
-### - [ ] **TSERV-013 — Implementar loadConfig()**
+### - [x] **TSERV-013 — Implementar loadConfig()**
 
 **Descrição:**
 
@@ -231,7 +231,7 @@ async saveConfig(data: any): Promise<void> {}
 
 ---
 
-### - [ ] **TSERV-014 — Implementar saveConfig()**
+### - [x] **TSERV-014 — Implementar saveConfig()**
 
 **Descrição:**
 
@@ -247,19 +247,19 @@ async saveConfig(data: any): Promise<void> {}
 
 ## 🧪 FASE 6 — Testes Integrados do Domínio
 
-### - [ ] **TSERV-015 — Criar `tests/domain/bucket.service.test.ts`**
+### - [x] **TSERV-015 — Criar `tests/domain/bucket.service.test.ts`**
 
 **Testar:** listBuckets + ensureBucket integrados com mocks.
 
-### - [ ] **TSERV-016 — Criar `tests/domain/filesync.service.test.ts`**
+### - [x] **TSERV-016 — Criar `tests/domain/filesync.service.test.ts`**
 
 **Testar:** listLocalFiles + sync.
 
-### - [ ] **TSERV-017 — Criar `tests/domain/application.service.test.ts`**
+### - [x] **TSERV-017 — Criar `tests/domain/application.service.test.ts`**
 
-### - [ ] **TSERV-018 — Criar `tests/domain/domain-config.service.test.ts`**
+### - [x] **TSERV-018 — Criar `tests/domain/domain-config.service.test.ts`**
 
-### - [ ] **TSERV-019 — Criar `tests/domain/config-storage.service.test.ts`**
+### - [x] **TSERV-019 — Criar `tests/domain/config-storage.service.test.ts`**
 
 ---
 

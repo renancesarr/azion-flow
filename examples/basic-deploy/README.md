@@ -1,25 +1,14 @@
-# Exemplo básico — azion-flow
+# Example — Basic Deploy
 
-## O que é
+Passos:
 
-Deploy mínimo de um `index.html` diretamente na raiz do bucket.
+1) Gere seus arquivos estáticos na pasta `dist/`.
+2) Execute:
 
-## Passos
+```bash
+azion-flow deploy --build-dir dist --bucket my-bucket
+```
 
-1. Entre na pasta:
-
-   ```bash
-   cd examples/basic-deploy
-   ```
-
-2. Ajuste `config.json` com seu bucket/domínio.
-3. Rode:
-
-   ```bash
-   azion-flow deploy --build-dir .
-   ```
-
-## Estrutura
-
-- `index.html`: página simples para publicação.
-- `config.json`: parâmetros do deploy (bucket/domínio).
+Flags úteis:
+- `--domain example.com` para já associar domínio.
+- `--json` para saída automatizada no CI.

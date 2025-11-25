@@ -49,9 +49,9 @@ Skipped     3
 
 ## Exemplos rápidos
 
-- Deploy mínimo: veja `examples/basic-deploy/`.
-- Várias pastas/rotas: `examples/multi-folder/`.
-- Domínio customizado: `examples/custom-domain/`.
+- Deploy mínimo: `examples/basic-deploy/`
+- Domínio customizado: `examples/custom-domain/`
+- Múltiplas pastas: `examples/multi-folder/`
 
 ## Roadmap curto
 

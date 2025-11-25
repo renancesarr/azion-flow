@@ -8,3 +8,5 @@ export * from "./domain-config/domain-config.entity";
 export * from "./domain-config/domain-config.service";
 export * from "./config-storage/config-storage.entity";
 export * from "./config-storage/config-storage.service";
+export * from "./domain-services";
+export * from "./services.factory";

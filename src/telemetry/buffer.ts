@@ -1,20 +1,11 @@
-import { mkdir, appendFile } from "node:fs/promises";
-import { existsSync } from "node:fs";
+import { appendFile, mkdir } from "node:fs/promises";
 import { dirname, join } from "node:path";
-import { TelemetryEvent } from "./event";
+import type { TelemetryEvent } from "./event";
 
-const LOG_PATH = ".azionflow/events.log";
+const BUFFER_FILE = ".azionflow/events.log";
 
-async function ensureDir(path: string): Promise<void> {
-  const dir = dirname(path);
-  if (!existsSync(dir)) {
-    await mkdir(dir, { recursive: true });
-  }
-}
-
-export async function bufferEvent(evt: TelemetryEvent, cwd = process.cwd()): Promise<void> {
-  const filePath = join(cwd, LOG_PATH);
-  await ensureDir(filePath);
-  const line = JSON.stringify(evt);
-  await appendFile(filePath, `${line}\n`, "utf-8");
+export async function appendEvent(event: TelemetryEvent, cwd = process.cwd()): Promise<void> {
+  const filePath = join(cwd, BUFFER_FILE);
+  await mkdir(dirname(filePath), { recursive: true });
+  await appendFile(filePath, JSON.stringify(event) + "\n", "utf-8");
 }
