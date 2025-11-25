@@ -1,4 +1,13 @@
-export function createDeployContext(initial: any = {}): any {
+export interface CoreContext {
+  projectRoot: string;
+  buildDir: string;
+  bucketName?: string;
+  applicationId?: string;
+  domain?: string;
+  report: Record<string, unknown>;
+}
+
+export function createDeployContext(initial: Partial<CoreContext> = {}): CoreContext {
   return {
     projectRoot: initial.projectRoot ?? process.cwd(),
     buildDir: initial.buildDir ?? "",
