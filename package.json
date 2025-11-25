@@ -25,10 +25,11 @@
     "vitest": "^1.6.1"
   },
   "overrides": {
-    "esbuild": "^0.24.4",
-    "glob": "^10.4.6"
+    "esbuild": "^0.24.0",
+    "glob": "^10.4.5"
   },
   "dependencies": {
+    "@types/node": "^24.10.1",
     "yaml": "^2.8.1"
   }
 }
