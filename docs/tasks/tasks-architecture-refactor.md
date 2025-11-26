@@ -40,25 +40,25 @@ Objetivo: alinhar todo o código à arquitetura core/domains/usecases/telemetry,
 
 ## Providers (deveriam migrar para domains correspondentes se aplicável)
 
-- [ ] **TARCH-PROV-001 — Revisar src/providers/azion/application/application.dto.ts**
-- [ ] **TARCH-PROV-002 — Revisar src/providers/azion/azion.application.ts**
-- [ ] **TARCH-PROV-003 — Revisar src/providers/azion/azion.credentials.ts**
-- [ ] **TARCH-PROV-004 — Revisar src/providers/azion/azion.domain.ts**
-- [ ] **TARCH-PROV-005 — Revisar src/providers/azion/azion.storage.ts**
-- [ ] **TARCH-PROV-006 — Revisar src/providers/azion/domain/domain.dto.ts**
-- [ ] **TARCH-PROV-007 — Revisar src/providers/azion/http/endpoints.ts**
-- [ ] **TARCH-PROV-008 — Revisar src/providers/azion/http/http-client.ts**
-- [ ] **TARCH-PROV-009 — Revisar src/providers/azion/http/http-error.ts**
-- [ ] **TARCH-PROV-010 — Revisar src/providers/azion/http/index.ts**
-- [ ] **TARCH-PROV-011 — Revisar src/providers/azion/http/token-store.ts**
-- [ ] **TARCH-PROV-012 — Revisar src/providers/azion/http/types.ts**
-- [ ] **TARCH-PROV-013 — Revisar src/providers/azion/storage/bucket.dto.ts**
-- [ ] **TARCH-PROV-014 — Revisar src/providers/azion/storage/credential.dto.ts**
-- [ ] **TARCH-PROV-015 — Revisar src/providers/config/file-config.ts**
-- [ ] **TARCH-PROV-016 — Revisar src/providers/filesystem/filesync.dto.ts**
-- [ ] **TARCH-PROV-017 — Revisar src/providers/filesystem/nodefs.ts**
-- [ ] **TARCH-PROV-018 — Revisar src/providers/index.ts**
-- [ ] **TARCH-PROV-019 — Revisar src/providers/types.ts**
+- [x] **TARCH-PROV-001 — Revisar src/providers/azion/application/application.dto.ts**
+- [x] **TARCH-PROV-002 — Revisar src/providers/azion/azion.application.ts**
+- [x] **TARCH-PROV-003 — Revisar src/providers/azion/azion.credentials.ts**
+- [x] **TARCH-PROV-004 — Revisar src/providers/azion/azion.domain.ts**
+- [x] **TARCH-PROV-005 — Revisar src/providers/azion/azion.storage.ts**
+- [x] **TARCH-PROV-006 — Revisar src/providers/azion/domain/domain.dto.ts**
+- [x] **TARCH-PROV-007 — Revisar src/providers/azion/http/endpoints.ts**
+- [x] **TARCH-PROV-008 — Revisar src/providers/azion/http/http-client.ts**
+- [x] **TARCH-PROV-009 — Revisar src/providers/azion/http/http-error.ts** (removido em commit anterior)
+- [x] **TARCH-PROV-010 — Revisar src/providers/azion/http/index.ts**
+- [x] **TARCH-PROV-011 — Revisar src/providers/azion/http/token-store.ts**
+- [x] **TARCH-PROV-012 — Revisar src/providers/azion/http/types.ts**
+- [x] **TARCH-PROV-013 — Revisar src/providers/azion/storage/bucket.dto.ts**
+- [x] **TARCH-PROV-014 — Revisar src/providers/azion/storage/credential.dto.ts**
+- [x] **TARCH-PROV-015 — Revisar src/providers/config/file-config.ts**
+- [x] **TARCH-PROV-016 — Revisar src/providers/filesystem/filesync.dto.ts**
+- [x] **TARCH-PROV-017 — Revisar src/providers/filesystem/nodefs.ts**
+- [x] **TARCH-PROV-018 — Revisar src/providers/index.ts**
+- [x] **TARCH-PROV-019 — Revisar src/providers/types.ts**
 
 ## Domínios (services/entities)
 
