@@ -4,8 +4,8 @@ Objetivo: alinhar todo o código à arquitetura core/domains/usecases/telemetry,
 
 ## CLI (core/cli)
 
-- [ ] **TARCH-CLI-001 — Revisar src/cli/banner.ts**
-- [ ] **TARCH-CLI-002 — Revisar src/cli/bootstrap.ts**
+- [x] **TARCH-CLI-001 — Revisar src/cli/banner.ts**
+- [x] **TARCH-CLI-002 — Revisar src/cli/bootstrap.ts**
 - [ ] **TARCH-CLI-003 — Revisar src/cli/commands/deploy.ts**
 - [ ] **TARCH-CLI-004 — Revisar src/cli/commands/help.ts**
 - [ ] **TARCH-CLI-005 — Revisar src/cli/commands/storage/buckets.ts**
