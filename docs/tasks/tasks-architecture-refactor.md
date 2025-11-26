@@ -6,24 +6,24 @@ Objetivo: alinhar todo o código à arquitetura core/domains/usecases/telemetry,
 
 - [x] **TARCH-CLI-001 — Revisar src/cli/banner.ts**
 - [x] **TARCH-CLI-002 — Revisar src/cli/bootstrap.ts**
-- [ ] **TARCH-CLI-003 — Revisar src/cli/commands/deploy.ts**
-- [ ] **TARCH-CLI-004 — Revisar src/cli/commands/help.ts**
-- [ ] **TARCH-CLI-005 — Revisar src/cli/commands/storage/buckets.ts**
-- [ ] **TARCH-CLI-006 — Revisar src/cli/commands/storage/credentials.ts**
-- [ ] **TARCH-CLI-007 — Revisar src/cli/commands/telemetry.ts**
-- [ ] **TARCH-CLI-008 — Revisar src/cli/commands/version.ts**
-- [ ] **TARCH-CLI-009 — Revisar src/cli/index.ts**
-- [ ] **TARCH-CLI-010 — Revisar src/cli/router.ts**
-- [ ] **TARCH-CLI-011 — Revisar src/cli/types/command.ts**
-- [ ] **TARCH-CLI-012 — Revisar src/cli/ui/output.ts**
-- [ ] **TARCH-CLI-013 — Revisar src/cli/utils/colors.ts**
-- [ ] **TARCH-CLI-014 — Revisar src/cli/utils/errors.ts**
-- [ ] **TARCH-CLI-015 — Revisar src/cli/utils/loading.ts**
-- [ ] **TARCH-CLI-016 — Revisar src/cli/utils/section.ts**
-- [ ] **TARCH-CLI-017 — Revisar src/cli/utils/step-labels.ts**
-- [ ] **TARCH-CLI-018 — Revisar src/cli/utils/step-logger.ts**
-- [ ] **TARCH-CLI-019 — Revisar src/cli/utils/table.ts**
-- [ ] **TARCH-CLI-020 — Revisar src/cli/utils/token-prompt.ts**
+- [x] **TARCH-CLI-003 — Revisar src/cli/commands/deploy.ts**
+- [x] **TARCH-CLI-004 — Revisar src/cli/commands/help.ts**
+- [x] **TARCH-CLI-005 — Revisar src/cli/commands/storage/buckets.ts**
+- [x] **TARCH-CLI-006 — Revisar src/cli/commands/storage/credentials.ts**
+- [x] **TARCH-CLI-007 — Revisar src/cli/commands/telemetry.ts**
+- [x] **TARCH-CLI-008 — Revisar src/cli/commands/version.ts**
+- [x] **TARCH-CLI-009 — Revisar src/cli/index.ts**
+- [x] **TARCH-CLI-010 — Revisar src/cli/router.ts**
+- [x] **TARCH-CLI-011 — Revisar src/cli/types/command.ts**
+- [x] **TARCH-CLI-012 — Revisar src/cli/ui/output.ts**
+- [x] **TARCH-CLI-013 — Revisar src/cli/utils/colors.ts**
+- [x] **TARCH-CLI-014 — Revisar src/cli/utils/errors.ts**
+- [x] **TARCH-CLI-015 — Revisar src/cli/utils/loading.ts**
+- [x] **TARCH-CLI-016 — Revisar src/cli/utils/section.ts**
+- [x] **TARCH-CLI-017 — Revisar src/cli/utils/step-labels.ts**
+- [x] **TARCH-CLI-018 — Revisar src/cli/utils/step-logger.ts**
+- [x] **TARCH-CLI-019 — Revisar src/cli/utils/table.ts**
+- [x] **TARCH-CLI-020 — Revisar src/cli/utils/token-prompt.ts**
 
 ## Core (erros, logger, utils)
 
