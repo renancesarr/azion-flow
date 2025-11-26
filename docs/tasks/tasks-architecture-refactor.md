@@ -31,9 +31,9 @@ Objetivo: alinhar todo o código à arquitetura core/domains/usecases/telemetry,
 - [x] **TARCH-CORE-002 — Revisar src/core/errors/error-codes.ts**
 - [x] **TARCH-CORE-003 — Revisar src/core/errors/index.ts**
 - [x] **TARCH-CORE-004 — Revisar src/core/errors/types/.gitkeep** (avaliar necessidade do diretório)
-- [x] **TARCH-CORE-005 — Revisar src/core/logger/adapters/console-logger.ts**
-- [x] **TARCH-CORE-006 — Revisar src/core/logger/logger.ts**
-- [x] **TARCH-CORE-007 — Revisar src/core/logger/types.ts**
+- [x] **TARCH-CORE-005 — Revisar src/core/logger/adapters/console-logger.ts** (removido; backlog para logger real)
+- [x] **TARCH-CORE-006 — Revisar src/core/logger/logger.ts** (removido; backlog para logger real)
+- [x] **TARCH-CORE-007 — Revisar src/core/logger/types.ts** (removido; backlog para logger real)
 - [x] **TARCH-CORE-008 — Revisar src/core/utils/fs/path.ts**
 - [x] **TARCH-CORE-009 — Revisar src/core/utils/index.ts**
 - [x] **TARCH-CORE-010 — Revisar src/core/utils/text/format.ts**
