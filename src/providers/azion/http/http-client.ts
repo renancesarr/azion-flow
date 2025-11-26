@@ -1,5 +1,4 @@
 import { AZION_API_BASE } from "./endpoints";
-import { AzionHttpError } from "./http-error";
 import type { HttpClientConfig } from "./http-config";
 import type { HttpRequest, HttpResponse } from "./types";
 
@@ -78,7 +77,7 @@ export class AzionHttpClient {
   async request(req: HttpRequest): Promise<HttpResponse> {
     // aborta cedo se não houver token explícito
     if (!this.token && !(req.headers && req.headers.Authorization)) {
-      throw new AzionHttpError("AZION_TOKEN ausente: solicite/colete o token antes de chamar a API.");
+      throw new Error("AZION_TOKEN ausente: solicite/colete o token antes de chamar a API.");
     }
 
     const url = new URL(req.path ?? "/", req.baseUrl ?? this.baseUrl).toString();
@@ -125,7 +124,7 @@ export class AzionHttpClient {
     } catch (err) {
       if (timeoutId) clearTimeout(timeoutId);
       if ((err as Error)?.name === "AbortError") {
-        throw new AzionHttpError(`Timeout após ${timeout}ms`);
+        throw new Error(`Timeout após ${timeout}ms`);
       }
       throw err;
     }
@@ -160,7 +159,7 @@ export class AzionHttpClient {
   private async handleHttpError(res: FetchResponse, body: unknown): Promise<never> {
     const base = `${res.status}: ${res.statusText}`;
     const detail = typeof body === "string" ? body : JSON.stringify(body);
-    throw new AzionHttpError(`${base}${detail ? ` — ${detail}` : ""}`);
+    throw new Error(`${base}${detail ? ` — ${detail}` : ""}`);
   }
 
   private log(message: string, meta?: unknown) {
