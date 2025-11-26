@@ -19,7 +19,7 @@
     "validate-docs": "node scripts/validate-docs.js"
   },
   "devDependencies": {
-    "markdownlint-cli": "^0.39.0",
+    "markdownlint-cli": "^0.46.0",
     "tsup": "^8.0.0",
     "typescript": "^5.3.3",
     "vitest": "^1.6.1"
