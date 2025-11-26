@@ -27,16 +27,16 @@ Objetivo: alinhar todo o código à arquitetura core/domains/usecases/telemetry,
 
 ## Core (erros, logger, utils)
 
-- [ ] **TARCH-CORE-001 — Revisar src/core/errors/base-error.ts**
-- [ ] **TARCH-CORE-002 — Revisar src/core/errors/error-codes.ts**
-- [ ] **TARCH-CORE-003 — Revisar src/core/errors/index.ts**
-- [ ] **TARCH-CORE-004 — Revisar src/core/errors/types/.gitkeep** (avaliar necessidade do diretório)
-- [ ] **TARCH-CORE-005 — Revisar src/core/logger/adapters/console-logger.ts**
-- [ ] **TARCH-CORE-006 — Revisar src/core/logger/logger.ts**
-- [ ] **TARCH-CORE-007 — Revisar src/core/logger/types.ts**
-- [ ] **TARCH-CORE-008 — Revisar src/core/utils/fs/path.ts**
-- [ ] **TARCH-CORE-009 — Revisar src/core/utils/index.ts**
-- [ ] **TARCH-CORE-010 — Revisar src/core/utils/text/format.ts**
+- [x] **TARCH-CORE-001 — Revisar src/core/errors/base-error.ts**
+- [x] **TARCH-CORE-002 — Revisar src/core/errors/error-codes.ts**
+- [x] **TARCH-CORE-003 — Revisar src/core/errors/index.ts**
+- [x] **TARCH-CORE-004 — Revisar src/core/errors/types/.gitkeep** (avaliar necessidade do diretório)
+- [x] **TARCH-CORE-005 — Revisar src/core/logger/adapters/console-logger.ts**
+- [x] **TARCH-CORE-006 — Revisar src/core/logger/logger.ts**
+- [x] **TARCH-CORE-007 — Revisar src/core/logger/types.ts**
+- [x] **TARCH-CORE-008 — Revisar src/core/utils/fs/path.ts**
+- [x] **TARCH-CORE-009 — Revisar src/core/utils/index.ts**
+- [x] **TARCH-CORE-010 — Revisar src/core/utils/text/format.ts**
 
 ## Providers (deveriam migrar para domains correspondentes se aplicável)
 
