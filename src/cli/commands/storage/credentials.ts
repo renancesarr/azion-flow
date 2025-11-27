@@ -1,8 +1,8 @@
-import { AzionCredentialsProvider } from "../../../providers/azion/azion.credentials";
+import { AzionCredentialsProvider } from "../../../domains/storage/azion.credentials";
 import { setTokenDirect, promptTokenIfNeeded } from "../../utils/token-prompt";
-import { getToken } from "../../../providers/azion/http/token-store";
+import { getToken } from "../../../core/http/token-store";
 import { renderTable } from "../../utils/table";
-import type { AzionCredentialDto } from "../../../providers/azion/storage/credential.dto";
+import type { AzionCredentialDto } from "../../../domains/storage/dto/credential.dto";
 
 type CredFlags = {
   json: boolean;

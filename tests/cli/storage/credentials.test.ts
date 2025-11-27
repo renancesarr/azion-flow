@@ -1,8 +1,8 @@
 import { describe, it, expect, vi, afterEach } from "vitest";
 import { credentialsCommand } from "../../../src/cli/commands/storage/credentials";
-import { AzionCredentialsProvider } from "../../../src/providers/azion/azion.credentials";
+import { AzionCredentialsProvider } from "../../../src/domains/storage/azion.credentials";
 import * as tokenPrompt from "../../../src/cli/utils/token-prompt";
-import { setToken, clearToken } from "../../../src/providers/azion/http/token-store";
+import { setToken, clearToken } from "../../../src/core/http/token-store";
 
 vi.mock("../../../src/cli/utils/token-prompt", () => ({
   promptTokenIfNeeded: vi.fn(async () => {}),

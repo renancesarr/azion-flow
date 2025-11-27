@@ -1,6 +1,6 @@
-import type { AzionApplicationDto } from "./application/application.dto";
-import { listApplicationsUrl } from "./http/endpoints";
-import { AzionHttpClient } from "./http/http-client";
+import type { AzionApplicationDto } from "../../domains/application/dto/application.dto";
+import { listApplicationsUrl } from "../../core/http/endpoints";
+import { AzionHttpClient } from "../../core/http/http-client";
 
 export class AzionApplicationProvider {
   private readonly http: AzionHttpClient;

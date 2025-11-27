@@ -1,7 +1,7 @@
 import readline from "node:readline/promises";
 import { stdin as input, stdout as output } from "node:process";
-import { getToken, setToken } from "../../providers/azion/http/token-store";
-import { AzionHttpClient } from "../../providers/azion/http/http-client";
+import { getToken, setToken } from "../../core/http/token-store";
+import { AzionHttpClient } from "../../core/http/http-client";
 
 async function validateToken(token: string): Promise<boolean> {
   try {

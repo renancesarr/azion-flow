@@ -1,5 +1,5 @@
 import { describe, it, expect } from "vitest";
-import { AzionDomainProvider } from "../../src/providers/azion/azion.domain";
+import { AzionDomainProvider } from "../../src/domains/storage/azion.domain";
 
 describe("Azion Domain Provider", () => {
   it("loads without crashing", () => {

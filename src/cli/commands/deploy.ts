@@ -2,7 +2,7 @@ import { createDeployUseCase } from "../../usecases/deploy/deploy.factory";
 import { renderTable } from "../utils/table";
 import { createCliStepLogger } from "../utils/step-logger";
 import { promptTokenIfNeeded } from "../utils/token-prompt";
-import { getToken } from "../../providers/azion/http/token-store";
+import { getToken } from "../../core/http/token-store";
 import { formatError } from "../utils/errors";
 import { labelForStep } from "../utils/step-labels";
 

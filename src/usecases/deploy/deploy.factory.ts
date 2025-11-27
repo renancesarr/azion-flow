@@ -1,11 +1,11 @@
 import { DeployOrchestrator } from "./deploy.orchestrator";
 import { DEPLOY_PIPELINE } from "./pipeline";
 import { DeployUseCase } from "./deploy.usecase";
-import { AzionStorageProvider } from "../../providers/azion/azion.storage";
+import { AzionStorageProvider } from "../../domains/storage/services/azion.storage";
 import { AzionApplicationProvider } from "../../providers/azion/azion.application";
-import { AzionDomainProvider } from "../../providers/azion/azion.domain";
-import { AzionHttpClient } from "../../providers/azion/http/http-client";
-import { NodeFileSystemProvider } from "../../providers/filesystem/nodefs";
+import { AzionDomainProvider } from "../../domains/storage/azion.domain";
+import { AzionHttpClient } from "../../core/http/http-client";
+import { NodeFileSystemProvider } from "../../core/utils/fs/nodefs";
 import { FileConfigProvider } from "../../providers/config/file-config";
 import { BucketService } from "../../domains/storage/services/bucket.service";
 import { FileSyncService } from "../../domains/storage/services/file-sync.service";

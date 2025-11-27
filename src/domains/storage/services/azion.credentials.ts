@@ -1,6 +1,6 @@
-import type { AzionCredentialDto } from "./storage/credential.dto";
-import { createCredentialUrl, listCredentialsUrl } from "./http/endpoints";
-import { AzionHttpClient } from "./http/http-client";
+import type { AzionCredentialDto } from "./dto/credential.dto";
+import { createCredentialUrl, listCredentialsUrl } from "../../core/http/endpoints";
+import { AzionHttpClient } from "../../core/http/http-client";
 
 export class AzionCredentialsProvider {
   private readonly http: AzionHttpClient;

@@ -5,6 +5,7 @@
 - Implementar tratamento de erros custom no core (substituir pasta removida `src/core/errors` por uma abordagem consistente de error handling).
 - Implementar logger consolidado no core (substituir pasta removida `src/core/logger` por uma solução real de logging/observabilidade).
 - Revisar Providers → migrar para domínios equivalentes ou ajustar naming conforme Azion v4 (Applications, Auth, DNS, DigitalCertificates, Firewalls, Functions, Storage, WAFs).
+- Planejar validação externa: além de testes unitários/integrados, prever revisão de arquitetura e dry-run da CLI com cenários reais (deploy básico, storage buckets/credentials).
 
 ## Domains — Applications
 

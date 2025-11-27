@@ -1,6 +1,6 @@
 import { describe, it, expect, vi, afterEach } from "vitest";
 import { AzionApplicationProvider } from "../../src/providers/azion/azion.application";
-import { AzionHttpClient } from "../../src/providers/azion/http/http-client";
+import { AzionHttpClient } from "../../src/core/http/http-client";
 
 describe("AzionApplicationProvider", () => {
   const originalFetch = globalThis.fetch;

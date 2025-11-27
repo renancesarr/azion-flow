@@ -1,6 +1,6 @@
-import { AzionStorageProvider } from "../../../providers/azion/azion.storage";
+import { AzionStorageProvider } from "../../../domains/storage/services/azion.storage";
 import { setTokenDirect, promptTokenIfNeeded } from "../../utils/token-prompt";
-import { getToken } from "../../../providers/azion/http/token-store";
+import { getToken } from "../../../core/http/token-store";
 import { renderTable } from "../../utils/table";
 
 type BucketCommandFlags = {

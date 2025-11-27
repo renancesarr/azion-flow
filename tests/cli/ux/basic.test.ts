@@ -3,7 +3,7 @@ import { deployCommand } from "../../../src/cli/commands/deploy";
 import { helpCommand } from "../../../src/cli/commands/help";
 import { createDeployUseCase } from "../../../src/usecases/deploy/deploy.factory";
 import { promptTokenIfNeeded } from "../../../src/cli/utils/token-prompt";
-import { setToken, clearToken } from "../../../src/providers/azion/http/token-store";
+import { setToken, clearToken } from "../../../src/core/http/token-store";
 
 vi.mock("../../../src/cli/utils/token-prompt", () => ({
   promptTokenIfNeeded: vi.fn(async () => {})

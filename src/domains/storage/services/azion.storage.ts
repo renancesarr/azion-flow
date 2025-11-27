@@ -1,10 +1,10 @@
-import type { AzionBucketDto } from "./storage/bucket.dto";
+import type { AzionBucketDto } from "../dto/bucket.dto";
 import {
   createBucketUrl,
   getBucketsUrl,
   uploadFileUrl
-} from "./http/endpoints";
-import { AzionHttpClient } from "./http/http-client";
+} from "../../../core/http/endpoints";
+import { AzionHttpClient } from "../../../core/http/http-client";
 
 export class AzionStorageProvider {
   private readonly http: AzionHttpClient;

@@ -1,5 +1,5 @@
 import { describe, it, expect, vi, afterEach, beforeEach } from "vitest";
-import { AzionHttpClient } from "../../src/providers/azion/http/http-client";
+import { AzionHttpClient } from "../../src/core/http/http-client";
 
 const mockResponse = (status: number, data: any, headers: Record<string, string> = {}) => ({
   status,

@@ -1,8 +1,8 @@
 import { describe, it, expect, vi, afterEach } from "vitest";
 import { bucketsCommand } from "../../../src/cli/commands/storage/buckets";
-import { AzionStorageProvider } from "../../../src/providers/azion/azion.storage";
+import { AzionStorageProvider } from "../../../src/domains/storage/services/azion.storage";
 import * as tokenPrompt from "../../../src/cli/utils/token-prompt";
-import { setToken, clearToken } from "../../../src/providers/azion/http/token-store";
+import { setToken, clearToken } from "../../../src/core/http/token-store";
 
 vi.mock("../../../src/cli/utils/token-prompt", () => ({
   promptTokenIfNeeded: vi.fn(async () => {}),

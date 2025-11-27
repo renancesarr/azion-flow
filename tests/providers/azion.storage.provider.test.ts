@@ -1,6 +1,6 @@
 import { describe, it, expect, vi, afterEach } from "vitest";
-import { AzionStorageProvider } from "../../src/providers/azion/azion.storage";
-import { AzionHttpClient } from "../../src/providers/azion/http/http-client";
+import { AzionStorageProvider } from "../../src/domains/storage/services/azion.storage";
+import { AzionHttpClient } from "../../src/core/http/http-client";
 
 describe("AzionStorageProvider", () => {
   const originalFetch = globalThis.fetch;

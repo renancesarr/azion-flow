@@ -1,5 +1,5 @@
 import { describe, it, expect } from "vitest";
-import { NodeFileSystemProvider } from "../../src/providers/filesystem/nodefs";
+import { NodeFileSystemProvider } from "../../src/core/utils/fs/nodefs";
 
 describe("Filesystem Provider", () => {
   it("loads without crashing", () => {

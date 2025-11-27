@@ -1,6 +1,6 @@
 import { describe, it, expect, vi, afterEach, beforeEach } from "vitest";
 import { deployCommand } from "../../../src/cli/commands/deploy";
-import { setToken, clearToken } from "../../../src/providers/azion/http/token-store";
+import { setToken, clearToken } from "../../../src/core/http/token-store";
 
 vi.mock("../../../src/cli/utils/token-prompt", () => ({
   promptTokenIfNeeded: vi.fn(async () => {})
