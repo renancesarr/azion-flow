@@ -7,8 +7,8 @@ import { AzionDomainProvider } from "../../providers/azion/azion.domain";
 import { AzionHttpClient } from "../../providers/azion/http/http-client";
 import { NodeFileSystemProvider } from "../../providers/filesystem/nodefs";
 import { FileConfigProvider } from "../../providers/config/file-config";
-import { BucketService } from "../../domains/storage/bucket.service";
-import { FileSyncService } from "../../domains/filesync/file-sync.service";
+import { BucketService } from "../../domains/storage/services/bucket.service";
+import { FileSyncService } from "../../domains/storage/services/file-sync.service";
 import { ApplicationService } from "../../domains/application/application.service";
 import { DomainConfigService } from "../../domains/storage/configs/domain-config.service";
 
