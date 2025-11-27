@@ -1,5 +1,5 @@
 import { describe, it, expect } from "vitest";
-import { FileSyncService } from "../../../src/domains/filesync/file-sync.service";
+import { FileSyncService } from "../../../src/domains/storage/file-sync.service";
 
 class MockFsProvider {
   async listLocalFiles(_dir: string) {
