@@ -5,9 +5,9 @@ import { FileConfigProvider } from "../providers/config/file-config";
 import { NodeFileSystemProvider } from "../providers/filesystem/nodefs";
 import { AzionHttpClient } from "../providers/azion/http/http-client";
 import { ApplicationService } from "./application/application.service";
-import { BucketService } from "./storage/bucket.service";
+import { BucketService } from "./storage/services/bucket.service";
 import { DomainConfigService } from "./domain-config/domain-config.service";
-import { FileSyncService } from "./storage/file-sync.service";
+import { FileSyncService } from "./storage/services/file-sync.service";
 import type { DomainServices } from "./domain-services";
 
 type Providers = {

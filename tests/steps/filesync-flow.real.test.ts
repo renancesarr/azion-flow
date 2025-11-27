@@ -1,6 +1,6 @@
 import { describe, it, expect } from "vitest";
 import { SyncFilesStep } from "../../src/usecases/deploy/steps/raw-steps/sync-files.step";
-import { FileSyncService } from "../../src/domains/storage/file-sync.service";
+import { FileSyncService } from "../../src/domains/storage/services/file-sync.service";
 
 class MockFsProvider {
   async listLocalFiles(_dir: string) {
