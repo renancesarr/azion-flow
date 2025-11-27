@@ -1,5 +1,5 @@
 import { describe, it, expect } from "vitest";
-import { BucketService } from "../../../src/domain/bucket/bucket.service";
+import { BucketService } from "../../../src/domains/bucket/bucket.service";
 
 class MockStorageProvider {
   buckets = [{ id: "1", name: "existing" }];

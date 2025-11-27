@@ -1,5 +1,5 @@
 import { describe, it, expect } from "vitest";
-import { DomainConfigService } from "../../../src/domain/domain-config/domain-config.service";
+import { DomainConfigService } from "../../../src/domains/domain-config/domain-config.service";
 
 class MockDomainProvider {
   async getConfig(domainId: string) {

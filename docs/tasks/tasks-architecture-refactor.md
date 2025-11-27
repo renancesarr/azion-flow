@@ -62,16 +62,16 @@ Objetivo: alinhar todo o código à arquitetura core/domains/usecases/telemetry,
 
 ## Domínios (services/entities)
 
-- [ ] **TARCH-DOM-001 — Revisar src/domain/application/application.entity.ts**
+- [x] **TARCH-DOM-001 — Revisar src/domain/application/application.entity.ts** (removido por inutilidade)
 - [ ] **TARCH-DOM-002 — Revisar src/domain/application/application.service.ts**
-- [ ] **TARCH-DOM-003 — Revisar src/domain/bucket/bucket.entity.ts**
+- [x] **TARCH-DOM-003 — Revisar src/domain/bucket/bucket.entity.ts** (removido por inutilidade)
 - [ ] **TARCH-DOM-004 — Revisar src/domain/bucket/bucket.service.ts**
-- [ ] **TARCH-DOM-005 — Revisar src/domain/config-storage/config-storage.entity.ts**
+- [x] **TARCH-DOM-005 — Revisar src/domain/config-storage/config-storage.entity.ts** (removido por inutilidade)
 - [ ] **TARCH-DOM-006 — Revisar src/domain/config-storage/config-storage.service.ts**
-- [ ] **TARCH-DOM-007 — Revisar src/domain/domain-config/domain-config.entity.ts**
+- [x] **TARCH-DOM-007 — Revisar src/domain/domain-config/domain-config.entity.ts** (removido por inutilidade)
 - [ ] **TARCH-DOM-008 — Revisar src/domain/domain-config/domain-config.service.ts**
 - [ ] **TARCH-DOM-009 — Revisar src/domain/domain-services.ts**
-- [ ] **TARCH-DOM-010 — Revisar src/domain/filesync/file-sync.entity.ts**
+- [x] **TARCH-DOM-010 — Revisar src/domain/filesync/file-sync.entity.ts** (removido por inutilidade)
 - [ ] **TARCH-DOM-011 — Revisar src/domain/filesync/file-sync.service.ts**
 - [ ] **TARCH-DOM-012 — Revisar src/domain/index.ts**
 - [ ] **TARCH-DOM-013 — Revisar src/domain/services.factory.ts**

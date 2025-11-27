@@ -1,5 +1,5 @@
 import { describe, it, expect } from "vitest";
-import { ApplicationService } from "../../../src/domain/application/application.service";
+import { ApplicationService } from "../../../src/domains/application/application.service";
 
 class MockApplicationProvider {
   async listApplications() {

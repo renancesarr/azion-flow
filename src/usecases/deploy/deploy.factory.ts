@@ -7,11 +7,11 @@ import { AzionDomainProvider } from "../../providers/azion/azion.domain";
 import { AzionHttpClient } from "../../providers/azion/http/http-client";
 import { NodeFileSystemProvider } from "../../providers/filesystem/nodefs";
 import { FileConfigProvider } from "../../providers/config/file-config";
-import { BucketService } from "../../domain/bucket/bucket.service";
-import { FileSyncService } from "../../domain/filesync/file-sync.service";
-import { ApplicationService } from "../../domain/application/application.service";
-import { DomainConfigService } from "../../domain/domain-config/domain-config.service";
-import { ConfigStorageService } from "../../domain/config-storage/config-storage.service";
+import { BucketService } from "../../domains/bucket/bucket.service";
+import { FileSyncService } from "../../domains/filesync/file-sync.service";
+import { ApplicationService } from "../../domains/application/application.service";
+import { DomainConfigService } from "../../domains/domain-config/domain-config.service";
+import { ConfigStorageService } from "../../domains/config-storage/config-storage.service";
 
 type DeployFactoryOptions = {
   services?: any;
