@@ -7,11 +7,10 @@ import { AzionDomainProvider } from "../../providers/azion/azion.domain";
 import { AzionHttpClient } from "../../providers/azion/http/http-client";
 import { NodeFileSystemProvider } from "../../providers/filesystem/nodefs";
 import { FileConfigProvider } from "../../providers/config/file-config";
-import { BucketService } from "../../domains/bucket/bucket.service";
+import { BucketService } from "../../domains/storage/bucket.service";
 import { FileSyncService } from "../../domains/filesync/file-sync.service";
 import { ApplicationService } from "../../domains/application/application.service";
 import { DomainConfigService } from "../../domains/domain-config/domain-config.service";
-import { ConfigStorageService } from "../../domains/config-storage/config-storage.service";
 
 type DeployFactoryOptions = {
   services?: any;
@@ -41,8 +40,7 @@ export function createDeployUseCase({ services = {}, providers = {}, stepLogger,
     fileSyncService: services.fileSyncService ?? new FileSyncService(resolvedProviders.fsProvider, resolvedProviders.storageProvider),
     applicationService:
       services.applicationService ?? new ApplicationService(resolvedProviders.applicationProvider),
-    domainConfigService: services.domainConfigService ?? new DomainConfigService(resolvedProviders.domainProvider),
-    configStorageService: services.configStorageService ?? new ConfigStorageService(resolvedProviders.configProvider)
+    domainConfigService: services.domainConfigService ?? new DomainConfigService(resolvedProviders.domainProvider)
   };
 
   const orchestrator = new DeployOrchestrator(DEPLOY_PIPELINE, resolvedServices, resolvedProviders, {}, stepLogger);

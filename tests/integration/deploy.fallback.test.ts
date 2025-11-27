@@ -10,8 +10,7 @@ describe("Deploy fallback scenarios", () => {
       },
       fileSyncService: { sync: async () => ({ uploaded: 0, skipped: 0 }) },
       applicationService: { listApplications: async () => [], selectApplication: async () => null },
-      domainConfigService: { getConfig: async () => null, ensureDomain: async () => null },
-      configStorageService: { loadConfig: async () => ({}) }
+      domainConfigService: { getConfig: async () => null, ensureDomain: async () => null }
     };
     const usecase = createDeployUseCase({ services, token: "test-token" });
     const cwd = process.cwd();
