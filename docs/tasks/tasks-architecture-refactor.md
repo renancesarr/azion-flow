@@ -60,21 +60,18 @@ Objetivo: alinhar todo o código à arquitetura core/domains/usecases/telemetry,
 - [x] **TARCH-PROV-018 — Revisar src/providers/index.ts**
 - [x] **TARCH-PROV-019 — Revisar src/providers/types.ts**
 
-## Domínios (services/entities)
+## Domínios (services/entities) — namespace `src/domains`
 
-- [x] **TARCH-DOM-001 — Revisar src/domain/application/application.entity.ts** (removido por inutilidade)
-- [ ] **TARCH-DOM-002 — Revisar src/domain/application/application.service.ts**
-- [x] **TARCH-DOM-003 — Revisar src/domain/bucket/bucket.entity.ts** (removido por inutilidade)
-- [ ] **TARCH-DOM-004 — Revisar src/domain/bucket/bucket.service.ts**
-- [x] **TARCH-DOM-005 — Revisar src/domain/config-storage/config-storage.entity.ts** (removido por inutilidade)
-- [ ] **TARCH-DOM-006 — Revisar src/domain/config-storage/config-storage.service.ts**
-- [x] **TARCH-DOM-007 — Revisar src/domain/domain-config/domain-config.entity.ts** (removido por inutilidade)
-- [ ] **TARCH-DOM-008 — Revisar src/domain/domain-config/domain-config.service.ts**
-- [ ] **TARCH-DOM-009 — Revisar src/domain/domain-services.ts**
-- [x] **TARCH-DOM-010 — Revisar src/domain/filesync/file-sync.entity.ts** (removido por inutilidade)
-- [ ] **TARCH-DOM-011 — Revisar src/domain/filesync/file-sync.service.ts**
-- [ ] **TARCH-DOM-012 — Revisar src/domain/index.ts**
-- [ ] **TARCH-DOM-013 — Revisar src/domain/services.factory.ts**
+- [ ] **TARCH-DOM-001 — Revisar src/domains/application/application.service.ts**
+- [ ] **TARCH-DOM-002 — Revisar src/domains/storage/bucket.service.ts**
+- [ ] **TARCH-DOM-003 — Revisar src/domains/storage/config-storage.service.ts**
+- [ ] **TARCH-DOM-004 — Revisar src/domains/domain-config/domain-config.service.ts**
+- [ ] **TARCH-DOM-005 — Revisar src/domains/domain-services.ts**
+- [ ] **TARCH-DOM-006 — Revisar src/domains/filesync/file-sync.service.ts**
+- [ ] **TARCH-DOM-007 — Revisar src/domains/index.ts**
+- [ ] **TARCH-DOM-008 — Revisar src/domains/services.factory.ts**
+
+Domínios futuros (backlog, não no checklist): Auth, DNS, DigitalCertificates, Firewalls, Functions, WAFs.
 
 ## Use cases
 
