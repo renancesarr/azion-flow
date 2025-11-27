@@ -74,41 +74,41 @@ Domínios futuros (backlog, não no checklist): Auth, DNS, DigitalCertificates, 
 
 ## Use cases
 
-- [ ] **TARCH-UC-001 — Revisar src/usecases/config/config.usecase.ts**
-- [ ] **TARCH-UC-002 — Revisar src/usecases/config/types.ts**
-- [ ] **TARCH-UC-003 — Revisar src/usecases/deploy/context.ts**
-- [ ] **TARCH-UC-004 — Revisar src/usecases/deploy/deploy.factory.ts**
-- [ ] **TARCH-UC-005 — Revisar src/usecases/deploy/deploy.orchestrator.ts**
-- [ ] **TARCH-UC-006 — Revisar src/usecases/deploy/deploy.usecase.ts**
-- [ ] **TARCH-UC-007 — Revisar src/usecases/deploy/pipeline.ts**
-- [ ] **TARCH-UC-008 — Revisar src/usecases/deploy/steps/index.ts**
-- [ ] **TARCH-UC-009 — Revisar src/usecases/deploy/steps/raw-steps/ensure-bucket.step.ts**
-- [ ] **TARCH-UC-010 — Revisar src/usecases/deploy/steps/raw-steps/ensure-domain.step.ts**
-- [ ] **TARCH-UC-011 — Revisar src/usecases/deploy/steps/raw-steps/generate-report.step.ts**
-- [ ] **TARCH-UC-012 — Revisar src/usecases/deploy/steps/raw-steps/get-domain-config.step.ts**
-- [ ] **TARCH-UC-013 — Revisar src/usecases/deploy/steps/raw-steps/list-applications.step.ts**
-- [ ] **TARCH-UC-014 — Revisar src/usecases/deploy/steps/raw-steps/list-buckets.step.ts**
-- [ ] **TARCH-UC-015 — Revisar src/usecases/deploy/steps/raw-steps/read-config.step.ts**
-- [ ] **TARCH-UC-016 — Revisar src/usecases/deploy/steps/raw-steps/resolve-paths.step.ts**
-- [ ] **TARCH-UC-017 — Revisar src/usecases/deploy/steps/raw-steps/select-application.step.ts**
-- [ ] **TARCH-UC-018 — Revisar src/usecases/deploy/steps/raw-steps/sync-files.step.ts**
-- [ ] **TARCH-UC-019 — Revisar src/usecases/deploy/steps/raw-steps/validate-local-env.step.ts**
-- [ ] **TARCH-UC-020 — Revisar src/usecases/deploy/steps/register.ts**
-- [ ] **TARCH-UC-021 — Revisar src/usecases/deploy/steps/step.base.ts**
-- [ ] **TARCH-UC-022 — Revisar src/usecases/deploy/steps/step.types.ts**
-- [ ] **TARCH-UC-023 — Revisar src/usecases/deploy/types.ts**
-- [ ] **TARCH-UC-024 — Revisar src/usecases/index.ts**
-- [ ] **TARCH-UC-025 — Revisar src/usecases/shared/index.ts**
-- [ ] **TARCH-UC-026 — Revisar src/usecases/shared/types.ts**
-- [ ] **TARCH-UC-027 — Revisar src/usecases/shared/validators/basic.ts**
+- [x] **TARCH-UC-001 — Revisar src/usecases/config/config.usecase.ts**
+- [x] **TARCH-UC-002 — Revisar src/usecases/config/types.ts**
+- [x] **TARCH-UC-003 — Revisar src/usecases/deploy/context.ts**
+- [x] **TARCH-UC-004 — Revisar src/usecases/deploy/deploy.factory.ts**
+- [x] **TARCH-UC-005 — Revisar src/usecases/deploy/deploy.orchestrator.ts**
+- [x] **TARCH-UC-006 — Revisar src/usecases/deploy/deploy.usecase.ts**
+- [x] **TARCH-UC-007 — Revisar src/usecases/deploy/pipeline.ts**
+- [x] **TARCH-UC-008 — Revisar src/usecases/deploy/steps/index.ts**
+- [x] **TARCH-UC-009 — Revisar src/usecases/deploy/steps/raw-steps/ensure-bucket.step.ts**
+- [x] **TARCH-UC-010 — Revisar src/usecases/deploy/steps/raw-steps/ensure-domain.step.ts**
+- [x] **TARCH-UC-011 — Revisar src/usecases/deploy/steps/raw-steps/generate-report.step.ts**
+- [x] **TARCH-UC-012 — Revisar src/usecases/deploy/steps/raw-steps/get-domain-config.step.ts**
+- [x] **TARCH-UC-013 — Revisar src/usecases/deploy/steps/raw-steps/list-applications.step.ts**
+- [x] **TARCH-UC-014 — Revisar src/usecases/deploy/steps/raw-steps/list-buckets.step.ts**
+- [x] **TARCH-UC-015 — Revisar src/usecases/deploy/steps/raw-steps/read-config.step.ts**
+- [x] **TARCH-UC-016 — Revisar src/usecases/deploy/steps/raw-steps/resolve-paths.step.ts**
+- [x] **TARCH-UC-017 — Revisar src/usecases/deploy/steps/raw-steps/select-application.step.ts**
+- [x] **TARCH-UC-018 — Revisar src/usecases/deploy/steps/raw-steps/sync-files.step.ts**
+- [x] **TARCH-UC-019 — Revisar src/usecases/deploy/steps/raw-steps/validate-local-env.step.ts**
+- [x] **TARCH-UC-020 — Revisar src/usecases/deploy/steps/register.ts**
+- [x] **TARCH-UC-021 — Revisar src/usecases/deploy/steps/step.base.ts**
+- [x] **TARCH-UC-022 — Revisar src/usecases/deploy/steps/step.types.ts**
+- [x] **TARCH-UC-023 — Revisar src/usecases/deploy/types.ts**
+- [x] **TARCH-UC-024 — Revisar src/usecases/index.ts**
+- [x] **TARCH-UC-025 — Revisar src/usecases/shared/index.ts**
+- [x] **TARCH-UC-026 — Revisar src/usecases/shared/types.ts**
+- [x] **TARCH-UC-027 — Revisar src/usecases/shared/validators/basic.ts**
 
 ## Telemetria
 
-- [ ] **TARCH-TEL-001 — Revisar src/telemetry/buffer.ts**
-- [ ] **TARCH-TEL-002 — Revisar src/telemetry/create-event.ts**
-- [ ] **TARCH-TEL-003 — Revisar src/telemetry/event.ts**
-- [ ] **TARCH-TEL-004 — Revisar src/telemetry/events.ts**
-- [ ] **TARCH-TEL-005 — Revisar src/telemetry/events/deploy.ts**
-- [ ] **TARCH-TEL-006 — Revisar src/telemetry/send.ts**
-- [ ] **TARCH-TEL-007 — Revisar src/telemetry/startup.ts**
-- [ ] **TARCH-TEL-008 — Revisar src/telemetry/telemetry.optin.ts**
+- [x] **TARCH-TEL-001 — Revisar src/telemetry/buffer.ts**
+- [x] **TARCH-TEL-002 — Revisar src/telemetry/create-event.ts**
+- [x] **TARCH-TEL-003 — Revisar src/telemetry/event.ts**
+- [x] **TARCH-TEL-004 — Revisar src/telemetry/events.ts**
+- [x] **TARCH-TEL-005 — Revisar src/telemetry/events/deploy.ts**
+- [x] **TARCH-TEL-006 — Revisar src/telemetry/send.ts**
+- [x] **TARCH-TEL-007 — Revisar src/telemetry/startup.ts**
+- [x] **TARCH-TEL-008 — Revisar src/telemetry/telemetry.optin.ts**
