@@ -60,16 +60,15 @@ Objetivo: alinhar todo o código à arquitetura core/domains/usecases/telemetry,
 - [x] **TARCH-PROV-018 — Revisar src/providers/index.ts**
 - [x] **TARCH-PROV-019 — Revisar src/providers/types.ts**
 
-## Domínios (services/entities) — namespace `src/domains`
+## Domínios (services) — namespace `src/domains`
 
 - [ ] **TARCH-DOM-001 — Revisar src/domains/application/application.service.ts**
-- [ ] **TARCH-DOM-002 — Revisar src/domains/storage/bucket.service.ts**
-- [ ] **TARCH-DOM-003 — Revisar src/domains/storage/config-storage.service.ts**
-- [ ] **TARCH-DOM-004 — Revisar src/domains/domain-config/domain-config.service.ts**
+- [ ] **TARCH-DOM-002 — Revisar src/domains/storage/services/bucket.service.ts**
+- [ ] **TARCH-DOM-003 — Revisar src/domains/storage/services/file-sync.service.ts**
+- [ ] **TARCH-DOM-004 — Revisar src/domains/storage/configs/domain-config.service.ts**
 - [ ] **TARCH-DOM-005 — Revisar src/domains/domain-services.ts**
-- [ ] **TARCH-DOM-006 — Revisar src/domains/filesync/file-sync.service.ts**
-- [ ] **TARCH-DOM-007 — Revisar src/domains/index.ts**
-- [ ] **TARCH-DOM-008 — Revisar src/domains/services.factory.ts**
+- [ ] **TARCH-DOM-006 — Revisar src/domains/index.ts**
+- [ ] **TARCH-DOM-007 — Revisar src/domains/services.factory.ts**
 
 Domínios futuros (backlog, não no checklist): Auth, DNS, DigitalCertificates, Firewalls, Functions, WAFs.
 

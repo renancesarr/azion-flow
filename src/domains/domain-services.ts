@@ -1,6 +1,6 @@
 import { ApplicationService } from "./application/application.service";
 import { BucketService } from "./storage/services/bucket.service";
-import { DomainConfigService } from "./domain-config/domain-config.service";
+import { DomainConfigService } from "./storage/configs/domain-config.service";
 import { FileSyncService } from "./storage/services/file-sync.service";
 
 export interface DomainServices {
