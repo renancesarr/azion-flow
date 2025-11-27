@@ -8,7 +8,6 @@ import { ApplicationService } from "./application.service";
 import { BucketService } from "../storage/services/bucket.service";
 import { DomainConfigService } from "../storage/configs/domain-config.service";
 import { FileSyncService } from "../storage/services/file-sync.service";
-import type { DomainServices } from "../domain-services";
 
 type Providers = {
   storageProvider?: any;
@@ -19,6 +18,12 @@ type Providers = {
 };
 
 type DomainServiceFactoryOptions = { providers?: Providers; token: string };
+type DomainServices = {
+  bucketService: BucketService;
+  fileSyncService: FileSyncService;
+  applicationService: ApplicationService;
+  domainConfigService: DomainConfigService;
+};
 
 export function createDomainServices({ providers = {}, token }: DomainServiceFactoryOptions): DomainServices {
   const resolvedToken = token?.trim();
