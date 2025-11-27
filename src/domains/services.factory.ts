@@ -6,7 +6,7 @@ import { NodeFileSystemProvider } from "../providers/filesystem/nodefs";
 import { AzionHttpClient } from "../providers/azion/http/http-client";
 import { ApplicationService } from "./application/application.service";
 import { BucketService } from "./storage/services/bucket.service";
-import { DomainConfigService } from "./domain-config/domain-config.service";
+import { DomainConfigService } from "./storage/configs/domain-config.service";
 import { FileSyncService } from "./storage/services/file-sync.service";
 import type { DomainServices } from "./domain-services";
 

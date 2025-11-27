@@ -10,7 +10,7 @@ import { FileConfigProvider } from "../../providers/config/file-config";
 import { BucketService } from "../../domains/storage/bucket.service";
 import { FileSyncService } from "../../domains/filesync/file-sync.service";
 import { ApplicationService } from "../../domains/application/application.service";
-import { DomainConfigService } from "../../domains/domain-config/domain-config.service";
+import { DomainConfigService } from "../../domains/storage/configs/domain-config.service";
 
 type DeployFactoryOptions = {
   services?: any;
