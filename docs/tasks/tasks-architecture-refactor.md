@@ -62,13 +62,13 @@ Objetivo: alinhar todo o código à arquitetura core/domains/usecases/telemetry,
 
 ## Domínios (services) — namespace `src/domains`
 
-- [ ] **TARCH-DOM-001 — Revisar src/domains/application/application.service.ts**
-- [ ] **TARCH-DOM-002 — Revisar src/domains/storage/services/bucket.service.ts**
-- [ ] **TARCH-DOM-003 — Revisar src/domains/storage/services/file-sync.service.ts**
-- [ ] **TARCH-DOM-004 — Revisar src/domains/storage/configs/domain-config.service.ts**
-- [ ] **TARCH-DOM-005 — Revisar src/domains/domain-services.ts**
-- [ ] **TARCH-DOM-006 — Revisar src/domains/index.ts**
-- [ ] **TARCH-DOM-007 — Revisar src/domains/services.factory.ts**
+- [x] **TARCH-DOM-001 — Revisar src/domains/application/application.service.ts**
+- [x] **TARCH-DOM-002 — Revisar src/domains/storage/services/bucket.service.ts**
+- [x] **TARCH-DOM-003 — Revisar src/domains/storage/services/file-sync.service.ts**
+- [x] **TARCH-DOM-004 — Revisar src/domains/storage/configs/domain-config.service.ts**
+- [x] **TARCH-DOM-005 — Revisar src/domains/domain-services.ts**
+- [x] **TARCH-DOM-006 — Revisar src/domains/index.ts**
+- [x] **TARCH-DOM-007 — Revisar src/domains/services.factory.ts**
 
 Domínios futuros (backlog, não no checklist): Auth, DNS, DigitalCertificates, Firewalls, Functions, WAFs.
 
