@@ -30,6 +30,6 @@
   },
   "dependencies": {
     "@types/node": "^24.10.1",
-    "yaml": "^2.8.1"
+    "yaml": "^2.8.2"
   }
 }
