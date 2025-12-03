@@ -22,7 +22,7 @@
     "markdownlint-cli": "^0.39.0",
     "tsup": "^8.0.0",
     "typescript": "^5.3.3",
-    "vitest": "^1.6.1"
+    "vitest": "^4.0.15"
   },
   "overrides": {
     "esbuild": "^0.24.0",
