@@ -29,7 +29,7 @@
     "glob": "^10.4.5"
   },
   "dependencies": {
-    "@types/node": "^24.10.1",
+    "@types/node": "^25.0.1",
     "yaml": "^2.8.1"
   }
 }
